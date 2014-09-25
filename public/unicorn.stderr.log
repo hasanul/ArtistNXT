@@ -1,0 +1,1065 @@
+I, [2014-01-16T07:25:59.794402 #18663]  INFO -- : Refreshing Gem list
+I, [2014-01-16T07:26:02.395046 #18663]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-16T07:26:02.395486 #18663]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-16T07:26:02.409853 #18663]  INFO -- : master process ready
+I, [2014-01-16T07:26:02.414715 #18669]  INFO -- : worker=0 ready
+I, [2014-01-16T07:26:02.416569 #18672]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-16T07:27:38.111272 #18663]  INFO -- : reaped #<Process::Status: pid 18672 exit 0> worker=1
+I, [2014-01-16T07:27:38.211736 #18663]  INFO -- : reaped #<Process::Status: pid 18669 exit 0> worker=0
+I, [2014-01-16T07:27:38.211873 #18663]  INFO -- : master complete
+I, [2014-01-16T07:31:17.246235 #19022]  INFO -- : Refreshing Gem list
+I, [2014-01-16T07:31:19.808742 #19022]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-16T07:31:19.809165 #19022]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-16T07:31:19.825259 #19028]  INFO -- : worker=0 ready
+I, [2014-01-16T07:31:19.826420 #19022]  INFO -- : master process ready
+I, [2014-01-16T07:31:19.832703 #19031]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+Geocoding API not responding fast enough (use Geocoder.configure(:timeout => ...) to set limit).
+I, [2014-01-16T08:07:19.351224 #19022]  INFO -- : reaped #<Process::Status: pid 19028 exit 0> worker=0
+I, [2014-01-16T08:07:19.351399 #19022]  INFO -- : reaped #<Process::Status: pid 19031 exit 0> worker=1
+I, [2014-01-16T08:07:19.351531 #19022]  INFO -- : master complete
+I, [2014-01-16T08:07:21.895502 #19713]  INFO -- : Refreshing Gem list
+I, [2014-01-16T08:07:24.446258 #19713]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-16T08:07:24.446719 #19713]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-16T08:07:24.460174 #19713]  INFO -- : master process ready
+I, [2014-01-16T08:07:24.463788 #19719]  INFO -- : worker=0 ready
+I, [2014-01-16T08:07:24.465028 #19722]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+Geocoding API not responding fast enough (use Geocoder.configure(:timeout => ...) to set limit).
+Geocoding API not responding fast enough (use Geocoder.configure(:timeout => ...) to set limit).
+I, [2014-01-16T08:18:21.739961 #19713]  INFO -- : reaped #<Process::Status: pid 19719 exit 0> worker=0
+I, [2014-01-16T08:18:21.740194 #19713]  INFO -- : reaped #<Process::Status: pid 19722 exit 0> worker=1
+I, [2014-01-16T08:18:21.740362 #19713]  INFO -- : master complete
+I, [2014-01-16T08:18:24.290542 #19965]  INFO -- : Refreshing Gem list
+I, [2014-01-16T08:18:26.870698 #19965]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-16T08:18:26.871113 #19965]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-16T08:18:26.883815 #19965]  INFO -- : master process ready
+I, [2014-01-16T08:18:26.887270 #19971]  INFO -- : worker=0 ready
+I, [2014-01-16T08:18:26.889691 #19974]  INFO -- : worker=1 ready
+Geocoding API not responding fast enough (use Geocoder.configure(:timeout => ...) to set limit).
+I, [2014-01-16T08:19:34.089692 #19965]  INFO -- : reaped #<Process::Status: pid 19971 exit 0> worker=0
+I, [2014-01-16T08:19:34.089853 #19965]  INFO -- : reaped #<Process::Status: pid 19974 exit 0> worker=1
+I, [2014-01-16T08:19:34.089975 #19965]  INFO -- : master complete
+I, [2014-01-16T08:19:55.218408 #1243]  INFO -- : Refreshing Gem list
+I, [2014-01-16T08:20:00.695915 #1243]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-16T08:20:00.696333 #1243]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-16T08:20:00.756489 #1243]  INFO -- : master process ready
+I, [2014-01-16T08:20:00.765600 #1315]  INFO -- : worker=0 ready
+I, [2014-01-16T08:20:00.765685 #1318]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+Geocoding API not responding fast enough (use Geocoder.configure(:timeout => ...) to set limit).
+Geocoding API not responding fast enough (use Geocoder.configure(:timeout => ...) to set limit).
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+Geocoding API not responding fast enough (use Geocoder.configure(:timeout => ...) to set limit).
+Geocoding API not responding fast enough (use Geocoder.configure(:timeout => ...) to set limit).
+Geocoding API not responding fast enough (use Geocoder.configure(:timeout => ...) to set limit).
+Geocoding API not responding fast enough (use Geocoder.configure(:timeout => ...) to set limit).
+Geocoding API not responding fast enough (use Geocoder.configure(:timeout => ...) to set limit).
+I, [2014-01-16T10:16:03.388980 #1243]  INFO -- : reaped #<Process::Status: pid 1315 exit 0> worker=0
+I, [2014-01-16T10:16:03.389155 #1243]  INFO -- : reaped #<Process::Status: pid 1318 exit 0> worker=1
+I, [2014-01-16T10:16:03.389259 #1243]  INFO -- : master complete
+I, [2014-01-16T10:16:05.943476 #2209]  INFO -- : Refreshing Gem list
+I, [2014-01-16T10:16:08.520810 #2209]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-16T10:16:08.521232 #2209]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-16T10:16:08.535882 #2209]  INFO -- : master process ready
+I, [2014-01-16T10:16:08.539409 #2215]  INFO -- : worker=0 ready
+I, [2014-01-16T10:16:08.542278 #2218]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-16T10:42:31.109574 #2209]  INFO -- : reaped #<Process::Status: pid 2215 exit 0> worker=0
+I, [2014-01-16T10:42:31.109716 #2209]  INFO -- : reaped #<Process::Status: pid 2218 exit 0> worker=1
+I, [2014-01-16T10:42:31.109823 #2209]  INFO -- : master complete
+I, [2014-01-16T10:42:33.641784 #2605]  INFO -- : Refreshing Gem list
+/home/ubuntu/artistnxt/config/initializers/geocoder.rb:19:in `<top (required)>': uninitialized constant Redis (NameError)
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/railties-4.0.0/lib/rails/engine.rb:609:in `block (2 levels) in <class:Engine>'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/railties-4.0.0/lib/rails/engine.rb:608:in `each'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/railties-4.0.0/lib/rails/engine.rb:608:in `block in <class:Engine>'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/railties-4.0.0/lib/rails/initializable.rb:30:in `instance_exec'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/railties-4.0.0/lib/rails/initializable.rb:30:in `run'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/railties-4.0.0/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:226:in `block in tsort_each'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:348:in `block (2 levels) in each_strongly_connected_component'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:418:in `block (2 levels) in each_strongly_connected_component_from'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:427:in `each_strongly_connected_component_from'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:417:in `block in each_strongly_connected_component_from'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/railties-4.0.0/lib/rails/initializable.rb:44:in `each'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/railties-4.0.0/lib/rails/initializable.rb:44:in `tsort_each_child'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:411:in `call'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:411:in `each_strongly_connected_component_from'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:347:in `block in each_strongly_connected_component'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:345:in `each'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:345:in `call'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:345:in `each_strongly_connected_component'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:224:in `tsort_each'
+	from /home/ubuntu/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/tsort.rb:205:in `tsort_each'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/railties-4.0.0/lib/rails/initializable.rb:54:in `run_initializers'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/railties-4.0.0/lib/rails/application.rb:215:in `initialize!'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/railties-4.0.0/lib/rails/railtie/configurable.rb:30:in `method_missing'
+	from /home/ubuntu/artistnxt/config/environment.rb:5:in `<top (required)>'
+	from config.ru:4:in `require'
+	from config.ru:4:in `block in <main>'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/unicorn-4.6.3/lib/unicorn.rb:48:in `eval'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/unicorn-4.6.3/lib/unicorn.rb:48:in `block in builder'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/unicorn-4.6.3/bin/unicorn_rails:139:in `call'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/unicorn-4.6.3/bin/unicorn_rails:139:in `block in rails_builder'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/unicorn-4.6.3/lib/unicorn/http_server.rb:722:in `call'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/unicorn-4.6.3/lib/unicorn/http_server.rb:722:in `build_app!'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/unicorn-4.6.3/lib/unicorn/http_server.rb:140:in `start'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/gems/unicorn-4.6.3/bin/unicorn_rails:209:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/bin/unicorn_rails:23:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/bin/unicorn_rails:23:in `<main>'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/bin/ruby_executable_hooks:15:in `eval'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.0/bin/ruby_executable_hooks:15:in `<main>'
+I, [2014-01-16T10:43:53.784955 #2759]  INFO -- : Refreshing Gem list
+I, [2014-01-16T10:43:56.308161 #2759]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-16T10:43:56.308585 #2759]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-16T10:43:56.320578 #2759]  INFO -- : master process ready
+I, [2014-01-16T10:43:56.325561 #2768]  INFO -- : worker=1 ready
+I, [2014-01-16T10:43:56.325533 #2765]  INFO -- : worker=0 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-16T11:29:26.843309 #2759]  INFO -- : reaped #<Process::Status: pid 2765 exit 0> worker=0
+I, [2014-01-16T11:29:26.843485 #2759]  INFO -- : reaped #<Process::Status: pid 2768 exit 0> worker=1
+I, [2014-01-16T11:29:26.843592 #2759]  INFO -- : master complete
+I, [2014-01-16T11:29:29.382532 #3192]  INFO -- : Refreshing Gem list
+I, [2014-01-16T11:29:31.915537 #3192]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-16T11:29:31.915955 #3192]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-16T11:29:31.931329 #3192]  INFO -- : master process ready
+I, [2014-01-16T11:29:31.931806 #3198]  INFO -- : worker=0 ready
+I, [2014-01-16T11:29:31.936163 #3201]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-16T11:30:33.593848 #3192]  INFO -- : reaped #<Process::Status: pid 3198 exit 0> worker=0
+I, [2014-01-16T11:30:33.594032 #3192]  INFO -- : reaped #<Process::Status: pid 3201 exit 0> worker=1
+I, [2014-01-16T11:30:33.594157 #3192]  INFO -- : master complete
+I, [2014-01-16T11:30:36.242551 #3331]  INFO -- : Refreshing Gem list
+I, [2014-01-16T11:30:38.800130 #3331]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-16T11:30:38.800538 #3331]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-16T11:30:38.813558 #3331]  INFO -- : master process ready
+I, [2014-01-16T11:30:38.818152 #3340]  INFO -- : worker=1 ready
+I, [2014-01-16T11:30:38.818101 #3337]  INFO -- : worker=0 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-16T12:08:53.698785 #3331]  INFO -- : reaped #<Process::Status: pid 3337 exit 0> worker=0
+I, [2014-01-16T12:08:53.698969 #3331]  INFO -- : reaped #<Process::Status: pid 3340 exit 0> worker=1
+I, [2014-01-16T12:08:53.699091 #3331]  INFO -- : master complete
+I, [2014-01-16T12:08:56.258264 #9919]  INFO -- : Refreshing Gem list
+I, [2014-01-16T12:08:58.832010 #9919]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-16T12:08:58.832441 #9919]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-16T12:08:58.845269 #9919]  INFO -- : master process ready
+I, [2014-01-16T12:08:58.848840 #9925]  INFO -- : worker=0 ready
+I, [2014-01-16T12:08:58.850391 #9928]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-16T12:13:00.097189 #9919]  INFO -- : reaped #<Process::Status: pid 9925 exit 0> worker=0
+I, [2014-01-16T12:13:00.097323 #9919]  INFO -- : reaped #<Process::Status: pid 9928 exit 0> worker=1
+I, [2014-01-16T12:13:00.097432 #9919]  INFO -- : master complete
+I, [2014-01-16T12:13:29.346581 #10157]  INFO -- : Refreshing Gem list
+I, [2014-01-16T12:13:31.916287 #10157]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-16T12:13:31.916713 #10157]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-16T12:13:31.929936 #10157]  INFO -- : master process ready
+I, [2014-01-16T12:13:31.933617 #10163]  INFO -- : worker=0 ready
+I, [2014-01-16T12:13:31.934988 #10166]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-16T12:37:20.351622 #10157]  INFO -- : reaped #<Process::Status: pid 10163 exit 0> worker=0
+I, [2014-01-16T12:37:20.351797 #10157]  INFO -- : reaped #<Process::Status: pid 10166 exit 0> worker=1
+I, [2014-01-16T12:37:20.351912 #10157]  INFO -- : master complete
+I, [2014-01-16T12:37:22.895384 #10351]  INFO -- : Refreshing Gem list
+I, [2014-01-16T12:37:25.446188 #10351]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-16T12:37:25.446628 #10351]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-16T12:37:25.459509 #10351]  INFO -- : master process ready
+I, [2014-01-16T12:37:25.463250 #10357]  INFO -- : worker=0 ready
+I, [2014-01-16T12:37:25.464352 #10360]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-16T12:49:11.548100 #10351]  INFO -- : reaped #<Process::Status: pid 10357 exit 0> worker=0
+I, [2014-01-16T12:49:11.548247 #10351]  INFO -- : reaped #<Process::Status: pid 10360 exit 0> worker=1
+I, [2014-01-16T12:49:11.548360 #10351]  INFO -- : master complete
+I, [2014-01-16T12:49:14.118458 #10504]  INFO -- : Refreshing Gem list
+I, [2014-01-16T12:49:16.670212 #10504]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-16T12:49:16.670622 #10504]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-16T12:49:16.683803 #10504]  INFO -- : master process ready
+I, [2014-01-16T12:49:16.690218 #10510]  INFO -- : worker=0 ready
+I, [2014-01-16T12:49:16.691120 #10513]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-16T23:30:48.203898 #10504]  INFO -- : reaped #<Process::Status: pid 10510 exit 0> worker=0
+I, [2014-01-16T23:30:48.204294 #10504]  INFO -- : reaped #<Process::Status: pid 10513 exit 0> worker=1
+I, [2014-01-16T23:30:48.204420 #10504]  INFO -- : master complete
+I, [2014-01-16T23:30:50.654021 #11972]  INFO -- : Refreshing Gem list
+I, [2014-01-16T23:30:53.233121 #11972]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-16T23:30:53.233609 #11972]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-16T23:30:53.247285 #11972]  INFO -- : master process ready
+I, [2014-01-16T23:30:53.250026 #11978]  INFO -- : worker=0 ready
+I, [2014-01-16T23:30:53.252773 #11981]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-17T00:17:38.245512 #11972]  INFO -- : reaped #<Process::Status: pid 11978 exit 0> worker=0
+I, [2014-01-17T00:17:38.245673 #11972]  INFO -- : reaped #<Process::Status: pid 11981 exit 0> worker=1
+I, [2014-01-17T00:17:38.245788 #11972]  INFO -- : master complete
+I, [2014-01-17T03:00:00.035630 #13605]  INFO -- : Refreshing Gem list
+I, [2014-01-17T03:00:02.677975 #13605]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-17T03:00:02.678396 #13605]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-17T03:00:02.698778 #13611]  INFO -- : worker=0 ready
+I, [2014-01-17T03:00:02.699196 #13605]  INFO -- : master process ready
+I, [2014-01-17T03:00:02.706827 #13614]  INFO -- : worker=1 ready
+I, [2014-01-17T03:00:21.260252 #13605]  INFO -- : reaped #<Process::Status: pid 13611 exit 0> worker=0
+I, [2014-01-17T03:00:21.260416 #13605]  INFO -- : reaped #<Process::Status: pid 13614 exit 0> worker=1
+I, [2014-01-17T03:00:21.260527 #13605]  INFO -- : master complete
+I, [2014-01-17T03:01:37.795465 #13934]  INFO -- : Refreshing Gem list
+I, [2014-01-17T03:01:40.349065 #13934]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-17T03:01:40.349525 #13934]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-17T03:01:40.363323 #13934]  INFO -- : master process ready
+I, [2014-01-17T03:01:40.366681 #13940]  INFO -- : worker=0 ready
+I, [2014-01-17T03:01:40.368324 #13943]  INFO -- : worker=1 ready
+I, [2014-01-17T03:02:02.513755 #13934]  INFO -- : reaped #<Process::Status: pid 13940 exit 0> worker=0
+I, [2014-01-17T03:02:02.513914 #13934]  INFO -- : reaped #<Process::Status: pid 13943 exit 0> worker=1
+I, [2014-01-17T03:02:02.514028 #13934]  INFO -- : master complete
+I, [2014-01-17T06:44:33.132074 #17935]  INFO -- : Refreshing Gem list
+I, [2014-01-17T06:44:35.707609 #17935]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-17T06:44:35.708023 #17935]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-17T06:44:35.719964 #17935]  INFO -- : master process ready
+I, [2014-01-17T06:44:35.734575 #17941]  INFO -- : worker=0 ready
+I, [2014-01-17T06:44:35.734664 #17944]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-17T07:22:32.862358 #17935]  INFO -- : reaped #<Process::Status: pid 17941 exit 0> worker=0
+I, [2014-01-17T07:22:32.862506 #17935]  INFO -- : reaped #<Process::Status: pid 17944 exit 0> worker=1
+I, [2014-01-17T07:22:32.862615 #17935]  INFO -- : master complete
+I, [2014-01-17T07:23:58.267787 #18896]  INFO -- : Refreshing Gem list
+I, [2014-01-17T07:24:00.822399 #18896]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-17T07:24:00.822818 #18896]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-17T07:24:00.835903 #18896]  INFO -- : master process ready
+I, [2014-01-17T07:24:00.839658 #18902]  INFO -- : worker=0 ready
+I, [2014-01-17T07:24:00.840849 #18905]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-17T11:56:59.053040 #18896]  INFO -- : reaped #<Process::Status: pid 18905 exit 0> worker=1
+I, [2014-01-17T11:56:59.153581 #18896]  INFO -- : reaped #<Process::Status: pid 18902 exit 0> worker=0
+I, [2014-01-17T11:56:59.153728 #18896]  INFO -- : master complete
+I, [2014-01-17T11:57:01.596094 #19783]  INFO -- : Refreshing Gem list
+I, [2014-01-17T11:57:04.187519 #19783]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-17T11:57:04.187942 #19783]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-17T11:57:04.200430 #19783]  INFO -- : master process ready
+I, [2014-01-17T11:57:04.204275 #19789]  INFO -- : worker=0 ready
+I, [2014-01-17T11:57:04.205474 #19792]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-17T11:58:07.894068 #19783]  INFO -- : reaped #<Process::Status: pid 19789 exit 0> worker=0
+I, [2014-01-17T11:58:07.894207 #19783]  INFO -- : reaped #<Process::Status: pid 19792 exit 0> worker=1
+I, [2014-01-17T11:58:07.894342 #19783]  INFO -- : master complete
+I, [2014-01-17T11:58:10.446768 #19922]  INFO -- : Refreshing Gem list
+I, [2014-01-17T11:58:13.025860 #19922]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-17T11:58:13.027275 #19922]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-17T11:58:13.039755 #19922]  INFO -- : master process ready
+I, [2014-01-17T11:58:13.043585 #19928]  INFO -- : worker=0 ready
+I, [2014-01-17T11:58:13.044812 #19931]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-19T22:48:13.852712 #19922]  INFO -- : reaped #<Process::Status: pid 19928 exit 0> worker=0
+I, [2014-01-19T22:48:13.853037 #19922]  INFO -- : reaped #<Process::Status: pid 19931 exit 0> worker=1
+I, [2014-01-19T22:48:13.853256 #19922]  INFO -- : master complete
+I, [2014-01-20T03:18:13.194041 #30587]  INFO -- : Refreshing Gem list
+I, [2014-01-20T03:18:15.776628 #30587]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-20T03:18:15.777045 #30587]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-20T03:18:15.789583 #30587]  INFO -- : master process ready
+I, [2014-01-20T03:18:15.793150 #30593]  INFO -- : worker=0 ready
+I, [2014-01-20T03:18:15.794446 #30596]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-20T03:58:08.278205 #30587]  INFO -- : reaped #<Process::Status: pid 30593 exit 0> worker=0
+I, [2014-01-20T03:58:08.278369 #30587]  INFO -- : reaped #<Process::Status: pid 30596 exit 0> worker=1
+I, [2014-01-20T03:58:08.278479 #30587]  INFO -- : master complete
+I, [2014-01-20T03:58:23.988487 #31179]  INFO -- : Refreshing Gem list
+I, [2014-01-20T03:58:26.587446 #31179]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-20T03:58:26.587859 #31179]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-20T03:58:26.603203 #31179]  INFO -- : master process ready
+I, [2014-01-20T03:58:26.604325 #31185]  INFO -- : worker=0 ready
+I, [2014-01-20T03:58:26.608280 #31188]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-20T06:09:27.364664 #31179]  INFO -- : reaped #<Process::Status: pid 31185 exit 0> worker=0
+I, [2014-01-20T06:09:27.365116 #31179]  INFO -- : reaped #<Process::Status: pid 31188 exit 0> worker=1
+I, [2014-01-20T06:09:27.365241 #31179]  INFO -- : master complete
+I, [2014-01-20T06:10:23.348364 #31892]  INFO -- : Refreshing Gem list
+I, [2014-01-20T06:10:25.960722 #31892]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-20T06:10:25.961136 #31892]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-20T06:10:25.975405 #31892]  INFO -- : master process ready
+I, [2014-01-20T06:10:25.979573 #31898]  INFO -- : worker=0 ready
+I, [2014-01-20T06:10:25.980771 #31901]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-21T05:26:36.838228 #31892]  INFO -- : reaped #<Process::Status: pid 31898 exit 0> worker=0
+I, [2014-01-21T05:26:36.838946 #31892]  INFO -- : reaped #<Process::Status: pid 31901 exit 0> worker=1
+I, [2014-01-21T05:26:36.839065 #31892]  INFO -- : master complete
+I, [2014-01-21T05:26:52.270188 #2307]  INFO -- : Refreshing Gem list
+I, [2014-01-21T05:26:54.863456 #2307]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-21T05:26:54.863910 #2307]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-21T05:26:54.879392 #2307]  INFO -- : master process ready
+I, [2014-01-21T05:26:54.880484 #2313]  INFO -- : worker=0 ready
+I, [2014-01-21T05:26:54.884795 #2316]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-21T05:32:01.453980 #2307]  INFO -- : reaped #<Process::Status: pid 2316 exit 0> worker=1
+I, [2014-01-21T05:32:01.554472 #2307]  INFO -- : reaped #<Process::Status: pid 2313 exit 0> worker=0
+I, [2014-01-21T05:32:01.554612 #2307]  INFO -- : master complete
+I, [2014-01-21T05:32:13.709161 #2597]  INFO -- : Refreshing Gem list
+I, [2014-01-21T05:32:16.332453 #2597]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-21T05:32:16.332909 #2597]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-21T05:32:16.347245 #2597]  INFO -- : master process ready
+I, [2014-01-21T05:32:16.350776 #2603]  INFO -- : worker=0 ready
+I, [2014-01-21T05:32:16.353495 #2606]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-21T05:37:28.383132 #2597]  INFO -- : reaped #<Process::Status: pid 2603 exit 0> worker=0
+I, [2014-01-21T05:37:28.383360 #2597]  INFO -- : reaped #<Process::Status: pid 2606 exit 0> worker=1
+I, [2014-01-21T05:37:28.383482 #2597]  INFO -- : master complete
+I, [2014-01-21T05:37:41.028530 #2890]  INFO -- : Refreshing Gem list
+I, [2014-01-21T05:37:43.595424 #2890]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-21T05:37:43.595874 #2890]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-21T05:37:43.611379 #2890]  INFO -- : master process ready
+I, [2014-01-21T05:37:43.613298 #2896]  INFO -- : worker=0 ready
+I, [2014-01-21T05:37:43.616445 #2899]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-21T06:42:21.120105 #2890]  INFO -- : reaped #<Process::Status: pid 2896 exit 0> worker=0
+I, [2014-01-21T06:42:21.120345 #2890]  INFO -- : reaped #<Process::Status: pid 2899 exit 0> worker=1
+I, [2014-01-21T06:42:21.120461 #2890]  INFO -- : master complete
+I, [2014-01-21T06:42:48.701193 #3738]  INFO -- : Refreshing Gem list
+I, [2014-01-21T06:42:51.298757 #3738]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-21T06:42:51.299172 #3738]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-21T06:42:51.317616 #3738]  INFO -- : master process ready
+I, [2014-01-21T06:42:51.320746 #3744]  INFO -- : worker=0 ready
+I, [2014-01-21T06:42:51.323139 #3747]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-24T05:13:51.138664 #3738]  INFO -- : reaped #<Process::Status: pid 3744 exit 0> worker=0
+I, [2014-01-24T05:13:51.138845 #3738]  INFO -- : reaped #<Process::Status: pid 3747 exit 0> worker=1
+I, [2014-01-24T05:13:51.138985 #3738]  INFO -- : master complete
+I, [2014-01-24T05:14:04.524426 #11169]  INFO -- : Refreshing Gem list
+I, [2014-01-24T05:14:07.140062 #11169]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-24T05:14:07.140508 #11169]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-24T05:14:07.156544 #11169]  INFO -- : master process ready
+I, [2014-01-24T05:14:07.157276 #11175]  INFO -- : worker=0 ready
+I, [2014-01-24T05:14:07.161695 #11178]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-24T05:15:18.290011 #11169]  INFO -- : reaped #<Process::Status: pid 11175 exit 0> worker=0
+I, [2014-01-24T05:15:18.290150 #11169]  INFO -- : reaped #<Process::Status: pid 11178 exit 0> worker=1
+I, [2014-01-24T05:15:18.290283 #11169]  INFO -- : master complete
+I, [2014-01-24T05:15:20.842109 #11346]  INFO -- : Refreshing Gem list
+I, [2014-01-24T05:15:23.509879 #11346]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-24T05:15:23.510352 #11346]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-24T05:15:23.528007 #11352]  INFO -- : worker=0 ready
+I, [2014-01-24T05:15:23.528165 #11346]  INFO -- : master process ready
+I, [2014-01-24T05:15:23.533052 #11355]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-24T05:23:00.011327 #11346]  INFO -- : reaped #<Process::Status: pid 11352 exit 0> worker=0
+I, [2014-01-24T05:23:00.011487 #11346]  INFO -- : reaped #<Process::Status: pid 11355 exit 0> worker=1
+I, [2014-01-24T05:23:00.011605 #11346]  INFO -- : master complete
+I, [2014-01-24T05:23:02.571166 #11536]  INFO -- : Refreshing Gem list
+I, [2014-01-24T05:23:05.192676 #11536]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-24T05:23:05.193125 #11536]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-24T05:23:05.209738 #11536]  INFO -- : master process ready
+I, [2014-01-24T05:23:05.212061 #11542]  INFO -- : worker=0 ready
+I, [2014-01-24T05:23:05.214870 #11545]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-24T05:44:05.276918 #11536]  INFO -- : reaped #<Process::Status: pid 11542 exit 0> worker=0
+I, [2014-01-24T05:44:05.277080 #11536]  INFO -- : reaped #<Process::Status: pid 11545 exit 0> worker=1
+I, [2014-01-24T05:44:05.277190 #11536]  INFO -- : master complete
+I, [2014-01-24T05:44:29.320683 #1299]  INFO -- : Refreshing Gem list
+I, [2014-01-24T05:44:34.911478 #1299]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-24T05:44:34.911894 #1299]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-24T05:44:34.976062 #1299]  INFO -- : master process ready
+I, [2014-01-24T05:44:34.984909 #1389]  INFO -- : worker=1 ready
+I, [2014-01-24T05:44:34.984934 #1386]  INFO -- : worker=0 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-24T07:20:27.684570 #1299]  INFO -- : reaped #<Process::Status: pid 1386 exit 0> worker=0
+I, [2014-01-24T07:20:27.684837 #1299]  INFO -- : reaped #<Process::Status: pid 1389 exit 0> worker=1
+I, [2014-01-24T07:20:27.684947 #1299]  INFO -- : master complete
+I, [2014-01-24T07:20:30.247447 #5568]  INFO -- : Refreshing Gem list
+I, [2014-01-24T07:20:32.844084 #5568]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-24T07:20:32.844488 #5568]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-24T07:20:32.859023 #5568]  INFO -- : master process ready
+I, [2014-01-24T07:20:32.861121 #5574]  INFO -- : worker=0 ready
+I, [2014-01-24T07:20:32.864195 #5577]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-24T07:58:34.638091 #5568]  INFO -- : reaped #<Process::Status: pid 5574 exit 0> worker=0
+I, [2014-01-24T07:58:34.638391 #5568]  INFO -- : reaped #<Process::Status: pid 5577 exit 0> worker=1
+I, [2014-01-24T07:58:34.638502 #5568]  INFO -- : master complete
+I, [2014-01-24T07:58:57.285544 #6153]  INFO -- : Refreshing Gem list
+I, [2014-01-24T07:58:59.866537 #6153]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-24T07:58:59.866957 #6153]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-24T07:58:59.882686 #6159]  INFO -- : worker=0 ready
+I, [2014-01-24T07:58:59.882997 #6153]  INFO -- : master process ready
+I, [2014-01-24T07:58:59.887956 #6162]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-24T08:06:26.332402 #6153]  INFO -- : reaped #<Process::Status: pid 6162 exit 0> worker=1
+I, [2014-01-24T08:06:26.432833 #6153]  INFO -- : reaped #<Process::Status: pid 6159 exit 0> worker=0
+I, [2014-01-24T08:06:26.432959 #6153]  INFO -- : master complete
+I, [2014-01-24T08:06:44.835022 #6491]  INFO -- : Refreshing Gem list
+I, [2014-01-24T08:06:47.486318 #6491]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-24T08:06:47.486752 #6491]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-24T08:06:47.500114 #6491]  INFO -- : master process ready
+I, [2014-01-24T08:06:47.503637 #6497]  INFO -- : worker=0 ready
+I, [2014-01-24T08:06:47.505189 #6500]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-27T00:59:45.452349 #6491]  INFO -- : reaped #<Process::Status: pid 6497 exit 0> worker=0
+I, [2014-01-27T00:59:45.452617 #6491]  INFO -- : reaped #<Process::Status: pid 6500 exit 0> worker=1
+I, [2014-01-27T00:59:45.452721 #6491]  INFO -- : master complete
+I, [2014-01-27T00:59:48.072537 #14712]  INFO -- : Refreshing Gem list
+I, [2014-01-27T00:59:50.743013 #14712]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-27T00:59:50.743443 #14712]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-27T00:59:50.760141 #14712]  INFO -- : master process ready
+I, [2014-01-27T00:59:50.761350 #14718]  INFO -- : worker=0 ready
+I, [2014-01-27T00:59:50.765743 #14721]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-27T01:01:40.440751 #14712]  INFO -- : reaped #<Process::Status: pid 14718 exit 0> worker=0
+I, [2014-01-27T01:01:40.541200 #14712]  INFO -- : reaped #<Process::Status: pid 14721 exit 0> worker=1
+I, [2014-01-27T01:01:40.541360 #14712]  INFO -- : master complete
+I, [2014-01-27T01:01:43.087084 #14874]  INFO -- : Refreshing Gem list
+I, [2014-01-27T01:01:45.684530 #14874]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-27T01:01:45.684936 #14874]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-27T01:01:45.699756 #14874]  INFO -- : master process ready
+I, [2014-01-27T01:01:45.701863 #14880]  INFO -- : worker=0 ready
+I, [2014-01-27T01:01:45.704759 #14883]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-27T04:59:54.406811 #14874]  INFO -- : reaped #<Process::Status: pid 14880 exit 0> worker=0
+I, [2014-01-27T04:59:54.407162 #14874]  INFO -- : reaped #<Process::Status: pid 14883 exit 0> worker=1
+I, [2014-01-27T04:59:54.407282 #14874]  INFO -- : master complete
+I, [2014-01-27T04:59:56.857030 #15705]  INFO -- : Refreshing Gem list
+I, [2014-01-27T04:59:59.496919 #15705]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-27T04:59:59.497422 #15705]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-27T04:59:59.512010 #15705]  INFO -- : master process ready
+I, [2014-01-27T04:59:59.513579 #15711]  INFO -- : worker=0 ready
+I, [2014-01-27T04:59:59.516989 #15714]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-27T05:03:29.468112 #15705]  INFO -- : reaped #<Process::Status: pid 15714 exit 0> worker=1
+I, [2014-01-27T05:03:29.568597 #15705]  INFO -- : reaped #<Process::Status: pid 15711 exit 0> worker=0
+I, [2014-01-27T05:03:29.568733 #15705]  INFO -- : master complete
+I, [2014-01-27T05:03:32.124219 #15894]  INFO -- : Refreshing Gem list
+I, [2014-01-27T05:03:34.718068 #15894]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-27T05:03:34.719389 #15894]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-27T05:03:34.735013 #15894]  INFO -- : master process ready
+I, [2014-01-27T05:03:34.736752 #15900]  INFO -- : worker=0 ready
+I, [2014-01-27T05:03:34.740551 #15903]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-27T05:28:51.071865 #15894]  INFO -- : reaped #<Process::Status: pid 15900 exit 0> worker=0
+I, [2014-01-27T05:28:51.072067 #15894]  INFO -- : reaped #<Process::Status: pid 15903 exit 0> worker=1
+I, [2014-01-27T05:28:51.072178 #15894]  INFO -- : master complete
+I, [2014-01-27T05:28:53.723924 #16107]  INFO -- : Refreshing Gem list
+I, [2014-01-27T05:28:56.334791 #16107]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-27T05:28:56.335195 #16107]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-27T05:28:56.351038 #16107]  INFO -- : master process ready
+I, [2014-01-27T05:28:56.351078 #16113]  INFO -- : worker=0 ready
+I, [2014-01-27T05:28:56.356178 #16116]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-27T05:35:04.297338 #16107]  INFO -- : reaped #<Process::Status: pid 16113 exit 0> worker=0
+I, [2014-01-27T05:35:04.297515 #16107]  INFO -- : reaped #<Process::Status: pid 16116 exit 0> worker=1
+I, [2014-01-27T05:35:04.297695 #16107]  INFO -- : master complete
+I, [2014-01-27T05:35:06.851190 #16272]  INFO -- : Refreshing Gem list
+I, [2014-01-27T05:35:09.509023 #16272]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-27T05:35:09.509500 #16272]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-27T05:35:09.526423 #16278]  INFO -- : worker=0 ready
+I, [2014-01-27T05:35:09.527052 #16272]  INFO -- : master process ready
+I, [2014-01-27T05:35:09.533303 #16281]  INFO -- : worker=1 ready
+I, [2014-01-27T05:37:23.774069 #16272]  INFO -- : reaped #<Process::Status: pid 16278 exit 0> worker=0
+I, [2014-01-27T05:37:23.774244 #16272]  INFO -- : reaped #<Process::Status: pid 16281 exit 0> worker=1
+I, [2014-01-27T05:37:23.774381 #16272]  INFO -- : master complete
+I, [2014-01-27T05:37:26.328358 #16463]  INFO -- : Refreshing Gem list
+I, [2014-01-27T05:37:28.938793 #16463]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-27T05:37:28.939231 #16463]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-27T05:37:28.955018 #16463]  INFO -- : master process ready
+I, [2014-01-27T05:37:28.955522 #16469]  INFO -- : worker=0 ready
+I, [2014-01-27T05:37:28.961876 #16472]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-27T05:48:30.361013 #16463]  INFO -- : reaped #<Process::Status: pid 16469 exit 0> worker=0
+I, [2014-01-27T05:48:30.361243 #16463]  INFO -- : reaped #<Process::Status: pid 16472 exit 0> worker=1
+I, [2014-01-27T05:48:30.361367 #16463]  INFO -- : master complete
+I, [2014-01-27T05:48:32.914280 #16701]  INFO -- : Refreshing Gem list
+I, [2014-01-27T05:48:35.517310 #16701]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-27T05:48:35.517754 #16701]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-27T05:48:35.535945 #16701]  INFO -- : master process ready
+I, [2014-01-27T05:48:35.536906 #16707]  INFO -- : worker=0 ready
+I, [2014-01-27T05:48:35.541459 #16710]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-27T06:15:27.715412 #16701]  INFO -- : reaped #<Process::Status: pid 16707 exit 0> worker=0
+I, [2014-01-27T06:15:27.815934 #16701]  INFO -- : reaped #<Process::Status: pid 16710 exit 0> worker=1
+I, [2014-01-27T06:15:27.816138 #16701]  INFO -- : master complete
+I, [2014-01-27T06:15:30.370102 #16986]  INFO -- : Refreshing Gem list
+I, [2014-01-27T06:15:33.009616 #16986]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-27T06:15:33.010036 #16986]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-27T06:15:33.023089 #16986]  INFO -- : master process ready
+I, [2014-01-27T06:15:33.025746 #16992]  INFO -- : worker=0 ready
+I, [2014-01-27T06:15:33.028215 #16995]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-27T06:31:13.065086 #16986]  INFO -- : reaped #<Process::Status: pid 16992 exit 0> worker=0
+I, [2014-01-27T06:31:13.065345 #16986]  INFO -- : reaped #<Process::Status: pid 16995 exit 0> worker=1
+I, [2014-01-27T06:31:13.065470 #16986]  INFO -- : master complete
+I, [2014-01-27T06:31:15.715429 #17241]  INFO -- : Refreshing Gem list
+I, [2014-01-27T06:31:18.291915 #17241]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-27T06:31:18.292342 #17241]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-27T06:31:18.307164 #17241]  INFO -- : master process ready
+I, [2014-01-27T06:31:18.309199 #17247]  INFO -- : worker=0 ready
+I, [2014-01-27T06:31:18.312444 #17250]  INFO -- : worker=1 ready
+I, [2014-01-27T06:31:30.559865 #17241]  INFO -- : reaped #<Process::Status: pid 17247 exit 0> worker=0
+I, [2014-01-27T06:31:30.560036 #17241]  INFO -- : reaped #<Process::Status: pid 17250 exit 0> worker=1
+I, [2014-01-27T06:31:30.560145 #17241]  INFO -- : master complete
+I, [2014-01-27T06:31:33.114700 #17382]  INFO -- : Refreshing Gem list
+I, [2014-01-27T06:31:35.682482 #17382]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-27T06:31:35.682887 #17382]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-27T06:31:35.699031 #17382]  INFO -- : master process ready
+I, [2014-01-27T06:31:35.699423 #17388]  INFO -- : worker=0 ready
+I, [2014-01-27T06:31:35.704161 #17391]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-27T06:43:39.689827 #17382]  INFO -- : reaped #<Process::Status: pid 17388 exit 0> worker=0
+I, [2014-01-27T06:43:39.690016 #17382]  INFO -- : reaped #<Process::Status: pid 17391 exit 0> worker=1
+I, [2014-01-27T06:43:39.690196 #17382]  INFO -- : master complete
+I, [2014-01-27T06:43:42.236291 #17593]  INFO -- : Refreshing Gem list
+I, [2014-01-27T06:43:44.838055 #17593]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-27T06:43:44.839550 #17593]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-27T06:43:44.854977 #17593]  INFO -- : master process ready
+I, [2014-01-27T06:43:44.855984 #17599]  INFO -- : worker=0 ready
+I, [2014-01-27T06:43:44.861964 #17602]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-27T06:49:05.137699 #17593]  INFO -- : reaped #<Process::Status: pid 17599 exit 0> worker=0
+I, [2014-01-27T06:49:05.137864 #17593]  INFO -- : reaped #<Process::Status: pid 17602 exit 0> worker=1
+I, [2014-01-27T06:49:05.138058 #17593]  INFO -- : master complete
+I, [2014-01-27T06:49:07.783440 #17901]  INFO -- : Refreshing Gem list
+I, [2014-01-27T06:49:10.381573 #17901]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-27T06:49:10.381995 #17901]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-27T06:49:10.399129 #17901]  INFO -- : master process ready
+I, [2014-01-27T06:49:10.399150 #17907]  INFO -- : worker=0 ready
+I, [2014-01-27T06:49:10.404345 #17910]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-27T22:27:54.110695 #17901]  INFO -- : reaped #<Process::Status: pid 17907 exit 0> worker=0
+I, [2014-01-27T22:27:54.111464 #17901]  INFO -- : reaped #<Process::Status: pid 17910 exit 0> worker=1
+I, [2014-01-27T22:27:54.111584 #17901]  INFO -- : master complete
+I, [2014-01-27T22:28:15.268276 #29313]  INFO -- : Refreshing Gem list
+I, [2014-01-27T22:28:17.864515 #29313]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-27T22:28:17.866146 #29313]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-27T22:28:17.880145 #29313]  INFO -- : master process ready
+I, [2014-01-27T22:28:17.883700 #29319]  INFO -- : worker=0 ready
+I, [2014-01-27T22:28:17.885151 #29322]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-28T00:17:23.751014 #29313]  INFO -- : reaped #<Process::Status: pid 29319 exit 0> worker=0
+I, [2014-01-28T00:17:23.751274 #29313]  INFO -- : reaped #<Process::Status: pid 29322 exit 0> worker=1
+I, [2014-01-28T00:17:23.751389 #29313]  INFO -- : master complete
+I, [2014-01-28T00:17:39.635458 #31567]  INFO -- : Refreshing Gem list
+I, [2014-01-28T00:17:42.243368 #31567]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-28T00:17:42.243789 #31567]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-28T00:17:42.259054 #31567]  INFO -- : master process ready
+I, [2014-01-28T00:17:42.261377 #31573]  INFO -- : worker=0 ready
+I, [2014-01-28T00:17:42.264512 #31576]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-28T00:38:29.742359 #31567]  INFO -- : reaped #<Process::Status: pid 31573 exit 0> worker=0
+I, [2014-01-28T00:38:29.842767 #31567]  INFO -- : reaped #<Process::Status: pid 31576 exit 0> worker=1
+I, [2014-01-28T00:38:29.842961 #31567]  INFO -- : master complete
+I, [2014-01-28T00:38:51.450511 #32212]  INFO -- : Refreshing Gem list
+I, [2014-01-28T00:38:54.082115 #32212]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-28T00:38:54.082555 #32212]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-28T00:38:54.095454 #32212]  INFO -- : master process ready
+I, [2014-01-28T00:38:54.099605 #32218]  INFO -- : worker=0 ready
+I, [2014-01-28T00:38:54.100739 #32221]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-28T03:05:11.562029 #32212]  INFO -- : reaped #<Process::Status: pid 32218 exit 0> worker=0
+I, [2014-01-28T03:05:11.562337 #32212]  INFO -- : reaped #<Process::Status: pid 32221 exit 0> worker=1
+I, [2014-01-28T03:05:11.562486 #32212]  INFO -- : master complete
+I, [2014-01-28T03:05:14.122354 #2541]  INFO -- : Refreshing Gem list
+I, [2014-01-28T03:05:16.763346 #2541]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-28T03:05:16.763839 #2541]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-28T03:05:16.777233 #2541]  INFO -- : master process ready
+I, [2014-01-28T03:05:16.781391 #2547]  INFO -- : worker=0 ready
+I, [2014-01-28T03:05:16.783562 #2550]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-28T04:16:03.161862 #2541]  INFO -- : reaped #<Process::Status: pid 2547 exit 0> worker=0
+I, [2014-01-28T04:16:03.162117 #2541]  INFO -- : reaped #<Process::Status: pid 2550 exit 0> worker=1
+I, [2014-01-28T04:16:03.162227 #2541]  INFO -- : master complete
+I, [2014-01-28T04:21:08.308684 #4315]  INFO -- : Refreshing Gem list
+I, [2014-01-28T04:21:10.931455 #4315]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-28T04:21:10.931875 #4315]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-28T04:21:10.945085 #4315]  INFO -- : master process ready
+I, [2014-01-28T04:21:10.949948 #4322]  INFO -- : worker=0 ready
+I, [2014-01-28T04:21:10.950589 #4325]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-28T04:52:09.955739 #4315]  INFO -- : reaped #<Process::Status: pid 4322 exit 0> worker=0
+I, [2014-01-28T04:52:09.955952 #4315]  INFO -- : reaped #<Process::Status: pid 4325 exit 0> worker=1
+I, [2014-01-28T04:52:09.956066 #4315]  INFO -- : master complete
+I, [2014-01-28T04:52:12.496472 #5156]  INFO -- : Refreshing Gem list
+I, [2014-01-28T04:52:15.120835 #5156]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-28T04:52:15.121297 #5156]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-28T04:52:15.138743 #5164]  INFO -- : worker=0 ready
+I, [2014-01-28T04:52:15.139037 #5156]  INFO -- : master process ready
+I, [2014-01-28T04:52:15.144417 #5167]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-28T05:15:55.432870 #5156]  INFO -- : reaped #<Process::Status: pid 5164 exit 0> worker=0
+I, [2014-01-28T05:15:55.433092 #5156]  INFO -- : reaped #<Process::Status: pid 5167 exit 0> worker=1
+I, [2014-01-28T05:15:55.433229 #5156]  INFO -- : master complete
+I, [2014-01-28T05:15:57.983830 #5769]  INFO -- : Refreshing Gem list
+I, [2014-01-28T05:16:00.570473 #5769]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-28T05:16:00.571107 #5769]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-28T05:16:00.587090 #5769]  INFO -- : master process ready
+I, [2014-01-28T05:16:00.588334 #5775]  INFO -- : worker=0 ready
+I, [2014-01-28T05:16:00.594364 #5778]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-28T05:21:19.510673 #5769]  INFO -- : reaped #<Process::Status: pid 5775 exit 0> worker=0
+I, [2014-01-28T05:21:19.510833 #5769]  INFO -- : reaped #<Process::Status: pid 5778 exit 0> worker=1
+I, [2014-01-28T05:21:19.510945 #5769]  INFO -- : master complete
+I, [2014-01-28T05:21:22.062676 #6131]  INFO -- : Refreshing Gem list
+I, [2014-01-28T05:21:24.683555 #6131]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-28T05:21:24.684887 #6131]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-28T05:21:24.699826 #6131]  INFO -- : master process ready
+I, [2014-01-28T05:21:24.706017 #6142]  INFO -- : worker=1 ready
+I, [2014-01-28T05:21:24.707433 #6139]  INFO -- : worker=0 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-28T05:25:31.490433 #6131]  INFO -- : reaped #<Process::Status: pid 6139 exit 0> worker=0
+I, [2014-01-28T05:25:31.490585 #6131]  INFO -- : reaped #<Process::Status: pid 6142 exit 0> worker=1
+I, [2014-01-28T05:25:31.490694 #6131]  INFO -- : master complete
+I, [2014-01-28T05:25:34.056528 #6430]  INFO -- : Refreshing Gem list
+I, [2014-01-28T05:25:36.903193 #6430]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-28T05:25:36.903608 #6430]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-28T05:25:36.917934 #6430]  INFO -- : master process ready
+I, [2014-01-28T05:25:36.921347 #6436]  INFO -- : worker=0 ready
+I, [2014-01-28T05:25:36.924504 #6439]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-28T05:44:51.020942 #6430]  INFO -- : reaped #<Process::Status: pid 6436 exit 0> worker=0
+I, [2014-01-28T05:44:51.021137 #6430]  INFO -- : reaped #<Process::Status: pid 6439 exit 0> worker=1
+I, [2014-01-28T05:44:51.021323 #6430]  INFO -- : master complete
+I, [2014-01-28T05:44:53.565855 #6920]  INFO -- : Refreshing Gem list
+I, [2014-01-28T05:44:56.178767 #6920]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-28T05:44:56.179202 #6920]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-28T05:44:56.194982 #6920]  INFO -- : master process ready
+I, [2014-01-28T05:44:56.195949 #6928]  INFO -- : worker=0 ready
+I, [2014-01-28T05:44:56.200233 #6931]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-28T06:51:05.356540 #6920]  INFO -- : reaped #<Process::Status: pid 6928 exit 0> worker=0
+I, [2014-01-28T06:51:05.356763 #6920]  INFO -- : reaped #<Process::Status: pid 6931 exit 0> worker=1
+I, [2014-01-28T06:51:05.356878 #6920]  INFO -- : master complete
+I, [2014-01-28T06:51:23.749628 #9081]  INFO -- : Refreshing Gem list
+I, [2014-01-28T06:51:26.361382 #9081]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-28T06:51:26.361814 #9081]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-28T06:51:26.378768 #9087]  INFO -- : worker=0 ready
+I, [2014-01-28T06:51:26.378942 #9081]  INFO -- : master process ready
+I, [2014-01-28T06:51:26.384531 #9090]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-28T07:14:29.933147 #9081]  INFO -- : reaped #<Process::Status: pid 9087 exit 0> worker=0
+I, [2014-01-28T07:14:29.933501 #9081]  INFO -- : reaped #<Process::Status: pid 9090 exit 0> worker=1
+I, [2014-01-28T07:14:29.933618 #9081]  INFO -- : master complete
+I, [2014-01-28T07:14:49.517022 #9404]  INFO -- : Refreshing Gem list
+I, [2014-01-28T07:14:52.147842 #9404]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-28T07:14:52.148308 #9404]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-28T07:14:52.161116 #9404]  INFO -- : master process ready
+I, [2014-01-28T07:14:52.164486 #9410]  INFO -- : worker=0 ready
+I, [2014-01-28T07:14:52.165912 #9413]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-28T07:43:40.998068 #9404]  INFO -- : reaped #<Process::Status: pid 9410 exit 0> worker=0
+I, [2014-01-28T07:43:40.998285 #9404]  INFO -- : reaped #<Process::Status: pid 9413 exit 0> worker=1
+I, [2014-01-28T07:43:40.998418 #9404]  INFO -- : master complete
+I, [2014-01-28T07:44:00.914048 #9757]  INFO -- : Refreshing Gem list
+I, [2014-01-28T07:44:03.554301 #9757]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-28T07:44:03.554746 #9757]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-28T07:44:03.568198 #9757]  INFO -- : master process ready
+I, [2014-01-28T07:44:03.572886 #9763]  INFO -- : worker=0 ready
+I, [2014-01-28T07:44:03.573575 #9766]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-29T05:19:54.755245 #9757]  INFO -- : reaped #<Process::Status: pid 9763 exit 0> worker=0
+I, [2014-01-29T05:19:54.755505 #9757]  INFO -- : reaped #<Process::Status: pid 9766 exit 0> worker=1
+I, [2014-01-29T05:19:54.755623 #9757]  INFO -- : master complete
+I, [2014-01-29T05:19:57.208146 #13787]  INFO -- : Refreshing Gem list
+I, [2014-01-29T05:19:59.864518 #13787]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-29T05:19:59.864945 #13787]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-29T05:19:59.878961 #13787]  INFO -- : master process ready
+I, [2014-01-29T05:19:59.882270 #13793]  INFO -- : worker=0 ready
+I, [2014-01-29T05:19:59.883883 #13796]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-29T05:24:01.039046 #13787]  INFO -- : reaped #<Process::Status: pid 13793 exit 0> worker=0
+I, [2014-01-29T05:24:01.039225 #13787]  INFO -- : reaped #<Process::Status: pid 13796 exit 0> worker=1
+I, [2014-01-29T05:24:01.039337 #13787]  INFO -- : master complete
+I, [2014-01-29T05:24:03.595599 #13956]  INFO -- : Refreshing Gem list
+I, [2014-01-29T05:24:06.274764 #13956]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-29T05:24:06.275240 #13956]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-29T05:24:06.287733 #13956]  INFO -- : master process ready
+I, [2014-01-29T05:24:06.291245 #13962]  INFO -- : worker=0 ready
+I, [2014-01-29T05:24:06.292454 #13965]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-29T05:34:21.755568 #13956]  INFO -- : reaped #<Process::Status: pid 13962 exit 0> worker=0
+I, [2014-01-29T05:34:21.855980 #13956]  INFO -- : reaped #<Process::Status: pid 13965 exit 0> worker=1
+I, [2014-01-29T05:34:21.856114 #13956]  INFO -- : master complete
+I, [2014-01-29T05:34:24.299928 #15792]  INFO -- : Refreshing Gem list
+I, [2014-01-29T05:34:26.927463 #15792]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-01-29T05:34:26.927882 #15792]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-01-29T05:34:26.943175 #15792]  INFO -- : master process ready
+I, [2014-01-29T05:34:26.944966 #15798]  INFO -- : worker=0 ready
+I, [2014-01-29T05:34:26.948270 #15801]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-07T00:13:42.886916 #15792]  INFO -- : reaped #<Process::Status: pid 15798 exit 0> worker=0
+I, [2014-02-07T00:13:42.887540 #15792]  INFO -- : reaped #<Process::Status: pid 15801 exit 0> worker=1
+I, [2014-02-07T00:13:42.887666 #15792]  INFO -- : master complete
+I, [2014-02-07T00:14:00.422573 #21028]  INFO -- : Refreshing Gem list
+I, [2014-02-07T00:14:03.065733 #21028]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-07T00:14:03.066180 #21028]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-07T00:14:03.080796 #21028]  INFO -- : master process ready
+I, [2014-02-07T00:14:03.083002 #21034]  INFO -- : worker=0 ready
+I, [2014-02-07T00:14:03.086247 #21037]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-07T01:05:31.138731 #21028]  INFO -- : reaped #<Process::Status: pid 21034 exit 0> worker=0
+I, [2014-02-07T01:05:31.239271 #21028]  INFO -- : reaped #<Process::Status: pid 21037 exit 0> worker=1
+I, [2014-02-07T01:05:31.239390 #21028]  INFO -- : master complete
+I, [2014-02-07T01:05:49.831510 #21969]  INFO -- : Refreshing Gem list
+I, [2014-02-07T01:05:52.488731 #21969]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-07T01:05:52.489156 #21969]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-07T01:05:52.506369 #21976]  INFO -- : worker=0 ready
+I, [2014-02-07T01:05:52.507286 #21969]  INFO -- : master process ready
+I, [2014-02-07T01:05:52.512206 #21979]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-12T05:52:44.473562 #21969]  INFO -- : reaped #<Process::Status: pid 21976 exit 0> worker=0
+I, [2014-02-12T05:52:44.474324 #21969]  INFO -- : reaped #<Process::Status: pid 21979 exit 0> worker=1
+I, [2014-02-12T05:52:44.474446 #21969]  INFO -- : master complete
+I, [2014-02-12T05:52:46.925311 #13499]  INFO -- : Refreshing Gem list
+I, [2014-02-12T05:52:49.580423 #13499]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-12T05:52:49.580830 #13499]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-12T05:52:49.595224 #13499]  INFO -- : master process ready
+I, [2014-02-12T05:52:49.597643 #13505]  INFO -- : worker=0 ready
+I, [2014-02-12T05:52:49.600489 #13508]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-12T07:48:31.263999 #13499]  INFO -- : reaped #<Process::Status: pid 13505 exit 0> worker=0
+I, [2014-02-12T07:48:31.264271 #13499]  INFO -- : reaped #<Process::Status: pid 13508 exit 0> worker=1
+I, [2014-02-12T07:48:31.264381 #13499]  INFO -- : master complete
+I, [2014-02-12T07:48:56.920405 #1417]  INFO -- : Refreshing Gem list
+I, [2014-02-12T07:49:05.407434 #1417]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-12T07:49:05.408262 #1417]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-12T07:49:05.474634 #1417]  INFO -- : master process ready
+I, [2014-02-12T07:49:05.492128 #1518]  INFO -- : worker=1 ready
+I, [2014-02-12T07:49:05.492120 #1515]  INFO -- : worker=0 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-12T22:35:08.113212 #1417]  INFO -- : reaped #<Process::Status: pid 1515 exit 0> worker=0
+I, [2014-02-12T22:35:08.113558 #1417]  INFO -- : reaped #<Process::Status: pid 1518 exit 0> worker=1
+I, [2014-02-12T22:35:08.113697 #1417]  INFO -- : master complete
+I, [2014-02-12T22:35:34.782210 #5119]  INFO -- : Refreshing Gem list
+I, [2014-02-12T22:35:37.367474 #5119]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-12T22:35:37.367925 #5119]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-12T22:35:37.382226 #5119]  INFO -- : master process ready
+I, [2014-02-12T22:35:37.384547 #5125]  INFO -- : worker=0 ready
+I, [2014-02-12T22:35:37.387126 #5128]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-13T00:18:45.055915 #5119]  INFO -- : reaped #<Process::Status: pid 5125 exit 0> worker=0
+I, [2014-02-13T00:18:45.156476 #5119]  INFO -- : reaped #<Process::Status: pid 5128 exit 0> worker=1
+I, [2014-02-13T00:18:45.156592 #5119]  INFO -- : master complete
+I, [2014-02-13T00:19:02.670663 #6025]  INFO -- : Refreshing Gem list
+I, [2014-02-13T00:19:05.318856 #6025]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-13T00:19:05.319340 #6025]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-13T00:19:05.333796 #6025]  INFO -- : master process ready
+I, [2014-02-13T00:19:05.335579 #6031]  INFO -- : worker=0 ready
+I, [2014-02-13T00:19:05.338961 #6034]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-13T04:06:46.791005 #6025]  INFO -- : reaped #<Process::Status: pid 6031 exit 0> worker=0
+I, [2014-02-13T04:06:46.791455 #6025]  INFO -- : reaped #<Process::Status: pid 6034 exit 0> worker=1
+I, [2014-02-13T04:06:46.791575 #6025]  INFO -- : master complete
+I, [2014-02-13T04:06:49.368550 #7296]  INFO -- : Refreshing Gem list
+I, [2014-02-13T04:06:52.007825 #7296]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-13T04:06:52.008275 #7296]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-13T04:06:52.021535 #7296]  INFO -- : master process ready
+I, [2014-02-13T04:06:52.023859 #7302]  INFO -- : worker=0 ready
+I, [2014-02-13T04:06:52.026923 #7305]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-14T03:51:31.781957 #7296]  INFO -- : reaped #<Process::Status: pid 7302 exit 0> worker=0
+I, [2014-02-14T03:51:31.782472 #7296]  INFO -- : reaped #<Process::Status: pid 7305 exit 0> worker=1
+I, [2014-02-14T03:51:31.782603 #7296]  INFO -- : master complete
+I, [2014-02-14T03:51:34.241902 #12798]  INFO -- : Refreshing Gem list
+I, [2014-02-14T03:51:36.884641 #12798]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-14T03:51:36.885082 #12798]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-14T03:51:36.898443 #12798]  INFO -- : master process ready
+I, [2014-02-14T03:51:36.903092 #12804]  INFO -- : worker=0 ready
+I, [2014-02-14T03:51:36.904115 #12807]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-14T03:59:19.768526 #12798]  INFO -- : reaped #<Process::Status: pid 12804 exit 0> worker=0
+I, [2014-02-14T03:59:19.869112 #12798]  INFO -- : reaped #<Process::Status: pid 12807 exit 0> worker=1
+I, [2014-02-14T03:59:19.869349 #12798]  INFO -- : master complete
+I, [2014-02-14T03:59:22.429173 #13041]  INFO -- : Refreshing Gem list
+I, [2014-02-14T03:59:25.038576 #13041]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-14T03:59:25.038992 #13041]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-14T03:59:25.053385 #13041]  INFO -- : master process ready
+I, [2014-02-14T03:59:25.056137 #13047]  INFO -- : worker=0 ready
+I, [2014-02-14T03:59:25.058060 #13050]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-17T01:06:35.903632 #13041]  INFO -- : reaped #<Process::Status: pid 13047 exit 0> worker=0
+I, [2014-02-17T01:06:35.904511 #13041]  INFO -- : reaped #<Process::Status: pid 13050 exit 0> worker=1
+I, [2014-02-17T01:06:35.904655 #13041]  INFO -- : master complete
+I, [2014-02-17T01:06:53.548118 #28386]  INFO -- : Refreshing Gem list
+I, [2014-02-17T01:06:56.193763 #28386]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-17T01:06:56.194213 #28386]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-17T01:06:56.209639 #28386]  INFO -- : master process ready
+I, [2014-02-17T01:06:56.210778 #28392]  INFO -- : worker=0 ready
+I, [2014-02-17T01:06:56.217192 #28395]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-23T22:09:15.033398 #28386]  INFO -- : reaped #<Process::Status: pid 28392 exit 0> worker=0
+I, [2014-02-23T22:09:15.033843 #28386]  INFO -- : reaped #<Process::Status: pid 28395 exit 0> worker=1
+I, [2014-02-23T22:09:15.033974 #28386]  INFO -- : master complete
+I, [2014-02-23T22:09:34.188833 #28825]  INFO -- : Refreshing Gem list
+I, [2014-02-23T22:09:36.847179 #28825]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-23T22:09:36.847632 #28825]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-23T22:09:36.865599 #28825]  INFO -- : master process ready
+I, [2014-02-23T22:09:36.865712 #28831]  INFO -- : worker=0 ready
+I, [2014-02-23T22:09:36.870931 #28834]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-23T22:58:08.928190 #28825]  INFO -- : reaped #<Process::Status: pid 28831 exit 0> worker=0
+I, [2014-02-23T22:58:09.028679 #28825]  INFO -- : reaped #<Process::Status: pid 28834 exit 0> worker=1
+I, [2014-02-23T22:58:09.028800 #28825]  INFO -- : master complete
+I, [2014-02-23T22:58:24.647452 #29504]  INFO -- : Refreshing Gem list
+I, [2014-02-23T22:58:27.281064 #29504]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-23T22:58:27.281492 #29504]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-23T22:58:27.297668 #29504]  INFO -- : master process ready
+I, [2014-02-23T22:58:27.298383 #29510]  INFO -- : worker=0 ready
+I, [2014-02-23T22:58:27.302660 #29513]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-24T02:08:04.997850 #29504]  INFO -- : reaped #<Process::Status: pid 29510 exit 0> worker=0
+I, [2014-02-24T02:08:04.998115 #29504]  INFO -- : reaped #<Process::Status: pid 29513 exit 0> worker=1
+I, [2014-02-24T02:08:04.998263 #29504]  INFO -- : master complete
+I, [2014-02-24T02:08:20.610737 #30691]  INFO -- : Refreshing Gem list
+I, [2014-02-24T02:08:23.214826 #30691]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-24T02:08:23.215251 #30691]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-24T02:08:23.233715 #30691]  INFO -- : master process ready
+I, [2014-02-24T02:08:23.237260 #30697]  INFO -- : worker=0 ready
+I, [2014-02-24T02:08:23.238835 #30700]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-24T02:49:03.850426 #30691]  INFO -- : reaped #<Process::Status: pid 30697 exit 0> worker=0
+I, [2014-02-24T02:49:03.850644 #30691]  INFO -- : reaped #<Process::Status: pid 30700 exit 0> worker=1
+I, [2014-02-24T02:49:03.851432 #30691]  INFO -- : master complete
+I, [2014-02-24T02:49:19.015213 #31362]  INFO -- : Refreshing Gem list
+I, [2014-02-24T02:49:21.675553 #31362]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-24T02:49:21.676044 #31362]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-24T02:49:21.693083 #31368]  INFO -- : worker=0 ready
+I, [2014-02-24T02:49:21.693507 #31362]  INFO -- : master process ready
+I, [2014-02-24T02:49:21.698512 #31371]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-24T02:59:07.512117 #31362]  INFO -- : reaped #<Process::Status: pid 31368 exit 0> worker=0
+I, [2014-02-24T02:59:07.512302 #31362]  INFO -- : reaped #<Process::Status: pid 31371 exit 0> worker=1
+I, [2014-02-24T02:59:07.512410 #31362]  INFO -- : master complete
+I, [2014-02-24T02:59:23.359873 #31668]  INFO -- : Refreshing Gem list
+I, [2014-02-24T02:59:26.027089 #31668]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-24T02:59:26.027523 #31668]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-24T02:59:26.041628 #31668]  INFO -- : master process ready
+I, [2014-02-24T02:59:26.044004 #31674]  INFO -- : worker=0 ready
+I, [2014-02-24T02:59:26.047095 #31677]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-24T03:12:31.537370 #31668]  INFO -- : reaped #<Process::Status: pid 31674 exit 0> worker=0
+I, [2014-02-24T03:12:31.639494 #31668]  INFO -- : reaped #<Process::Status: pid 31677 exit 0> worker=1
+I, [2014-02-24T03:12:31.639618 #31668]  INFO -- : master complete
+I, [2014-02-24T03:12:48.114409 #32022]  INFO -- : Refreshing Gem list
+I, [2014-02-24T03:12:50.761964 #32022]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-24T03:12:50.762426 #32022]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-24T03:12:50.777673 #32022]  INFO -- : master process ready
+I, [2014-02-24T03:12:50.779668 #32028]  INFO -- : worker=0 ready
+I, [2014-02-24T03:12:50.782425 #32031]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-25T00:34:38.773422 #32022]  INFO -- : reaped #<Process::Status: pid 32028 exit 0> worker=0
+I, [2014-02-25T00:34:38.773753 #32022]  INFO -- : reaped #<Process::Status: pid 32031 exit 0> worker=1
+I, [2014-02-25T00:34:38.773865 #32022]  INFO -- : master complete
+I, [2014-02-25T00:34:41.230000 #5248]  INFO -- : Refreshing Gem list
+I, [2014-02-25T00:34:43.874577 #5248]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-25T00:34:43.875038 #5248]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-25T00:34:43.889642 #5248]  INFO -- : master process ready
+I, [2014-02-25T00:34:43.891328 #5254]  INFO -- : worker=0 ready
+I, [2014-02-25T00:34:43.894929 #5257]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-25T02:01:42.124592 #5248]  INFO -- : reaped #<Process::Status: pid 5254 exit 0> worker=0
+I, [2014-02-25T02:01:42.124884 #5248]  INFO -- : reaped #<Process::Status: pid 5257 exit 0> worker=1
+I, [2014-02-25T02:01:42.124998 #5248]  INFO -- : master complete
+I, [2014-02-25T02:02:24.880609 #6079]  INFO -- : Refreshing Gem list
+I, [2014-02-25T02:02:27.525157 #6079]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-25T02:02:27.525589 #6079]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-25T02:02:27.539936 #6079]  INFO -- : master process ready
+I, [2014-02-25T02:02:27.544593 #6086]  INFO -- : worker=0 ready
+I, [2014-02-25T02:02:27.545528 #6089]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-25T02:08:35.935249 #6079]  INFO -- : reaped #<Process::Status: pid 6086 exit 0> worker=0
+I, [2014-02-25T02:08:35.935396 #6079]  INFO -- : reaped #<Process::Status: pid 6089 exit 0> worker=1
+I, [2014-02-25T02:08:35.935763 #6079]  INFO -- : master complete
+I, [2014-02-25T02:08:49.401106 #6380]  INFO -- : Refreshing Gem list
+I, [2014-02-25T02:08:52.017473 #6380]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-25T02:08:52.017916 #6380]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-25T02:08:52.033630 #6380]  INFO -- : master process ready
+I, [2014-02-25T02:08:52.034799 #6386]  INFO -- : worker=0 ready
+I, [2014-02-25T02:08:52.039350 #6389]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-25T04:02:03.813493 #6380]  INFO -- : reaped #<Process::Status: pid 6386 exit 0> worker=0
+I, [2014-02-25T04:02:03.914156 #6380]  INFO -- : reaped #<Process::Status: pid 6389 exit 0> worker=1
+I, [2014-02-25T04:02:03.914281 #6380]  INFO -- : master complete
+I, [2014-02-25T04:02:06.463513 #7204]  INFO -- : Refreshing Gem list
+I, [2014-02-25T04:02:09.083518 #7204]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-25T04:02:09.083944 #7204]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-25T04:02:09.096717 #7204]  INFO -- : master process ready
+I, [2014-02-25T04:02:09.100223 #7212]  INFO -- : worker=0 ready
+I, [2014-02-25T04:02:09.102327 #7215]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-02-25T04:19:02.601581 #7204]  INFO -- : reaped #<Process::Status: pid 7212 exit 0> worker=0
+I, [2014-02-25T04:19:02.601815 #7204]  INFO -- : reaped #<Process::Status: pid 7215 exit 0> worker=1
+I, [2014-02-25T04:19:02.601927 #7204]  INFO -- : master complete
+I, [2014-02-25T04:19:05.147788 #7452]  INFO -- : Refreshing Gem list
+I, [2014-02-25T04:19:07.775653 #7452]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-02-25T04:19:07.776726 #7452]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-02-25T04:19:07.789434 #7452]  INFO -- : master process ready
+I, [2014-02-25T04:19:07.793749 #7458]  INFO -- : worker=0 ready
+I, [2014-02-25T04:19:07.794450 #7461]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-03-10T00:40:49.411136 #7452]  INFO -- : reaped #<Process::Status: pid 7458 exit 0> worker=0
+I, [2014-03-10T00:40:49.411712 #7452]  INFO -- : reaped #<Process::Status: pid 7461 exit 0> worker=1
+I, [2014-03-10T00:40:49.411869 #7452]  INFO -- : master complete
+I, [2014-03-10T00:41:06.974117 #14877]  INFO -- : Refreshing Gem list
+I, [2014-03-10T00:41:09.677836 #14877]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-03-10T00:41:09.678294 #14877]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-03-10T00:41:09.694166 #14877]  INFO -- : master process ready
+I, [2014-03-10T00:41:09.696821 #14883]  INFO -- : worker=0 ready
+I, [2014-03-10T00:41:09.699541 #14886]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-03-10T01:34:05.022108 #14877]  INFO -- : reaped #<Process::Status: pid 14886 exit 0> worker=1
+I, [2014-03-10T01:34:05.122671 #14877]  INFO -- : reaped #<Process::Status: pid 14883 exit 0> worker=0
+I, [2014-03-10T01:34:05.122878 #14877]  INFO -- : master complete
+I, [2014-03-10T01:34:20.844394 #15659]  INFO -- : Refreshing Gem list
+I, [2014-03-10T01:34:23.476757 #15659]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-03-10T01:34:23.477208 #15659]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-03-10T01:34:23.495292 #15659]  INFO -- : master process ready
+I, [2014-03-10T01:34:23.496599 #15665]  INFO -- : worker=0 ready
+I, [2014-03-10T01:34:23.501014 #15668]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-03-11T07:46:27.693044 #15659]  INFO -- : reaped #<Process::Status: pid 15665 exit 0> worker=0
+I, [2014-03-11T07:46:27.693493 #15659]  INFO -- : reaped #<Process::Status: pid 15668 exit 0> worker=1
+I, [2014-03-11T07:46:27.693651 #15659]  INFO -- : master complete
+I, [2014-03-11T07:46:30.154290 #22270]  INFO -- : Refreshing Gem list
+I, [2014-03-11T07:46:32.768507 #22270]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-03-11T07:46:32.768920 #22270]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-03-11T07:46:32.782920 #22270]  INFO -- : master process ready
+I, [2014-03-11T07:46:32.786563 #22276]  INFO -- : worker=0 ready
+I, [2014-03-11T07:46:32.787914 #22279]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-03-31T22:32:46.402640 #1314]  INFO -- : Refreshing Gem list
+I, [2014-03-31T22:32:49.877507 #1314]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-03-31T22:32:49.877934 #1314]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-03-31T22:32:49.917295 #1314]  INFO -- : master process ready
+I, [2014-03-31T22:32:49.922308 #1510]  INFO -- : worker=0 ready
+I, [2014-03-31T22:32:49.923620 #1513]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-04-01T04:56:19.487399 #1314]  INFO -- : reaped #<Process::Status: pid 1510 exit 0> worker=0
+I, [2014-04-01T04:56:19.588094 #1314]  INFO -- : reaped #<Process::Status: pid 1513 exit 0> worker=1
+I, [2014-04-01T04:56:19.588284 #1314]  INFO -- : master complete
+I, [2014-04-01T04:56:22.044544 #3449]  INFO -- : Refreshing Gem list
+I, [2014-04-01T04:56:24.716017 #3449]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-04-01T04:56:24.716455 #3449]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-04-01T04:56:24.732086 #3449]  INFO -- : master process ready
+I, [2014-04-01T04:56:24.734502 #3455]  INFO -- : worker=0 ready
+I, [2014-04-01T04:56:24.737557 #3458]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-04-01T04:59:38.759765 #3449]  INFO -- : reaped #<Process::Status: pid 3455 exit 0> worker=0
+I, [2014-04-01T04:59:38.759935 #3449]  INFO -- : reaped #<Process::Status: pid 3458 exit 0> worker=1
+I, [2014-04-01T04:59:38.760045 #3449]  INFO -- : master complete
+I, [2014-04-01T04:59:41.305075 #3593]  INFO -- : Refreshing Gem list
+I, [2014-04-01T04:59:43.948241 #3593]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-04-01T04:59:43.948679 #3593]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-04-01T04:59:43.963926 #3593]  INFO -- : master process ready
+I, [2014-04-01T04:59:43.964433 #3599]  INFO -- : worker=0 ready
+I, [2014-04-01T04:59:43.969043 #3602]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-04-01T05:02:46.608140 #3593]  INFO -- : reaped #<Process::Status: pid 3599 exit 0> worker=0
+I, [2014-04-01T05:02:46.608382 #3593]  INFO -- : reaped #<Process::Status: pid 3602 exit 0> worker=1
+I, [2014-04-01T05:02:46.608586 #3593]  INFO -- : master complete
+I, [2014-04-01T05:02:49.161282 #3823]  INFO -- : Refreshing Gem list
+I, [2014-04-01T05:02:51.812896 #3823]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-04-01T05:02:51.813382 #3823]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-04-01T05:02:51.827884 #3823]  INFO -- : master process ready
+I, [2014-04-01T05:02:51.829400 #3830]  INFO -- : worker=0 ready
+I, [2014-04-01T05:02:51.833362 #3833]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-04-01T05:11:32.501908 #3823]  INFO -- : reaped #<Process::Status: pid 3830 exit 0> worker=0
+I, [2014-04-01T05:11:32.602370 #3823]  INFO -- : reaped #<Process::Status: pid 3833 exit 0> worker=1
+I, [2014-04-01T05:11:32.602501 #3823]  INFO -- : master complete
+I, [2014-04-01T05:11:35.151166 #4122]  INFO -- : Refreshing Gem list
+I, [2014-04-01T05:11:37.728772 #4122]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-04-01T05:11:37.729181 #4122]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-04-01T05:11:37.744015 #4122]  INFO -- : master process ready
+I, [2014-04-01T05:11:37.746497 #4128]  INFO -- : worker=0 ready
+I, [2014-04-01T05:11:37.748783 #4131]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-04-01T05:21:28.957125 #4122]  INFO -- : reaped #<Process::Status: pid 4128 exit 0> worker=0
+I, [2014-04-01T05:21:28.957290 #4122]  INFO -- : reaped #<Process::Status: pid 4131 exit 0> worker=1
+I, [2014-04-01T05:21:28.957405 #4122]  INFO -- : master complete
+I, [2014-04-01T05:21:31.510110 #4310]  INFO -- : Refreshing Gem list
+I, [2014-04-01T05:21:34.103082 #4310]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-04-01T05:21:34.103508 #4310]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-04-01T05:21:34.119796 #4310]  INFO -- : master process ready
+I, [2014-04-01T05:21:34.119781 #4316]  INFO -- : worker=0 ready
+I, [2014-04-01T05:21:34.124929 #4319]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-04-01T05:31:04.851048 #4310]  INFO -- : reaped #<Process::Status: pid 4316 exit 0> worker=0
+I, [2014-04-01T05:31:04.951466 #4310]  INFO -- : reaped #<Process::Status: pid 4319 exit 0> worker=1
+I, [2014-04-01T05:31:04.951589 #4310]  INFO -- : master complete
+I, [2014-04-01T05:31:07.493605 #4600]  INFO -- : Refreshing Gem list
+I, [2014-04-01T05:31:10.153174 #4600]  INFO -- : listening on addr=/home/ubuntu/artistnxt/tmp/sockets/unicorn.socket fd=11
+I, [2014-04-01T05:31:10.173031 #4600]  INFO -- : listening on addr=127.0.0.1:8080 fd=12
+I, [2014-04-01T05:31:10.188147 #4600]  INFO -- : master process ready
+I, [2014-04-01T05:31:10.189997 #4606]  INFO -- : worker=0 ready
+I, [2014-04-01T05:31:10.193742 #4609]  INFO -- : worker=1 ready
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.

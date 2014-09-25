@@ -1,0 +1,163 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Genres</title>
+<% end %>
+<% content_for :page_meta do %>
+ <meta name="description" content="Where the Artist Controls Their Own Destiny">
+  <meta name="keywords" content="ArtistNXT, Genres, artist, video, music, fan, news">
+  <meta property="og:image" content="<%=root_url%>assets/logo.png">
+<% end %>
+
+<div class="contentCol col-md-12">
+    <div class="content">
+        <!-- search page start -->
+        <div class="search_page_content">
+            <h2 class="logintitle2">Genres</h2>
+            
+            <%if @search!=""
+            %>
+              <form name="innerSearchForm" id="innerSearchForm" action="<%=genres_path%>" method="get" onsubmit="return (jQuery.trim(jQuery('#inner_search_box').val()) != '');">
+                <div class="search_box clearfix">
+                  <div class="inputbox col-sm-10 col-md-10">
+                    <%=text_field_tag 'search', nil, id: 'inner_search_box',class:"form-control" , value: @search%>      
+                  </div>
+                  <div class="button col-sm-2 col-md-2"><input name="" type="submit" value=" Search " class="searchbutton btn"></div>
+                </div>
+              </form>
+            <%
+            end  
+            %>
+
+            <div class="filterWrapper">
+                <div class="filterWrap row">
+                    <h2>Filter Results by</h2>
+                    <div class="fiterbox col-md-6 col-sm-6 clearfix">
+                        <h4>Genres Category</h4>
+                        <ul>
+                          <% @musicCategories.each {|musicCategory| %>
+                          <li>
+                            <%if musicCategory.id.to_s == @cat_id
+                            %>
+                              <span title="<%=musicCategory.name.html_safe%>"><%=musicCategory.name.html_safe%></span>
+                            <%
+                            else
+                            %>
+                              <%= link_to musicCategory.name.html_safe, genres_path(result_type:@result_type,cat_id: musicCategory.id,search:@search,uploaded_time:@uploaded_time,duration:@duration), :title=>musicCategory.name.html_safe %>
+                            <%
+                            end
+                            %>    
+                          </li>
+                        <%}%> 
+                        </ul>
+                    </div>
+                    <div class="fiterbox col-md-3 col-sm-3">
+                        <h4>Upload Date</h4>
+                        <ul>
+                          <li>
+                          <%if @uploaded_time == "last_hour"
+                            %>
+                              <span>Last hour</span>
+                            <%
+                          else
+                            %>
+                              <%= link_to "Last hour", genres_path(result_type:@result_type,cat_id: @cat_id, search:@search,uploaded_time:"last_hour",duration:@duration), :title=>"Last hour" %>
+                            <%
+                          end%>        
+                        </li>      
+                        <li>
+                          <%if @uploaded_time == "today"
+                            %>
+                              <span>Today</span>
+                            <%
+                          else
+                            %>
+                              <%= link_to "Today", genres_path(result_type:@result_type,cat_id: @cat_id, search:@search,uploaded_time:"today",duration:@duration), :title=>"Today" %>
+                            <%
+                          end%>                
+                        </li>
+                        <li>
+                          <%if @uploaded_time == "this-week"
+                            %>
+                              <span>This week</span>
+                            <%
+                          else
+                            %>
+                              <%= link_to "This week", genres_path(result_type:@result_type,cat_id: @cat_id, search:@search,uploaded_time:"this-week",duration:@duration), :title=>"This week" %>        
+                            <%
+                          end%>
+                        </li>
+                        <li>
+                          <%if @uploaded_time == "this-month"
+                            %>
+                              <span>This month</span>
+                            <%
+                          else
+                            %>
+                              <%= link_to "This month", genres_path(result_type:@result_type,cat_id: @cat_id, search:@search,uploaded_time:"this-month",duration:@duration), :title=>"This month" %>        
+                            <%
+                          end%>
+                          
+                        </li>
+                        <li>
+                          <%if @uploaded_time == "this-year"
+                            %>
+                              <span>This year</span>
+                            <%
+                          else
+                            %>
+                              <%= link_to "This year", genres_path(result_type:@result_type,cat_id: @cat_id, search:@search,uploaded_time:"this-year",duration:@duration), :title=>"This year" %>        
+                            <%
+                          end%>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="fiterbox col-md-3 col-sm-3">
+                        <h4>Sort by</h4>
+                        <ul>
+                            <li>
+                              <%if @sort_by == "upload-date"
+                              %>
+                                <span title="Upload date">Upload date</span>
+                              <%
+                                else
+                              %>
+                                <%= link_to "Upload date", genres_path(result_type:@result_type, cat_id: @cat_id, search:@search,uploaded_time:@uploaded_time,duration:@duration,quality:@quality,sort_by:"upload-date"), :title=>"Upload date" %>          
+                              <%
+                                end
+                              %>
+                            </li>
+                            <li>
+                              <%if @sort_by == "view-count"
+                              %>
+                                <span title="View count">View count</span>
+                              <%
+                                else
+                              %>
+                                <%= link_to "View count", genres_path(result_type:@result_type, cat_id: @cat_id, search:@search,uploaded_time:@uploaded_time,duration:@duration,quality:@quality,sort_by:"view-count"), :title=>"View count" %>          
+                              <%
+                                end
+                              %>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="searchWrapper">
+                <%if @result_type == "video"
+                %>
+                <%= render :partial => 'generes_video' %>      
+                <%
+                elsif @result_type == "music"
+                %>
+                  <%= render :partial => 'generes_music' %>      
+                <%
+                end
+                %>
+            </div>
+            <div class="pagination">
+                <%= will_paginate @results, :previous_label => 'Prev', :next_label => 'Next' %>
+            </div>
+        </div>
+        <!-- search page end -->
+    </div>	
+</div>

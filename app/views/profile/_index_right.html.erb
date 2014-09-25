@@ -1,0 +1,140 @@
+<div class="rightCol col-md-3"> <!-- rightCol start -->
+    <div class="moduletable-myaccount">
+	<h3>My Account</h3>
+	<div class="inner-box">
+	    <div class="account-menu">
+		<% user_name = current_user.first_name + " " + current_user.last_name %>
+		<% subscription = Subscription.find_by userid: current_user.id %>
+		<ul>
+		    
+		    <% if current_user.user_type == 'artist' %>
+			<li><%= link_to 'Public Profile'.html_safe, artist_dashboard_path(id: current_user.id.to_s+':'+user_name.parameterize) %></li>						
+		    <% end %>
+		    
+		   <% if current_user.user_type == 'artist' %>
+			<li><%= link_to 'Artist Following'.html_safe, profile_artist_following_path %></li>
+		      <li><%= link_to 'Fan Following Me'.html_safe, profile_follower_fans_path %></li>		      
+		      <li><%= link_to 'News'.html_safe, user_news_index_path(:user_id => current_user.id) %></li>
+		      <li><%= link_to 'Events'.html_safe, user_events_path(:user_id => current_user.id) %></li>
+		      <li><%= link_to 'Upload Music'.html_safe, user_audios_path(:user_id => current_user.id) %></li>
+		      <li><%= link_to 'Upload Video'.html_safe, user_videos_path(:user_id => current_user.id) %></li>
+		      <li><%= link_to 'My Music Sale'.html_safe, my_music_sales_path %></li>
+		      <li><%= link_to 'My Subscription'.html_safe, renew_subscription_path(:subscription_id => subscription.id) %></li>
+		   <% end %>
+		    
+		    <% if current_user.user_type == 'fan' %>
+			<li><%= link_to "My Friends("+getFriendCount(current_user.id).to_s+")".html_safe, my_friends_path %></li>
+			<li><%= link_to "Pending Friend request("+getPendingFriendRequestCount(current_user.id).to_s+")".html_safe, peding_friend_requests_path %></li>
+			<li><%= link_to "Awaiting Friend request("+getAwaitingFriendRequestCount(current_user.id).to_s+")".html_safe, awaiting_friend_requests_path %></li>
+			<li><%= link_to 'Artist Following'.html_safe, profile_artist_following_path %></li>
+		    <% end %>
+		    
+		    <li><%= link_to 'My Favorite Videos'.html_safe, favorite_videos_path %></li>
+		    <li><%= link_to 'Watch History'.html_safe, watch_history_path %></li>
+		    <li><%= link_to 'My Music'.html_safe, my_musics_path %></li>
+		    <li><%= link_to 'My Purchase'.html_safe, my_purchases_path %></li>
+		    <li><%= link_to 'Edit Profile'.html_safe, edit_user_registration_path %></li>
+		    <!--li><%= link_to 'Change Password'.html_safe, edit_user_path %></li-->
+	      </ul>
+	    </div>
+	    <div class="fanWrap">
+		<% if current_user.user_type == 'artist' %>
+		    <div class="tile"><span>My Fans</span></div>
+		    <div class="fansitemWrap clearfix">
+			<% artistsFans = getArtistsFans(current_user.id)%>
+			    <%if artistsFans.length == 0
+			    %>
+				No Fan has followed you yet
+			    <%
+			    else
+			    %>
+			        <% artistsFans.each {|fan|
+				    user_name = fan.first_name + " " + fan.last_name
+				    if fan.user_type.eql?("artist")
+					profileLink = artist_dashboard_path(id: fan.id.to_s+':'+user_name.parameterize)
+				    else
+					profileLink = fan_dashboard_path(id: fan.id.to_s+':'+user_name.parameterize)
+				    end
+				%>
+				    <div class="itembox">
+					<div class="item"><%= link_to image_tag(getUserAvatar(fan),:class=>"img-responsive",:width => "58"), profileLink %></div>
+					<h4><%= link_to user_name, profileLink %></h4>
+				    </div>
+				<%
+				}%>	
+			    <%  end 	
+			    %>
+		    </div>
+		<% end %>
+	    </div>
+    
+	    <%if current_user.user_type.eql?("fan")%>
+	    <div class="moduletable-fanarlist">
+                <%= image_tag('/assets/fanalert1.jpg', :class=>"img-responsive") %>
+                <div class="text">Who is performing near you</div>
+                    
+                <div class="fanappWrap">
+                <%if current_user!=nil
+                %>
+                    <%
+                    nearestArtists = nil
+                    if current_user.user_type.to_s == "fan"
+                        nearestArtists = GetNearestPerformers(current_user,Rails.application.config.search_radius.to_s)
+                    elsif current_user.user_type.to_s == "artist"
+                        nearestArtists = GetArtistsNearestPerformers(current_user,Rails.application.config.search_radius.to_s)    
+                    end
+                    if !nearestArtists.nil?
+                        %>
+                        <% nearestArtists.each {|nearestArtist| %>
+                          
+                            <% user_name = nearestArtist.first_name + " " + nearestArtist.last_name %>
+                            <div class="fanapp clearfix">
+                              <div class="fanappimage">                                                                
+                                <%= link_to image_tag(getUserAvatar(nearestArtist),:width => "58"), artist_dashboard_path(id: nearestArtist.id.to_s+':'+user_name.parameterize) %>
+                              </div>
+                              <div class="fanappimagename">
+                              <%= link_to user_name, artist_dashboard_path(id: nearestArtist.id.to_s+':'+user_name.parameterize) %>                                                            
+                              </div>
+                            </div>
+                         <% } %>
+                         
+                    <% else %>
+                        <div class="" style="text-align:center">No Artist Found</div>  
+                    <% end %>
+                <%
+                end
+                %>
+                </div>
+            </div>
+	    <div class="moduletable-myaccount">
+                <h3>My Fan Friends</h3>
+                <div class="inner-box">
+                    <div class="fanWrap">
+                        <div class="fansitemWrap clearfix">
+                          
+                          <% fanFriends = getFanFriends(current_user.id)%>
+                          <% if fanFriends.length == 0 %>
+                               <div class="" style="text-align:center">No Fan Friend Found</div>
+                          <% else %>
+                                <% fanFriends.each {|fanFriend|
+                                    user_name = fanFriend.first_name + " " + fanFriend.last_name  
+                                    if fanFriend.user_type.eql?("artist")
+                                        profileLink = artist_dashboard_path(id: fanFriend.id.to_s+':'+user_name.parameterize)
+                                    else
+                                        profileLink = fan_dashboard_path(id: fanFriend.id.to_s+':'+user_name.parameterize)
+                                    end
+                                %>
+                                  <div class="itembox">
+                                      <div class="item"><%= link_to image_tag(getUserAvatar(fanFriend),:width => "58", :class=>"img-responsive"), profileLink %></div>
+                                      <h4><%= link_to user_name, profileLink %></h4>
+                                  </div>
+                                <% } %>
+                          <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	    <%end%>
+	</div>
+    </div>
+</div> <!-- rightCol end -->

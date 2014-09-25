@@ -1,0 +1,346 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | <%= @displayUser.first_name %> <%= @displayUser.last_name %></title>
+<% end %>
+
+<%
+generes = ""
+isFirst = true
+@myMusicCategories.each{|myMusicCategory|
+        if isFirst
+                isFirst = false
+        else
+                generes = generes + ", "
+        end
+        generes = generes + myMusicCategory.name
+}%>
+<%bigAvatarURL=getUserAvatar(@displayUser,"large")%>
+<% content_for :page_meta do %>
+<link rel="canonical" href="<%=request.url%>" />
+<meta property="og:url" content="<%=request.url%>" />
+<link rel='image_src' href="<%=root_url+bigAvatarURL[1..-1]%>">
+<meta property='og:image' content="<%=root_url+bigAvatarURL[1..-1]%>" />
+
+<meta property='og:type' content="artist" />
+<meta property='og:title' content="<%= @displayUser.first_name %> <%= @displayUser.last_name %>" />
+<meta property='og:site_name' content='ArtistNXT' />
+<meta name="title" content="<%= @displayUser.first_name %> <%= @displayUser.last_name %> - ArtistNXT" />
+<meta name="description" content="<%= @displayUser.first_name %> <%= @displayUser.last_name %><%if !generes.blank?%>, Artist: <%=generes%>... <%end%>" />
+<meta property="og:description" content="<%= @displayUser.first_name %> <%= @displayUser.last_name %><%if !generes.blank?%>, Artist: <%=generes%>... <%end%>" />
+<meta name="keywords" content="Biography, Photos, Videos, News, Events" />
+<% end %>
+
+<div class="titlepage">
+        <span><%= @displayUser.first_name %> <%= @displayUser.last_name %>:</span>
+        <span>&nbsp;Artist Page</span>
+        <span class="arr2">
+          <%if isUserOnline(@displayUser)
+          %>
+              <div class="on">Online</div>                                                
+          <%
+          else
+          %>
+               <div class="off">Offline</div>                                                
+          <%
+            end
+          %>
+        </span>
+</div>
+<div class="leftCol col-md-2"> <!-- leftCol start -->
+        <div class="moduletable-profile">
+                <div class="profile-image"><%= image_tag( getUserAvatar(@displayUser,"large"),:width => "212", :class => "img-responsive") %></div>
+        </div>		
+        <div class="moduletable-recentlyupload">
+            <div class="recent_videos clearfix">
+                <h3>Recently uploaded video</h3>
+                
+                <% myRecentVideos = getMyVideos(@displayUser.id) %>
+                <% if myRecentVideos.length == 0 %>
+                    <div class="no_track">No Video Found</div>
+                <% else %>
+                        <%
+                        counter = 1
+                        myRecentVideos.each {|video| %>
+                          <% additional_class = (counter>6) ? ' visible-lg' : '' %>
+                            <div class="upload_video<%=additional_class%>"><%=getVideoThumb(video,"default",112,84)%></div>
+                        <%
+                        counter = counter+1
+                        } %>
+                <% end %>
+            </div>
+        
+            <div class="buy_tracks clearfix">
+                <h3>Buy Tracks</h3>
+                
+                <% audioFiles=getMyAudios(@displayUser.id) %>
+                <% if audioFiles.length == 0 %>
+                    <div class="no_track">No Track Found</div>
+                <% else %>
+                      <% audioFiles.each {|audio| %>
+                          <div class="track_item">
+                            <%= audio.title.html_safe%><br>                                                                                                                                                
+                            <%=get_mediaelement_audio_player(audio.path.to_s,250).html_safe%><br>
+                            <%if audio.is_free && audio.is_downloadable%>
+                                <%= link_to 'Download Now'.html_safe, download_free_music_path(:id => audio.id) %>
+                            <%elsif !audio.is_free%>
+                                <%= link_to 'Buy Now'.html_safe, new_cart_path(:pid => audio.id) %>
+                            <%end%>                            
+                          </div>
+                      <% } %>
+                <% end %>
+            </div>
+        </div>
+</div> <!-- leftCol end -->
+<div class="rightpartWrap col-md-10"> <!-- rightpartWrap start -->
+        <div class="rightPart clearfix"> <!-- rightPart start -->
+                <div class="contentCol col-md-9"> <!-- contentCol start -->
+                    <div class="content">
+                        <div class="artist_profile_des">
+                                <p><b>Name:</b> <%= @displayUser.first_name %> <%= @displayUser.last_name %></p>
+                                <p><b>Location:</b> <%=getFormattedLocation(@displayUser)%></p>
+                                <p><b>Genre:</b> <%=generes%></p>
+                                
+                                <% if @displayUser.biography.to_s != "" %>
+                                <p><b>Bioghraphy:</b></p>
+                                <div class="des"><%= @displayUser.biography %></div>
+                                <% end %>
+                        </div>
+                        
+                        <div class="videoWrap boxto">
+                                <div class="titlepage">
+                                        <h3>Top videos</h3>
+                                </div>
+                                <div class="video-list clearfix">
+                                  
+                                  <%
+                                  myTopVideos = getMostViewedVideos(@displayUser.id,5)
+                                  %>
+                                  <% if myTopVideos.length == 0 %>
+                                          No Video Found    
+                                  <% else %>
+                                      <% counter = 1 %>
+                                          <% myTopVideos.each {|video| %>
+                                            
+                                            <%if counter < 5 %>
+                                            <div class="boxtopvideo">
+                                            <% else %>
+                                            <div class="boxtopvideo visible-lg">
+                                            <% end %>
+                                            
+                                                  <div class="video">
+                                                    <%=getVideoThumb(video,"mqdefault",138,83)%>                                                                  
+                                                  </div>
+                                                  <div class="title">
+                                                      <%= link_to video.title.html_safe, watch_video_path(:id => video.id.to_s+':'+video.title.parameterize) %>
+                                                  </div>
+                                            </div>
+                                          <%
+                                          counter = counter + 1
+                                          }
+                                          %>
+                                  <% end %>
+                                </div>
+                        </div>	
+                        <div class="porfileboxWrap">
+                            <h3>Latest News</h3>
+                            <% latestNews = getNewslist(@displayUser.id) %>
+                            <% if latestNews.length == 0 %>
+                                    <div class="" style="text-align:center;margin:10px 0;">No News Found</div>  
+                            <% else %>
+                                  <% latestNews.each {|news| %>
+                                  <div class="porfilebox">
+                                  
+                                      <% if news.news_image.to_s != "" %>
+                                          <div class="proImage col-md-2 col-sm-2"><%= image_tag(news.news_image, :width=>126, :height=>78, :class=>"img-responsive") %></div>
+                                          <div class="proText col-md-10 col-sm-10">
+                                                <h4><%= link_to news.title, read_news_path(:id => news.id.to_s+':'+news.title.parameterize) %></h4>
+                                                <p><%= news.desc.truncate(140, :separator => ' ') %></p>
+                                          </div>
+                                      <% else %>
+                                          <div class="proText col-md-12 col-sm-12">
+                                                <h4><%= link_to news.title, read_news_path(:id => news.id.to_s+':'+news.title.parameterize) %></h4>
+                                                <p><%= news.desc.truncate(180, :separator => ' ') %></p>
+                                          </div>
+                                      <% end %>
+                                  </div>
+                                  <% } %>
+                            <% end %>
+                        </div>
+
+                        <div class="porfileboxWrap">
+                            <h3>Latest Events</h3>
+                            <% latestEvents = getEventlist(@displayUser.id,5) %>
+                            <% if latestEvents.length == 0 %>
+                                    <div class="" style="text-align:center;margin:10px 0;">No Event Found</div>
+                            <% else %>
+                                <% latestEvents.each {|event| %>
+                                <div class="porfilebox">
+                                
+                                    <% if event.event_image.to_s != "" %>
+                                        <div class="proImage col-md-2 col-sm-2"><%= image_tag(event.event_image, :width=>126, :height=>78, :class=>"img-responsive") %></div>
+                                        <div class="proText col-md-10 col-sm-10">
+                                          <h4><%= link_to event.title, event_details_path(:id => event.id.to_s+':'+event.title.parameterize) %></h4>
+                                          <p><%= event.desc.truncate(140, :separator => ' ') %></p>
+                                        </div>
+                                    <% else %>
+                                        <div class="proText col-md-12 col-sm-12">
+                                          <h4><%= link_to event.title, event_details_path(:id => event.id.to_s+':'+event.title.parameterize) %></h4>
+                                          <p><%= event.desc.truncate(180, :separator => ' ') %></p>
+                                        </div>
+                                    <% end %>
+                                </div>
+                                <% } %>
+                            <% end %>
+                            
+                        </div>
+                    </div>		
+                </div> <!-- contentCol end -->
+                
+                <div class="rightCol col-md-3"> <!-- rightCol start -->
+                      <div class="moduletable-rightlogomap">
+                              <ul>
+                                  <li>
+                                    <a href="<%=@becomeFanLink%>">
+                                        <%= image_tag('/assets/logo4.jpg', :width=>207, :height=>105, :class=>"img-responsive") %>
+                                    </a>
+                                  </li>
+                              </ul>
+                              
+                              <%fanTotal = getFanTotal(@displayUser.id)%>
+                              
+                              <div class="fanlogo"><%= image_tag('/assets/logo5.jpg', :class=>"img-responsive") %></div>
+                              <div class="fanwrap">		
+                                  <div class="mapwrap">
+                                      <div class="map"><%= image_tag('/assets/map.jpg', :class=>"img-responsive") %></div>
+                                      <div class="fanbox">
+                                          <div class="fan">Fans <span><%=number_with_delimiter(fanTotal)%></span></div>
+                                      </div>
+                                  </div>
+                                  <div class="allfan">
+                                    <%if fanTotal > 0%>
+                                        <%= link_to "&lt;&lt; All Fantistics".html_safe,artist_fantistics_path(:artist_id=>@displayUser.id), :class=>"all"%>                                                                                                                                
+                                    <%end%>
+                                  </div>
+                              </div>				
+                      </div>
+                      
+                      <div class="moduletable-fanarlist">
+                          <%= image_tag('/assets/fanalert1.jpg', :class=>"img-responsive") %>
+                          <div class="text">Who is performig near you</div>
+                          
+                          <div class="fanappWrap">
+                            <%if current_user!=nil
+                            %>
+                                <%
+                                nearestArtists = nil
+                                if current_user.user_type.to_s == "fan"
+                                    nearestArtists = GetNearestPerformers(current_user,Rails.application.config.search_radius.to_s)
+                                elsif current_user.user_type.to_s == "artist"
+                                    nearestArtists = GetArtistsNearestPerformers(current_user,Rails.application.config.search_radius.to_s)    
+                                end
+                                if !nearestArtists.nil?
+                                        
+                                    %>
+                                    <% nearestArtists.each {|nearestArtist| %>
+                                      
+                                        <% user_name = nearestArtist.first_name + " " + nearestArtist.last_name %>
+                                        <div class="fanapp clearfix">
+                                          <div class="fanappimage">                                                                
+                                            <%= link_to image_tag(getUserAvatar(nearestArtist),:width => "58"), artist_dashboard_path(id: nearestArtist.id.to_s+':'+user_name.parameterize) %>
+                                          </div>
+                                          <div class="fanappimagename">
+                                          <%= link_to user_name, artist_dashboard_path(id: nearestArtist.id.to_s+':'+user_name.parameterize) %>                                                            
+                                          </div>
+                                        </div>
+                                    <% } %>
+                                <% else %>
+                                    <div class="" style="text-align:center;">No Artist Found</div>  
+                                <% end %>                                      
+                            <%
+                            end
+                            %>
+                          </div>
+                          
+                          <!--in miles-->
+                          
+                      </div>
+                      
+                      <div class="moduletable-fan">
+                          <h3>My Fan Friends</h3>
+                          <div class="fansitemWrap clearfix">
+                            
+                            <% fanFriends = getFanFriends(@displayUser.id,@artist_id)%>
+                            <% if fanFriends.length == 0
+                            %>
+                                 <div class="" style="text-align:center">No Fan Friend Found</div>
+                            <%
+                               end             
+                            %>
+                            <% fanFriends.each {|fanFriend|
+                                  user_name = fanFriend.first_name + " " + fanFriend.last_name  
+                                  if fanFriend.user_type.eql?("artist")
+                                    profileLink = artist_dashboard_path(id: fanFriend.id.to_s+':'+user_name.parameterize)
+                                  else
+                                    profileLink = fan_dashboard_path(id: fanFriend.id.to_s+':'+user_name.parameterize)
+                                  end
+                            %>
+                              <div class="itembox">
+                                  <div class="item">
+                                      <%= link_to image_tag(getUserAvatar(fanFriend),:width => "58", :class=>"img-responsive"), profileLink %>
+                                  </div>
+                                  <h4><%= link_to user_name, profileLink %></h4>
+                              </div>
+                            <%
+                            }%>
+                          </div>
+                      </div>	
+                </div> <!-- rightCol end -->
+        </div> <!-- rightPart end -->
+</div> <!-- rightpartWrap end -->
+
+<div class="leftCol mobile_device col-md-2"> <!-- leftCol start -->
+    <div class="moduletable-profile">
+            <div class="profile-image"><%= image_tag( getUserAvatar(@displayUser,"large"),:width => "212", :class => "img-responsive") %></div>
+    </div>		
+    <div class="moduletable-recentlyupload">
+        <div class="recent_videos clearfix">
+            <h3>Recently uploaded video</h3>
+            
+            <% myRecentVideos = getMyVideos(@displayUser.id) %>
+            <% if myRecentVideos.length == 0 %>
+                <div class="no_track">No Video Found</div>
+            <% else %>
+                    <%
+                    counter = 1
+                    myRecentVideos.each {|video|
+                    %>
+                      <% additional_class = (counter>6) ? ' visible-lg' : '' %>
+                        <div class="upload_video<%=additional_class%>"><%=getVideoThumb(video,"default",112,84)%></div>
+                    <%
+                    counter = counter + 1
+                    }
+                    %>
+            <% end %>
+        </div>
+    
+        <div class="buy_tracks clearfix">
+            <h3>Buy Tracks</h3>
+            
+            <% audioFiles=getMyAudios(@displayUser.id) %>
+            <% if audioFiles.length == 0 %>
+                <div class="no_track">No Track Found</div>
+            <% else %>
+                  <% audioFiles.each {|audio| %>
+                        <div class="track_item">
+                          <%= audio.title.html_safe%><br>                                                                                                                                                
+                          <%=get_mediaelement_audio_player(audio.path.to_s,250).html_safe%><br>
+                          <%if audio.is_free && audio.is_downloadable%>
+                              <%= link_to 'Download Now'.html_safe, download_free_music_path(:id => audio.id) %>
+                          <%elsif !audio.is_free%>
+                              <%= link_to 'Buy Now'.html_safe, new_cart_path(:pid => audio.id) %>
+                          <%end%>                            
+                        </div>
+                    <% } %>
+            <% end %>
+        </div>
+    </div>
+</div> <!-- leftCol end -->

@@ -1,0 +1,230 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT</title>
+<% end %>
+
+<% content_for :page_meta do %>
+ <meta name="description" content="Where the Artist Controls Their Own Destiny">
+  <meta name="keywords" content="ArtistNXT, artist, video, music, fan, news">
+  <meta property="og:image" content="<%=root_url%>assets/logo.png">
+<% end %>
+
+
+    <div class="leftCol col-md-2"> <!-- leftCol start -->
+        <div class="moduletable-featured">
+            <h3>Featured Artist</h3>
+            <div class="item-list">
+              <% featuredArtists = getFeaturedArtists()%>
+              <% featuredArtists.each {|featuredArtist| %>
+                
+                <% user_name = featuredArtist.first_name + " " + featuredArtist.last_name %>
+                <div class="featured-artist clearfix">
+                    <div class="artist-image">
+                      <%= link_to image_tag(getUserAvatar(featuredArtist),:width => "58",:height => "58"), artist_dashboard_path(id: featuredArtist.id.to_s+':'+user_name.parameterize) %>
+                    </div>
+                    <div class="artist-name">
+                      <h4><%= link_to user_name, artist_dashboard_path(id: featuredArtist.id.to_s+':'+user_name.parameterize) %></h4>
+                    </div>
+                </div>
+              <%
+              }%>
+            </div>
+        </div>
+    </div> <!-- leftCol end -->
+    
+    <div class="rightpartWrap col-md-10"> <!-- rightpartWrap start -->
+    
+        <div class="banner">
+          <%slides=getSlideImages()
+          if slides != nil
+          %>
+            <%
+              if slides.length > 1
+            %>
+                <button class="prev"><<</button>
+                <button class="next">>></button>
+            <%
+              end
+            %>
+            <div class="flexslider">
+              <ul class="slides">              
+                <%
+                 slides.each do |slide|
+                 %>
+                    <li><%= image_tag(slide.slide_image) %></li>
+                 <%
+                 end
+                 %>
+              </ul>
+           </div>
+              <%
+              if slides.length > 1
+              %>
+               
+               <script type="text/javascript">
+                jQuery(document) .ready(function(){
+                  $('.flexslider').flexslider({
+                    animation: "slide",
+                    controlNav:false,
+                    start: function(slider){
+                      $('body').removeClass('loading');
+                    }
+                  });
+                });
+                /*jQuery(document) .ready(function(){
+                    jQuery('.banner .next').css('opacity',0);
+                    jQuery('.banner .prev').css('opacity',0);
+                   $(".banner").mouseenter(function(){
+                      jQuery('.banner .next').css('opacity',1);
+                      jQuery('.banner .prev').css('opacity',1);
+                    });
+                     $(".banner").mouseleave(function(){
+                      jQuery('.banner .next').css('opacity',0);
+                      jQuery('.banner .prev').css('opacity',0);
+                    });
+                     $(".jCarouselLite").jCarouselLite({
+                         btnNext: ".banner .next",
+                         btnPrev: ".banner .prev",
+                         visible: 1,
+                         speed: 2000,
+                        // easing: "easeinout",
+                         auto: 500
+                     });                             
+                });*/
+                
+               </script>
+              <%
+              end 
+          end
+          %>
+          </div>
+            
+            <div class="rightPart clearfix"> <!-- rightPart start -->
+                <div class="contentCol col-md-9"> <!-- contentCol start -->
+                    <div class="content">
+                      
+                      <%homeCategories = getHomepageVideos().each do |catVideoRow| %>
+                        <div class="videoWrap">
+                            <div class="titlepage">
+                                    <h3>Aspiring Artists: <span><%=catVideoRow["category"].name%></span></h3>
+                            </div>
+                            <div class="video-list clearfix">
+                              
+                              <%
+                              counter = 1
+                              total = catVideoRow["videos"].length
+                              catVideoRow["videos"].each do |videoRow|
+                                createdBy = getUserByID(videoRow.user_id);
+                                user_name = ""
+                                if !createdBy.nil?
+                                  user_name = createdBy.first_name.to_s+" "+createdBy.last_name.to_s
+                                end                          
+                              %>
+                              
+                              <% additional_class = (counter>4) ? ' visible-lg' : '' %>
+                              
+                              <div class="video-box<%=additional_class%>">    
+                                      <div class="video-top"><%=getVideoThumb(videoRow,"mqdefault",138,83)%>  </div>
+                                      <div class="video-textbox">
+                                          <div class="title-of-video"><%= link_to videoRow.title, watch_video_path(:id=>videoRow.id.to_s+':'+videoRow.title.parameterize) %></div>
+                                          <span>by: <%if createdBy!=nil%>
+                                                  <%= link_to user_name, artist_dashboard_path(id: createdBy.id.to_s+':'+user_name.parameterize) %>
+                                                <%
+                                                else
+                                                %>
+                                                  Anonymous
+                                                <%
+                                                end%>
+                                          </span>
+                                      </div>
+                                  </div>
+                                <%
+                                counter = counter + 1
+                                end
+                                %>  
+                            </div>
+                        </div>
+                        <%
+                        end
+                        %>  
+                    </div>		
+                </div> <!-- contentCol end -->
+                    
+                    <div class="rightCol col-md-3"> <!-- rightCol start -->
+                            <div class="moduletable-fanpage">
+                                    <div class="box-top"><%= image_tag('/assets/logo2.jpg') %></div>
+                                    <div class="box-inner">
+                                      <%
+                                      content = Content.where('alias = ? AND published = 1', 'fan-me-button').take
+                                      if content!=nil
+                                      %>
+                                        <%=content.text.html_safe%>
+                                      
+                                      <%end
+                                      %>
+                                        <div class="logo3"><%= image_tag('/assets/logo3.png') %></div>
+                                    </div>
+                            </div>
+                            <div class="moduletable-news">
+                                    <h3>Artist in News</h3>
+                                    
+                                    <%latestNews = getAdminNewslist(0,5)
+                                      totalNews = latestNews.length
+                                      newsIndex = 1
+                                    %>
+                                    <% latestNews.each {|news|
+                                      date = DateTime.parse(news.created_at.to_s)
+                                      formatted_date = date.strftime('%B %d, %Y %I:%M %p')
+                                    %>
+                                        <%if newsIndex < totalNews %>
+                                        <div class="box-inner newsbox">
+                                        <% else %>
+                                        <div class="box-inner">
+                                        <% end %>
+                                        
+                                        <span class="date"><%=formatted_date%></span>
+                                        <%= news.text.truncate(100, :separator => ' ').html_safe %>
+                                        <%= link_to "read more", read_admin_news_path(:id => news.id.to_s+':'+news.title.parameterize), :class=>"readmore" %>
+                                    </div>
+                                    
+                                      
+                                    <%
+                                      newsIndex = newsIndex + 1
+                                    }%>
+                            </div>
+                            
+                            <% right_contents = Content.where('position = "right" AND published = 1 AND alias != "fan-me-button"').all %>
+                            <% if right_contents.size > 0 %>
+                                  <% right_contents.each_with_index do |right_content, index| %>
+                                  
+                                  <div class="moduletable-artist">
+                                      <h3><%=right_content.title.html_safe%></h3>
+                                      <div class="box-inner"><%=right_content.text.html_safe%></div>
+                                  </div>
+                                  <% end %>
+                            <% end %>
+                    </div> <!-- rightCol end -->
+            </div> <!-- rightPart end -->
+    </div> <!-- rightpartWrap end -->
+    
+    <div class="leftCol mobile_device col-md-2"> <!-- leftCol start -->
+        <div class="moduletable-featured">
+            <h3>Featured Artist</h3>
+            <div class="item-list">
+              
+              <% featuredArtists = getFeaturedArtists()%>
+              <% featuredArtists.each {|featuredArtist| %>
+                
+                <% user_name = featuredArtist.first_name + " " + featuredArtist.last_name %>
+                <div class="featured-artist clearfix">
+                    <div class="artist-image">
+                      <%= link_to image_tag(getUserAvatar(featuredArtist),:width => "58",:height => "58"), artist_dashboard_path(id: featuredArtist.id.to_s+':'+user_name.parameterize) %>
+                    </div>
+                    <div class="artist-name">
+                      <h4><%= link_to user_name, artist_dashboard_path(id: featuredArtist.id.to_s+':'+user_name.parameterize) %></h4>
+                    </div>
+                </div>
+              <%
+              }%>
+            </div>
+        </div>
+    </div> <!-- leftCol end -->	

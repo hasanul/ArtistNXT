@@ -1,0 +1,35 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Renew Subscription</title>
+<% end %>
+
+<div class="contentCol">
+    <div class="content">
+      <h2 class="logintitle2">Renew Subscription</h2>
+
+      <div id="filter-dropdown-subscription">
+        <ul>
+          <% @plans.each {|plan| %>
+            
+            <% additional_class = (@user_assgined==plan.id) ? 'assigned' : ''%>
+            
+            <li class="<%=additional_class%>">
+                <div class="subscription_wrap clearfix">
+                  <div class="subscription_wrap_des col-md-9 col-sm-9">
+                    <h3><%=plan.name%></h3>
+                    <%=plan.desc%>
+                  </div>
+                  <div class="subscription_wrap_link col-md-3 col-sm-3">
+                    <%= link_to "Subscribe", confirmation_subscription_path(subscription_id:@subscription_id,plan_id: plan.id), :title=>plan.name.html_safe, :class=>"btn", :style=>"float:right;" %>
+                  </div>
+                  <div class=clear></div>
+                </div>
+            </li>
+            
+          <%}%>  
+          
+        </ul>
+      <div>
+
+    </div>	
+</div>
+  <!--content-end-->

@@ -1,0 +1,44 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Register</title>
+<% end %>
+
+<div class="logintitle2">Fan Registration</div>
+
+<%= form_for(:user, :url => session_path(:user)) do |f| %>
+<div id="ddtags" style="width: 48%;padding: 10px;">
+  <p class="text1"> Please use your email id and password to login.</p>
+  
+  <dl>			
+  <dt>Email Address:</dt>
+  <dd><%= f.email_field :email, :autofocus => true, :class => 'login_inp' %></dd>
+  </dl>
+  
+  <dl>			
+  <dt>Password:</dt>
+  <dd><%= f.password_field :password, :class => 'login_inp' %></dd>
+  </dl>
+
+  <dl>			
+  <dt>&nbsp;</dt>
+  <dd><%= f.submit "Login", :class => 'login' %></dd>
+  </dl>
+  
+  <dl>			
+    <dt>&nbsp;</dt>
+    <dd><%= link_to "forgot password?", new_password_path(:user), :class => 'forgot' %></dd>
+  </dl>
+
+</div>
+<% end %>
+
+
+<div id="ddtags1">
+  <div class="text2">Don't have an account yet? </div>
+  <div class="text3">To Create One For Free <br /><%= link_to 'Click Here !'.html_safe, signup_fan_path %></div>
+  <div class="text4">- OR -</div>
+  <div><%= link_to image_tag('/assets/sign-infb.png'), user_omniauth_authorize_path(:facebook, :display=>"page") %></div>
+  <div class="text4">- OR -</div>
+  <div><%= link_to image_tag('/assets/sign-intwitter.png'), user_omniauth_authorize_path(:twitter) %></div>
+  <div class="text4">- OR -</div>
+  <div><%= link_to image_tag('/assets/sign-inyt.png'), user_omniauth_authorize_path(:google_oauth2) %></div>
+</div>

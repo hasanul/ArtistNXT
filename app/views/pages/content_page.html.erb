@@ -1,0 +1,17 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | <%=@content.alias%></title>
+<% end %>
+
+<% content_for :page_meta do %>
+ <meta name="description" content="<%=strip_tags(@content.text).truncate(140, :separator => ' ')%>">
+  <meta name="keywords" content="<%=@content.title%>">
+  <meta property="og:image" content="<%=root_url%>assets/logo.png">
+<% end %>
+
+<div class="contentCol">
+        <div class="content">
+                <!-- termsofcontion start -->
+                <h2 class="logintitle2"><%=@content.title%></h2>
+                <%=@content.text.html_safe%>
+        </div>	
+</div>

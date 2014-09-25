@@ -1,0 +1,103 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Videos Manager</title>
+<% end %>
+
+<div class="profiletitle">Videos Manager</div>
+<div class="clr">&nbsp;</div>
+
+<div class="searchWrap">
+    <div class="searchbox">
+	<form id="searchForm" name="searchForm" action="" method="get">
+	    <div class="searchboxinner">
+	      <input type="text" name="search" class="textbox1" value="<%=h(@search)%>"/>
+	      <input type="submit" value="Search" class="btn"/>
+	      <input style="margin-left:4px;" type="button" class="btn" value="Reset" onclick="document.searchForm.search.value='';document.searchForm.submit();">
+		
+	      <input type="hidden" name="sort_by" id="sort_by" value="<%=@sort_by%>" />
+	      <input type="hidden" name="sort_dir" id="sort_dir" value="<%=@sort_dir%>" />
+	
+	    </div>
+	</form>		
+    </div>
+    <div class="clr">&nbsp;</div>
+</div>
+<div class="tableWrap">
+  <form id="dataFormSlide" name="dataFormSlide" action="" method="post">
+    <table class="table">
+           <thead>
+                  <tr>
+                    <th style="width: 50px;">#</th>
+                    <th><%=sortColumn('title', @sort_by, @sort_dir, 'Title').html_safe%></th>
+		    <th style="width: 200px;">Genre</th>
+		    <th style="width: 120px;"><%=sortColumn('user_id', @sort_by, @sort_dir, 'Created By').html_safe%></th>
+		    <th style="width: 120px;"><%=sortColumn('created_at', @sort_by, @sort_dir, 'Created').html_safe%></th>
+		    <th style="width: 70px;"><%=sortColumn('hits', @sort_by, @sort_dir, 'Hits').html_safe%></th>
+                    <th style="width: 70px;">Published</th>
+		    <th style="width: 70px;">Featured</th>
+                    <th style="width: 90px;">Action</th>
+                  </tr>
+           </thead>
+           <tbody>
+                  <%                    
+                    slideNo = 0
+                    if params[:page].to_i > 1
+		      slideNo = (params[:page].to_i - 1)*10
+                    end
+                    @items.each do |item|
+                    slideNo = slideNo + 1
+                  %>
+                    <tr>
+                      <td><%=slideNo%></td>
+                      <td><%= link_to item.title.html_safe, admin_video_details_path(:cid => item.id) %></td>
+		      <td>
+			<%
+			video_genres = Array.new(0)
+			genres_result = MusicCategoriesVideos.joins("LEFT JOIN `music_categories` ON music_categories.id = music_categories_videos.music_category_id").select("music_categories.*").where("music_categories_videos.video_id = ?",item.id )
+			genres_result.each do |genre|
+			  video_genres.push(genre.name)
+			end
+			%>
+			
+			<%=video_genres.join(", ")%>
+		      </td>
+		      <td><%= User.find(item.user_id).first_name+" "+User.find(item.user_id).last_name %></td>
+		      <td><%=item.created_at.to_s%></td>	
+		      <td><%=item.hits == nil ? 0 : item.hits%></td>
+                      <td>
+                        <%if item.published
+                        %>
+                          <img src="/assets/tick_green_icon.png" alt="" />
+                        <%
+                          else
+                        %>
+                          <img src="/assets/unpublish_icon.png" alt="" />
+                        <%
+                          end
+                        %>
+                        
+                      </td>
+		      <td>
+                        <%if item.featured
+                        %>
+                          <img src="/assets/tick_green_icon.png" alt="" />
+                        <%
+                          else
+                        %>
+                          <img src="/assets/unpublish_icon.png" alt="" />
+                        <%
+                          end
+                        %>
+                        
+                      </td>
+                      <td>
+			  <%= link_to image_tag("/assets/edit_icon.png"), admin_video_details_path(:cid=>item.id)%>
+			  &nbsp;&nbsp;&nbsp;	
+                          <%= link_to image_tag("/assets/delete_icon.png"), removevideo_path(:cid => item.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+                      </td>
+                    </tr>
+                  <% end %>                  
+           </tbody>
+    </table>
+    <%= will_paginate @items, :params=>{:search=>h(@search)} %>
+  </form>
+</div>

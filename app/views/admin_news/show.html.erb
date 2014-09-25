@@ -1,0 +1,67 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | News Details</title>
+<% end %>
+
+<div class="profiletitle">News Details</div>
+<div class="clr">&nbsp;</div>
+
+
+<div id="ddtags">
+
+  <dl>
+    <dt><strong>Title:</strong>:</dt>
+    <dd><%= @admin_news.title %></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Text:</dt>
+    <dd><%= @admin_news.text %></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Hits:</dt>
+    <dd><%= @admin_news.hits%></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Created:</dt>
+    <dd><%= @admin_news.created_at%></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Created by:</dt>
+    <dd><%= User.find(@admin_news.created_by).first_name+' '+User.find(@admin_news.created_by).last_name%></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Updated:</dt>
+    <dd><%= @admin_news.updated_at%></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Updated by:</dt>
+    <dd><%= User.find(@admin_news.updated_by).first_name+' '+User.find(@admin_news.created_by).last_name%></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Published:</dt>
+    <dd>
+      <% if @admin_news.published
+        %>
+          <img src="/assets/tick_green_icon.png" alt="" />
+        <%
+        else
+        %>
+          <img src="/assets/unpublish_icon.png" alt="" />
+        <%
+        end
+      %>
+    </dd>
+  </dl>
+  
+  <dl>			
+    <dt><%= link_to 'Edit', edit_admin_news_path(@admin_news) %></dt>
+    <dd><%= link_to 'Back', admin_news_index_path %></dd>
+  </dl>
+
+</div>

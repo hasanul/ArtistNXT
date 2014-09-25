@@ -1,0 +1,17 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Editing Slide</title>
+<% end %>
+
+<div class="profiletitle">Editing Slide</div>
+<div class="clr">&nbsp;</div>
+
+<div id="ddtags">
+  
+  <%= render 'form' %>
+  
+  <dl>			
+    <dt><%= link_to 'Show', slide_path(@slide) %></dt>
+    <dd><%= link_to 'Back', admin_slides_path %></dd>
+  </dl>
+  
+</div>

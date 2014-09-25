@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  cart_number: MyString
+  cart_total: 9.99
+  ip_address: MyString
+
+two:
+  user_id: 1
+  cart_number: MyString
+  cart_total: 9.99
+  ip_address: MyString

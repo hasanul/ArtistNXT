@@ -1,0 +1,870 @@
+
+html,
+body {
+margin:0;
+padding:0;
+height:100%;
+}
+
+
+body {
+	background: #fff;
+	font-family:'Conv_GillSansLight',Sans-Serif;
+	font-size:13px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family:'Conv_GillSansLight',Sans-Serif;	
+}
+
+#wrapperOuter {
+	min-height: 100%;
+	position: relative;
+	padding-bottom: 20px;
+}
+
+/*-- header styling start ---*/
+
+.headerOuter {
+	background: url(/assets/header_outer_bg.jpg) repeat-x left top;
+	width: 100%;
+}
+
+.container.header {
+	position: relative;
+	height: 152px;
+}
+
+.container.header .logo {
+
+}
+
+.container.header .logo .img-responsive {
+	display: inherit;
+}
+
+.container.header .mobile_menu {
+	display: none;
+}
+
+.container.header .mainmenu {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+.container.header .mainmenu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.container.header .mainmenu ul li {
+	background: url(/assets/menu_border_bg.png) no-repeat left center;
+	padding: 0px 30px;
+	float: left;
+}
+
+.container.header .mainmenu ul li:first-child {
+	background: none;
+}
+
+.container.header .mainmenu ul li a:link,
+.container.header .mainmenu ul li a:visited,
+.container.header .mainmenu ul li a:active {
+	text-decoration: none;
+	color: #3d3d3d;
+	height: 36px;
+	line-height: 30px;
+	font-size: 15px;
+	display: block;
+}
+
+.container.header .mainmenu ul li a:hover {
+	color: #B61C1C;
+}
+
+.container.header .moduletable-sign {
+	position: absolute;
+	top: 18px;
+	right: 6px;
+}
+
+.container.header .moduletable-sign ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.container.header .moduletable-sign ul li {
+	background: url(/assets/sign_red_border.jpg) no-repeat left center;
+	float: left;
+	padding: 0px 14px;
+}
+
+.container.header .moduletable-sign ul li:first-child {
+	background: none;
+}
+
+.container.header .moduletable-sign ul li a:link,
+.container.header .moduletable-sign ul li a:visited,
+.container.header .moduletable-sign ul li a:active {
+	color: #B30000;
+	font-family: 'Conv_GillSansLight',Sans-Serif;
+	font-size: 14px;
+	line-height: 36px;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: block;
+}
+
+.container.header .moduletable-sign ul li a:hover {
+	color: #3d3d3d;
+}
+
+.container.header .moduletable-social {
+	position: absolute;
+	top: 57px;
+	right: 20px;
+}
+
+.container.header .moduletable-social h5 {
+	display: inline-block;
+	vertical-align: middle;
+	color: #626062;
+	font-size: 13px;
+}
+
+.container.header .moduletable-social ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.container.header .moduletable-social ul li {
+	float: left;
+	padding-left: 3px;
+}
+
+.container.header .moduletable-search {
+	position: absolute;
+	bottom: 8px;
+	right: 16px;
+}
+
+.container.header .moduletable-search .inputbox {
+	background: url(/assets/search_bg.jpg) repeat-x left top;
+	width: 310px;
+	height: 28px;
+	line-height: 28px;
+	border: 1px solid #c5c5c5;
+	float: left;
+}
+
+.container.header .moduletable-search .btn {
+	background-color: #B61C1C;
+	border: 1px solid #B61C1C;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline;
+	float: right;
+	font-family: 'Conv_GillSansLight',Sans-Serif;
+	font-size: 14px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0;
+	border-radius: 0px; 
+	padding: 0px 10px;
+}
+
+
+/*-- header styling end ---*/
+
+/*--- left styling start ---*/
+
+.leftCol {
+	border: 1px solid #DBDADA;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+.leftCol.mobile_device {
+	display: none;
+}
+
+.leftCol .moduletable-featured h3 {
+	background: #E2E2E2;
+	font-family: 'Conv_GillSansLight';
+	font-size: 18px;
+	font-weight: normal;
+	color: #000;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 5px 0;
+}
+
+.leftCol .moduletable-featured .item-list {
+	margin: 3px;
+}
+
+.leftCol .moduletable-featured .item-list .featured-artist {
+	background: #fff url(/assets/graphic.png) no-repeat right bottom;
+	border: 1px solid #DADADA;
+	margin-bottom: 2px;
+	padding: 6px;
+}
+
+.leftCol .moduletable-featured .item-list .featured-artist .artist-image {
+	border: 1px solid #003554;
+	float: left;
+	margin: 0 5px 0 0;
+	width: 60px;
+}
+
+.leftCol .moduletable-featured .item-list .featured-artist .artist-name {
+	float: left;
+}
+
+.leftCol .moduletable-featured .item-list .featured-artist .artist-name h4 {
+	font-family: 'Conv_GillSansLight';
+	font-size: 13px;
+	font-weight: normal;
+	color: #000;
+	margin: 0 0 5px 0;
+}
+
+.leftCol .moduletable-profile {
+	margin: 7px 7px 17px 7px;
+}
+
+.leftCol .moduletable-profile .profile-image {
+	text-align: center;
+}
+
+.leftCol .moduletable-profile .profile-image img {
+	display: inline-block;
+}
+
+.leftCol .moduletable-profile .profiletile {
+	margin-top: 10px;
+}
+
+.leftCol .moduletable-profile .profiletile span {
+	font-size: 14px;
+	color: #025172;
+	line-height: 30px;
+	float: left;
+}
+
+.leftCol .moduletable-profile .profiletile span.add-new {
+	float: right;
+}
+
+.leftCol .moduletable-profile .profiletile span.add-new a:link,
+.leftCol .moduletable-profile .profiletile span.add-new a:active,
+.leftCol .moduletable-profile .profiletile span.add-new a:visited {
+	background-color: #9E0707;
+	color: #FFFEFE;
+	font-size: 14px;
+	line-height: 30px;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+.leftCol .moduletable-profile .profiletile span.add-new a:hover {
+	text-decoration: none;
+}
+
+.leftCol .moduletable-profilevideo {
+	margin: 7px 7px 17px 7px;
+	text-align: center;
+}
+
+.leftCol .moduletable-profilevideo .video-box {
+	display: inline-block;
+	margin-bottom: 3px;
+}
+
+.leftCol .moduletable-profilevideo .video-box img {
+	width: 100%;
+}
+
+.leftCol .moduletable-profilevideo .profiletile {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.leftCol .moduletable-profilevideo .profiletile span {
+	font-size: 14px;
+	color: #025172;
+	line-height: 30px;
+	float: left;
+}
+
+.leftCol .moduletable-profilevideo .profiletile span.add-new {
+	float: right;
+}
+
+.leftCol .moduletable-profilevideo .profiletile span.add-new a:link,
+.leftCol .moduletable-profilevideo .profiletile span.add-new a:active,
+.leftCol .moduletable-profilevideo .profiletile span.add-new a:visited {
+	background-color: #9E0707;
+	color: #FFFEFE;
+	font-size: 14px;
+	line-height: 30px;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+.leftCol .moduletable-profilevideo .profiletile span.add-new a:hover {
+	text-decoration: none;
+}
+
+.leftCol .moduletable-myartist {
+
+}
+
+.leftCol .moduletable-myartist h3 {
+	background-color: #E2E2E2;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000;
+	padding: 5px 0;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.leftCol .moduletable-myartist .inner-box {
+	margin: 7px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.leftCol .moduletable-myartist .fanWrap {
+	
+}
+
+.leftCol .moduletable-myartist .fanWrap .tile {
+	
+}
+
+.leftCol .moduletable-myartist .fanWrap .tile span {
+	color: #025172;
+	display: inline;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.leftCol .moduletable-myartist .fanWrap .fansitemWrap {
+	text-align: center;
+}
+
+.leftCol .moduletable-myartist .fanWrap .fansitemWrap img {
+	display: inline-block;
+	width: 100%;
+}
+
+.leftCol .moduletable-myartist .fanWrap .fansitemWrap .itembox {
+	border: 1px solid #dbdada;
+	float: left;
+	margin: 0 4px 4px 0;
+}
+
+.leftCol .moduletable-myartist .fanWrap .fansitemWrap .itembox h4 {
+	margin: 0;
+	line-height: normal;
+	height: 30px;
+	overflow: hidden;
+}
+
+.leftCol .moduletable-myartist .fanWrap .fansitemWrap .itembox h4 a:link,
+.leftCol .moduletable-myartist .fanWrap .fansitemWrap .itembox h4 a:active,
+.leftCol .moduletable-myartist .fanWrap .fansitemWrap .itembox h4 a:visited {
+	color: #9E0707;
+	display: block;
+	font-size: 10px;
+	padding: 5px 0 0;
+	line-height: normal;
+}
+
+.leftCol .moduletable-myartist .fanWrap .fansitemWrap .itembox h4 a:hover {
+	text-decoration: none;
+}
+
+.leftCol .moduletable-recentlyupload {
+	margin: 7px;
+}
+
+.leftCol .moduletable-recentlyupload h3 {
+    color: #03537D;
+    font-size: 18px;
+    font-weight: normal;
+	 margin: 0px;
+}
+
+.leftCol .moduletable-recentlyupload .upload_video {
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	width: 85px;
+}
+
+.leftCol .moduletable-recentlyupload .upload_video img {
+	width: 100%;
+}
+
+/*--- left styling end ---*/
+
+
+.container.containerWrap.adminpanel .profiletitle {
+    border-bottom: 1px solid #CCCCCC;
+    color: #014C6C;
+    font-size: 23px;
+    line-height: 36px;
+}
+
+.container.containerWrap.adminpanel .box2account1 {
+    background-color: #9E0707;
+    clear: both;
+    margin: 7px;
+    overflow: hidden;
+    *padding: 0!important;
+}
+
+.container.containerWrap.adminpanel .box2account1 ul {
+    padding: 10px;
+    list-style: none;
+}
+
+.container.containerWrap.adminpanel .box2account1 ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.container.containerWrap.adminpanel .box2account1 ul li a {
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.container.containerWrap.adminpanel .icon-wrapper .icon a {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    color: #565656;
+    display: block;
+    float: left;
+    height: 97px;
+    margin: 0 15px 15px 0;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 108px;
+}
+
+.container.containerWrap.adminpanel .icon-wrapper .icon img {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.container.containerWrap.adminpanel .icon-wrapper .icon span {
+    display: block;
+    text-align: center;
+}
+
+.container.containerWrap.adminpanel .icon-wrapper .icon a:hover {
+    background: #e2e2e2;
+}
+
+.container.containerWrap.adminpanel .searchWrap .textbox1 {
+    float: left;
+    margin-right: 5px;
+    width: 15%;
+}
+
+.container.containerWrap.adminpanel .textbox1 {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #C5C5C5;
+    display: inline;
+    float: right;
+    height: 28px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+    width: 79.5%;
+}
+
+
+.container.containerWrap.adminpanel .searchWrap .btn {
+    float: left;
+}
+
+.container.containerWrap.adminpanel .btn {
+    background-color: #B61C1C;
+    border: 1px solid #B61C1C;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline;
+    float: right;
+    font-family: 'Conv_GillSansLight',Sans-Serif;
+    font-size: 14px;
+    height: 30px;
+    /*line-height: 30px;*/
+    *line-height: 15px;
+    margin: 0;
+    width: 16.4%;
+}
+.container.containerWrap.adminpanel .btn.subscription {
+	float: none!important;
+}
+
+
+.container.containerWrap.adminpanel div.add-new {
+    float: right;
+}
+
+.container.containerWrap.adminpanel div.add-new a {
+    background: none repeat scroll 0 0 #B61C1C;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-family: 'Conv_GillSansLight',Sans-Serif;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 8px;
+}
+
+.container.containerWrap.adminpanel .clr {
+    clear: both;
+}
+.container.containerWrap.adminpanel .table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.container.containerWrap.adminpanel .table tr th {
+    background: none repeat scroll 0 0 #E2E2E2;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 5px 0;
+}
+.container.containerWrap.adminpanel .table tr th,
+.container.containerWrap.adminpanel .table tr td {
+    border: 1px solid #CCCCCC;
+    padding: 3px;
+    text-align: center;
+}
+
+
+.container.containerWrap.adminpanel #ddtags dl {
+    clear: both;
+    margin: 8px 0 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+}
+
+
+.container.containerWrap.adminpanel #ddtags dl dt {
+    color: #6A6A6A;
+    display: inline;
+    float: left;
+    font-size: 15px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    width: 26.8%;
+}
+
+.container.containerWrap.adminpanel #ddtags dl dt label {
+    padding: 0!important;
+    font-weight: normal!important;
+}
+
+.container.containerWrap.adminpanel #ddtags dl dd {
+    color: #6A6A6A;
+    display: inline;
+    float: left;
+    font-size: 15px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    width: 56.4%;
+}
+
+.container.containerWrap.adminpanel .login_inp {
+    background-color: #FEFEFE;
+    border: 1px solid #C7C7C7;
+    padding: 5px!important;
+    width: 96.2%!important;
+    line-height: 26px;
+    *line-height: 15px;
+    font-size: 13px;
+}
+
+.container.containerWrap.adminpanel .login {
+    background-color: #B61C1C;
+    border: 2px solid #B61C1C;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-family: 'Conv_GillSansLight',Sans-Serif;
+    font-size: 15px;
+    height: 30px;
+    line-height: 30px;
+    *line-height: 15px;
+    text-align: center;
+    width: 132px;
+}
+
+.container.containerWrap.adminpanel #ddtags a {
+    clear: both;
+    color: #E40000;
+    margin: 0;
+}
+
+.container.containerWrap.adminpanel .rightpartWrap .table a {
+    color: #000!important;
+    text-decoration: none;
+}
+
+.container.containerWrap.adminpanel .rightpartWrap .table a:hover {
+    text-decoration: none;
+}
+
+.container.containerWrap.adminpanel .pagination span, 
+.container.containerWrap.adminpanel .pagination a, 
+.container.containerWrap.adminpanel .pagination em {
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-radius: 3px;
+    color: #464646;
+    display: inline;
+    font-size: 12px;
+    line-height: 30px;
+    margin: 0 4px;
+    padding: 4px 7px;
+}
+
+.container.containerWrap.adminpanel .pagination em {
+    color: #B61C1C;
+}
+.container.containerWrap.adminpanel .table input {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+    padding: 3px 5px;
+    text-align: center;
+    width: 50px;
+}
+
+.container.containerWrap.adminpanel #status, 
+.container.containerWrap.adminpanel #plan, 
+.container.containerWrap.adminpanel #artist {
+    height: 30px!important;
+    line-height: 30px!important;
+    padding: 5px 0!important;
+}
+
+.container.containerWrap.adminpanel #status,
+.container.containerWrap.adminpanel #plan,
+.container.containerWrap.adminpanel #expiration_date_datewrap, 
+.container.containerWrap.adminpanel #expiration_date, 
+.container.containerWrap.adminpanel #artist, 
+.container.containerWrap.adminpanel #expiration_date_start, 
+.container.containerWrap.adminpanel #purchase_date_start, 
+.container.containerWrap.adminpanel #expiration_date_end, 
+.container.containerWrap.adminpanel #purchase_date_end {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #C5C5C5;
+    display: inline;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    width: 16%;
+}
+.container.containerWrap.adminpanel .ui-datepicker-trigger, 
+.container.containerWrap.adminpanel .to {
+    float: left;
+    margin-right: 5px;
+    margin-top: 6px;
+    vertical-align: middle;
+}
+
+.container.containerWrap.adminpanel .buttonwrap {
+    float: left;
+    margin: 10px 0;
+    width: 100%;
+}
+
+
+.container.containerWrap.adminpanel .login_inp1 {
+    background-color: #FEFEFE;
+    border: 1px solid #C7C7C7;
+    height: 100px;
+    padding: 5px;
+    width: 96.2%;
+}
+
+.container.containerWrap.adminpanel #ddtags dl dt {
+    font-weight: normal;
+}
+
+.container.containerWrap.adminpanel #ddtags dl dt strong {
+    font-weight: normal!important;
+}
+
+/*--- footer styling start --*/
+
+.footer-outerWrap {
+	position: relative;
+	bottom: 0px;
+	width: 100%;	
+}
+
+.container.footerWrap {
+	background: url(/assets/footer_bg.jpg) repeat-x left top #e7e7e7;
+	padding-bottom: 15px;
+}
+
+.footer-menu {
+	padding: 25px 11px 18px;
+}
+
+.footer-menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-menu ul li {
+	border-left: 1px solid #015677;
+	padding: 0 9px 0 10px;
+	line-height: 15px;
+	float: left;
+}
+
+.footer-menu ul li.first {
+	padding-left: 0;
+	border-left: 0;
+}
+
+.footer-menu ul li a:link,
+.footer-menu ul li a:active,
+.footer-menu ul li a:visited {
+	color: #015677;
+	font-size: 14px;
+	line-height: 15px;
+	text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+	text-decoration: none;
+	color:	#D70000;
+}
+
+.footer-bottom {
+
+}
+
+.footer-bottom .moduletable.footerleft {
+
+}
+
+.footer-bottom .moduletable.footerleft a:link,
+.footer-bottom .moduletable.footerleft a:active,
+.footer-bottom .moduletable.footerleft a:visited {
+	color: #D70000;
+	font-size: 14px;
+	line-height: 22px;
+	text-decoration: none;
+}
+
+.footer-bottom .moduletable.footerleft a:hover {
+	color: #3d3d3d;
+	text-decoration: none;
+}
+
+.footer-bottom .moduletable.footerright {
+
+}
+
+.footer-bottom .moduletable.footerright ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.footer-bottom .moduletable.footerright ul li {
+	display: inline;
+}
+
+
+/*--- footer styling end --*/
+
+.container.containerWrap.adminpanel {
+     padding: 8px 10px 0;
+}
+
+.notice {
+    background: url("/assets/tick_green.png") no-repeat scroll 15px center #FCF8E6;
+    border-bottom: 3px solid #DCD5B5;
+    border-top: 3px solid #DCD5B5;
+    color: #CC0000;
+    margin: 15px 0;
+    padding: 5px 50px;
+}
+.message {
+    color: #908867;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 7px 0 7px 38px;
+    text-align: left;
+}
+
+/* vedio css */
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+/*	min-height: 320px;*/
+	margin-bottom: 10px;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.container.containerWrap.adminpanel .admin_subscription_view.subscription #status, 
+.container.containerWrap.adminpanel .admin_subscription_view.subscription #plan, 
+.container.containerWrap.adminpanel .admin_subscription_view.subscription #artist {
+	width: 40%!important;
+}
+
+/*-- new add may23-2014---*/
+.exportWrap {
+float: right;
+}
+
+.exportWrap label {
+display: inline;
+margin-right: 5px;
+}

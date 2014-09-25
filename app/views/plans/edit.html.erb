@@ -1,0 +1,17 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Editing plan</title>
+<% end %>
+
+<div class="profiletitle">Editing plan</div>
+<div class="clr">&nbsp;</div>
+
+<div id="ddtags">
+  
+  <%= render 'form' %>
+  
+  <dl>			
+    <dt><%= link_to 'Show', @plan %></dt>
+    <dd><%= link_to 'Back', plans_path %></dd>
+  </dl>
+  
+</div>

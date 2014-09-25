@@ -1,0 +1,96 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Music Purchase</title>
+<% end %>
+
+<div class="profiletitle">Music Purchase</div>
+<div class="clr">&nbsp;</div>
+
+<div class="searchWrap">
+	<div class="searchbox">
+                <form id="searchForm" name="searchForm" action="" method="get">
+                  <div class="searchboxinner">
+                    <input type="text" name="search" class="textbox1" value="<%=h(@search)%>"/>
+		    <%= select_tag :artist, options_from_collection_for_select(User.where("user_type='artist'").select("id,CONCAT(first_name,' ',last_name) AS full_name"), :id, :full_name,:selected => params[:artist]), {:prompt=>"Select Artist" } %>
+		    <%=select_tag "status", options_for_select([ "Complete", "Incomplete" ], @status),{:prompt=>"Select Status"}%>		    
+		    <%=text_field_tag 'purchase_date_start', params[:purchase_date_start], placeholder: "Start date", class: "datepicker"%> 
+			<div class="to">to </div>
+		    <%=text_field_tag 'purchase_date_end', params[:purchase_date_end], placeholder: "End date", class: "datepicker"%>
+                    <div class="buttonwrap"><input type="submit" value="Search" class="btn"/>
+                    <input style="margin-left:4px;" type="button" class="btn" value="Reset" onclick="clearSearchForm();document.searchForm.submit();"></div>
+                  </div>
+                </form>		
+	</div>	
+	<div class="clr">&nbsp;</div>
+</div>
+<div class="tableWrap">
+  <form id="dataFormItem" name="dataFormItem" action="" method="post">
+    <table class="table">
+           <thead>
+                  <tr>
+                    <th style="width: 50px;">#</th>
+                    <th>User</th>
+                    <th>Purchase Date</th>
+		    <th>Amount</th>
+                    <th>Note</th>
+		    <th>Status</th>
+                    <th style="width: 125px;">Action</th>   
+                  </tr>
+           </thead>
+           <tbody>
+                  <%
+                    itemNo = 0
+                    if params[:page].to_i > 1
+		      itemNo = (params[:page].to_i - 1)*10
+                    end
+                    @music_orders.each do |music_order|
+                    itemNo = itemNo + 1
+                    buyer = getUserByID(music_order.user_id)
+                    
+                    buyerName = "-"
+                    if buyer!=nil
+		      buyerName = buyer.first_name+" "+buyer.last_name
+                    end
+                  %>
+                    <tr>
+                      <td><%=itemNo%></td>
+                      <td>
+			<%= link_to buyerName, music_purchase_path(music_order) %>                        
+                      </td>
+                      <td><%=music_order.created_at.to_time.utc.strftime('%Y-%m-%d')%></td>
+		      <td><%=music_order.order_total%></td>
+                      <td><%=music_order.customer_note%></td>
+			
+                      <td>
+                        <%=(music_order.order_status == 1)?"Paid":"Pending"%>
+                      </td>
+                      <td>
+			<% if music_order.order_status == 0%>
+			  <%= link_to 'Complete Order', admin_music_purchase_complete_path(:id=>music_order.id) %>
+			<%end%>
+                      </td>
+                    </tr>
+                  <% end %>                  
+           </tbody>
+    </table>
+    <%= will_paginate @music_orders, :params=>{:search=>h(@search)} %>
+  </form>
+</div>
+
+<script type="text/javascript">
+  jQuery( document ).ready(function() {
+    jQuery( ".datepicker" ).datepicker({
+      dateFormat: "yy-mm-dd",
+      buttonImage: "/assets/calendar.gif",
+      buttonImageOnly: true,
+      //minDate:'0d+',
+      showOn: "both"
+    });
+  });
+  function clearSearchForm(){
+    document.searchForm.search.value='';
+    document.searchForm.status.value='';
+    document.searchForm.artist.value='';    
+    document.searchForm.purchase_date_start.value='';
+    document.searchForm.purchase_date_end.value='';
+  }
+</script>

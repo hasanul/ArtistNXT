@@ -1,0 +1,46 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Watch History</title>
+<% end %>
+
+<div class="contenttitle_area">
+        <h2 class="logintitle2">Watch History</h2>
+</div>
+
+<%@mobile_device_class=""%>
+<%= render :partial => 'profile/index_left' %>
+<div class="rightpartWrap col-md-10"> <!-- rightpartWrap start -->
+        <div class="rightPart clearfix"> <!-- rightPart start -->
+                <div class="contentCol col-md-9"> <!-- contentCol start -->
+                        <div class="content">
+                          <div class="titlepage"><span class="addnew"><%= link_to "Clear All", clear_watch_list_path(:return_url=>Base64.encode64(watch_history_url) ), data: { confirm: 'Are you sure?' } %></span></div>
+                          <% watchedVideos = getRecentlyWatchedVideosPagination(current_user.id,@pageNo) %>
+                          <% if watchedVideos[:total] == 0 %>
+                                <div class="video" style="text-align:center;">No record found!</div>
+                           <% else %>
+                              <% watchedVideos[:rows].each {|video| %>
+                          
+                          <div class="favorite_videoWrap watch">
+							  <div class="favorite_videoItem clearfix">
+								<div class="video_thumb"><%=getVideoThumb(video,"mqdefault",138,83)%></div>
+								<div class="video_info">
+								  <div class="video_title"><%= link_to video.title.html_safe, watch_video_path(:id => video.id.to_s+':'+video.title.parameterize) %></div>
+								  <%= time_ago_in_words(video.created_at) %> ago<br/>
+								  <%= video.desc.truncate(80, :separator => ' ') %>
+								</div>
+								<div class="video_delete">
+								  <%= link_to image_tag("/assets/del.png"), remove_video_watch_path(:id => video.id,:user_id => current_user.id, :return_url=>Base64.encode64(watch_history_url) ), data: { confirm: 'Are you sure?' } %>
+								</div>
+							  </div>
+						  </div>
+                              <% } %>
+                          
+                          <% end %>
+                          
+                          <%= will_paginate watchedVideos[:collection], :previous_label => 'Prev', :next_label => 'Next' %>
+                        </div>
+                </div> <!-- contentCol end -->
+                <%= render :partial => 'profile/index_right' %>
+        </div> <!-- rightPart end -->
+</div> <!-- rightpartWrap end -->
+<%@mobile_device_class=" mobile_device"%>
+<%= render :partial => 'profile/index_left' %>

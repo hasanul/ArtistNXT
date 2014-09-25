@@ -1,0 +1,61 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Music Details</title>
+<% end %>
+
+<div class="profiletitle">Music Details</div>
+<div class="clr">&nbsp;</div>
+
+<div id="ddtags">
+
+  <dl>
+    <dt><strong>Title:</strong>:</dt>
+    <dd><%= @item.title %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Created By:</strong>:</dt>
+    <dd><%= User.find(@item.user_id).first_name+' ' +User.find(@item.user_id).last_name %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Created:</strong>:</dt>
+    <dd><%= @item.created_at %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Hits:</strong>:</dt>
+    <dd><%= @item.hits %></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Published:</dt>
+    <dd>
+      <% if @item.published
+        %>
+          <img src="/assets/tick_green_icon.png" alt="" />
+        <%
+        else
+        %>
+          <img src="/assets/unpublish_icon.png" alt="" />
+        <%
+        end
+      %>
+    </dd>
+  </dl>
+  
+  <dl>			
+    <dt>Description:</dt>
+    <dd><%= @item.desc %></dd>
+  </dl>
+  
+  <dl>
+    <dt></dt>
+    <dd><%=get_mediaelement_audio_player(@item.path.to_s).html_safe%></dd>
+  </dl>
+  
+  <dl>			
+    <dt></dt>
+    <dd><%= link_to 'Back', admin_music_path %></dd>
+  </dl>
+
+</div>

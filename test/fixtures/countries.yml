@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  country_name: MyString
+  country_3_code: MyString
+  country_2_code: MyString
+  published: false
+
+two:
+  country_name: MyString
+  country_3_code: MyString
+  country_2_code: MyString
+  published: false

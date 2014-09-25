@@ -1,0 +1,68 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Plan Details</title>
+<% end %>
+
+<div class="profiletitle">Plan Details</div>
+<div class="clr">&nbsp;</div>
+
+<div id="ddtags">
+
+  <dl>
+    <dt><strong>Name:</strong>:</dt>
+    <dd><%= @plan.name %></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Description:</dt>
+    <dd><%= @plan.desc %></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Is free:</dt>
+    <dd><%= @plan.is_free ? 'Yes' : 'No' %></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Price:</dt>
+    <dd><%= @plan.price %></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Period:</dt>
+    <dd>
+      <%if !@plan.is_free
+      %>
+        <%=formatDuration(@plan.period,@plan.period_unit)%>
+      <%
+      else
+      %>
+        Lifetime
+      <%
+        end
+      %>
+    </dd>
+  </dl>
+  
+  <dl>			
+    <dt>Published:</dt>
+    <dd>
+      <% if @plan.published
+        %>
+          <img src="/assets/tick_green_icon.png" alt="" />
+        <%
+        else
+        %>
+          <img src="/assets/unpublish_icon.png" alt="" />
+        <%
+        end
+      %>
+    </dd>
+  </dl>
+  
+  <dl>			
+    <dt><%= link_to 'Edit', edit_plan_path(@plan) %></dt>
+    <dd><%= link_to 'Back', plans_path %></dd>
+  </dl>
+
+</div>
+

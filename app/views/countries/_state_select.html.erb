@@ -1,0 +1,18 @@
+  <% if !country_id.blank?  %>
+  <% country = Country.find(country_id)  %>
+  
+  <% states = State.where("country_id = ?", country_id).all %>
+  <% end %>
+  
+  <% if country.nil? %>
+    <em>Please select a country above</em>
+  
+  <% else %>
+    <% if !states.blank? %>
+    
+      <%= select(:user, :state_id, states.collect{|s| [s[:state_name],s[:id]]}, {:prompt => "Please Select Your State", :selected => state_id}, {:class => "form-control"}) %>
+  
+    <% else %>
+      <%= select(:user, :state_id, [], {:prompt => "Please Select Your State"}, {:class => "form-control"}) %>
+    <% end %>
+  <% end %>

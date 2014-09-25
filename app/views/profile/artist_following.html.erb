@@ -1,0 +1,44 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Artist Following</title>
+<% end %>
+
+<%@mobile_device_class=""%>
+<%= render :partial => 'profile/index_left' %>
+<div class="rightpartWrap col-md-10"> <!-- rightpartWrap start -->
+        <div class="rightPart clearfix"> <!-- rightPart start -->
+                <div class="contentCol col-md-9"> <!-- contentCol start -->
+                        <div class="content">
+                                <!-- artist following start -->
+				<% favAristResult = getFansFavoriteArtistsPagination(current_user.id,@pageNo)%>
+                                <div class="fanfollowingWrap">
+                                        <div class="profiletitle">Artist I am following (<span><%=favAristResult[:total]%></span>)</div>
+                                        <%
+                                        favAristResult[:rows].each {|artist|
+                                          user_name = artist.first_name + " " + artist.last_name                                        
+                                      %>
+                                        <div class="fanfollowing clearfix">
+                                                <div class="folloimage col-md-3 col-sm-3">
+                                                  <%= link_to image_tag(getUserAvatar(artist,'large'),:width => "154"), artist_dashboard_path(id: artist.id.to_s+':'+user_name.parameterize) %>                                                  
+                                                </div>
+                                                <div class="folloinfo col-md-9 col-sm-9">
+                                                    <div class="follow_des">
+                                                            <%= link_to user_name, artist_dashboard_path(id: artist.id.to_s+':'+user_name.parameterize) %>
+                                                            <%= artist.biography.to_s.truncate(300, :separator => ' ') %>                                                        
+                                                            <span>From: <%=getFormattedLocation(artist)%></span>
+                                                    </div>
+                                                    <%= link_to "View Profile", artist_dashboard_path(id: artist.id.to_s+':'+user_name.parameterize),:class=>"viewprofile" %>
+                                                </div>
+                                        </div>
+                                      <%
+                                      }%>
+                                        <%= will_paginate favAristResult[:collection], :previous_label => 'Prev', :next_label => 'Next' %>
+                                </div>
+
+                                <!-- artist following end -->
+                        </div>
+                </div> <!-- contentCol end -->
+                <%= render :partial => 'profile/index_right' %>
+        </div> <!-- rightPart end -->
+</div> <!-- rightpartWrap end -->
+<%@mobile_device_class=" mobile_device"%>
+<%= render :partial => 'profile/index_left' %>

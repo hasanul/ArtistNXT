@@ -1,0 +1,25 @@
+name,email,phone,account_type,registered_date,city,state,country,zip
+<%
+@all_items.each do |item|
+    user_name = item.first_name.to_s + " " + item.last_name.to_s
+    
+    if item.plan_id!=nil
+      account_type = Plan.find(item.plan_id).name
+    else
+      account_type = ''
+    end
+    
+    if item.state_id!=nil
+      state = State.find(item.state_id).state_name
+    else
+      state = ''
+    end
+    
+    if item.country_id != nil
+      country = Country.find(item.country_id).country_name
+    else
+      country =  ''
+    end 
+%>
+<%=user_name%>,<%=item.email%>,<%=item.phone%>,<%=account_type%>,<%=item.created_at%>,<%=item.city%>,<%=state%>,<%=country%>,<%=item.zip%>
+<% end %>

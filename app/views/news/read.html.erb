@@ -1,0 +1,31 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | <%= @news.title %></title>
+<% end %>
+
+<% content_for :page_meta do %>
+  <meta name="description" content="<%= @news.title %>" />
+  <meta property="og:site_name" content="ArtistNXT">
+  <meta property="og:title" content="<%= @news.title %>"/>
+  <meta property="og:type" content="article"/>
+                
+  <meta property="og:url" content="<%=request.url%>">
+  <% if @news.news_image.to_s != "" %>
+  <meta property="og:image" content="<%=root_url+@news.news_image.to_s[1..-1]%>"/>
+  <%end%>
+<% end %>
+
+<div class="contenttitle_area">
+  <h2 class="logintitle2">News Details</h2>
+</div>
+<div class="contentCol">
+    <div class="content">
+      <h1><%= @news.title %></h1>
+      <br>
+      <% if @news.news_image.to_s != "" %>
+              <%= image_tag(@news.news_image, :width=>"100%") %>
+      <% end %> 
+      <p>
+        <%= @news.desc %>
+      </p>
+    </div>
+</div>

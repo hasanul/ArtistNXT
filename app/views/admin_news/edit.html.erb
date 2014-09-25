@@ -1,0 +1,17 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Editing news</title>
+<% end %>
+
+<div class="profiletitle">Editing news</div>
+<div class="clr">&nbsp;</div>
+
+<div id="ddtags" class="ddtags-full-width">
+  
+  <%= render 'form' %>
+  
+  <dl>			
+    <dt><%= link_to 'Show', @admin_news %></dt>
+    <dd><%= link_to 'Back', admin_news_index_path %></dd>
+  </dl>
+  
+</div>

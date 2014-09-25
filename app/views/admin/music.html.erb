@@ -1,0 +1,69 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Music Manager</title>
+<% end %>
+
+<div class="profiletitle">Music Manager</div>
+<div class="clr">&nbsp;</div>
+
+<div class="searchWrap">
+	<div class="searchbox">
+                <form id="searchForm" name="searchForm" action="" method="get">
+                  <div class="searchboxinner">
+                    <input type="text" name="search" class="textbox1" value="<%=h(@search)%>"/>
+                    <input type="submit" value="Search" class="btn"/>
+                    <input style="margin-left:4px;" type="button" class="btn" value="Reset" onclick="document.searchForm.search.value='';document.searchForm.submit();">
+                  </div>
+                </form>		
+	</div>
+	<div class="clr">&nbsp;</div>
+</div>
+<div class="tableWrap">
+  <form id="dataFormSlide" name="dataFormSlide" action="" method="post">
+    <table class="table">
+           <thead>
+                  <tr>
+                    <th style="width: 50px;">#</th>
+                    <th>Title</th>
+		    <th>Created By</th>
+		    <th>Hits</th>
+                    <th style="width: 125px;">Published</th>
+                    <th style="width: 150px;">Action</th>
+                  </tr>
+           </thead>
+           <tbody>
+                  <%                    
+                    slideNo = 0
+                    if params[:page].to_i > 1
+		      slideNo = (params[:page].to_i - 1)*10
+                    end
+                    @items.each do |item|
+                    slideNo = slideNo + 1
+                  %>
+                    <tr>
+                      <td><%=slideNo%></td>
+                      <td><%= link_to item.title.html_safe, admin_music_details_path(:cid => item.id) %></td>
+		      <td><%= User.find(item.user_id).first_name+" "+User.find(item.user_id).last_name %></td>
+		      <td><%=item.hits%></td>
+                      <td>
+                        <%if item.published
+                        %>
+                          <img src="/assets/tick_green_icon.png" alt="" />
+                        <%
+                          else
+                        %>
+                          <img src="/assets/unpublish_icon.png" alt="" />
+                        <%
+                          end
+                        %>
+                        
+                      </td>
+                      <td>
+                          <%= link_to image_tag("/assets/delete_icon.png"), removemusic_path(:cid => item.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+                      </td>
+                    </tr>
+                  <% end %>                  
+           </tbody>
+    </table>
+    <%= will_paginate @items, :params=>{:search=>h(@search)} %>
+  </form>
+</div>

@@ -1,0 +1,36 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Settings Manager</title>
+<% end %>
+
+<div class="profiletitle">Paypal Settings</div>
+<div class="clr">&nbsp;</div>
+
+<div id="ddtags">
+<form method="POST" name="settings_form" action="/admin/save_settings">
+  <dl>
+  <dt>Paypal Merchant Email</dt>
+  <dd><input type="text" name="paypal_merchant_email" class="login_inp" value="<%=@settings.paypal_merchant_email%>" /></dd>
+  </dl>
+  
+  <dl>
+  <dt>Sandbox Merchant Email</dt>
+  <dd><input type="text" name="sandbox_merchant_email" class="login_inp" value="<%=@settings.sandbox_merchant_email%>" /></dd>
+  </dl>
+  
+  <dl>
+  <dt>Sandbox?</dt>
+  <dd><%= select_tag :sandbox, options_for_select([['YES',TRUE],['NO',FALSE]], @settings.sandbox) %></dd>
+  </dl>
+  
+  <dl>
+  <dt>Currency</dt>
+  <dd><input type="text" name="currency" class="login_inp" value="<%=@settings.currency%>" /></dd>
+  </dl>
+  
+  <dl>
+  <dt>&nbsp;</dt>
+  <dd><input type="submit" name="submit" class="login" value="Submit" /></dd>
+  </dl>
+  
+</form>
+</div>

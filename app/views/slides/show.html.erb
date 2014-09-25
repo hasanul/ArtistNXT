@@ -1,0 +1,32 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Listing Slide</title>
+<% end %>
+
+<div class="profiletitle">Listing Slide</div>
+<div class="clr">&nbsp;</div>
+
+<div id="ddtags">
+
+  <dl>
+    <dt><strong>Title:</strong>:</dt>
+    <dd><%= @slide.title %></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Description:</dt>
+    <dd><%= @slide.desc %></dd>
+  </dl>
+  
+  <dl>
+    <dt>
+        <strong>Image: </strong>
+    </dt>
+    <dd><%= image_tag(@slide.slide_image, :width=>126, :height=>78) %></dd>
+  </dl>
+  
+  <dl>			
+    <dt><%= link_to 'Edit', edit_slide_path(@slide) %></dt>
+    <dd><%= link_to 'Back', admin_slides_path %></dd>
+  </dl>
+
+</div>

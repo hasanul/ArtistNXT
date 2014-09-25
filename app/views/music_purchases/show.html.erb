@@ -1,0 +1,85 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Order Details</title>
+<% end %>
+
+<div class="profiletitle">Order Details</div>
+<div class="clr">&nbsp;</div>
+<%buyerUser = getUserByID(@music_order.user_id)
+%>
+<div id="ddtags" class="ddtags-full-width">
+
+  <dl>
+    <dt><strong>User:</strong></dt>
+    <dd>
+      <% if buyerUser!=nil
+      %>
+        <%=buyerUser.first_name%> <%=buyerUser.last_name%>
+      <%end%>
+    </dd>
+  </dl>
+  
+  <dl>			
+    <dt>Purchase date:</dt>
+    <dd><%=@music_order.created_at.to_time.utc.strftime('%Y-%m-%d')%></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Total:</dt>
+    <dd><%= @music_order.order_total %></dd>
+  </dl>
+  
+  <dl>			
+    <dt>Status:</dt>
+    <dd>
+      <%=(@music_order.order_status == 1)?"Paid":"Pending"%>
+    </dd>
+  </dl>
+  
+  <dl>			
+    <dt>Note:</dt>
+    <dd>
+      <%= @music_order.customer_note %>
+    </dd>
+  </dl>
+  
+  <dl>			
+    <dt>IP:</dt>
+    <dd>
+      <%= @music_order.ip_address %>
+    </dd>
+  </dl>
+</div>
+<%
+if @music_order.order_items!=nil  
+%>
+  <div class="subtitle">Order Items</div>
+ <table class="table">
+    <thead>
+       <tr>
+         <th style="width: 50px;">ID#</th>
+         <th>Music</th>
+         <th>Artist</th>
+         <th>Amount</th>
+         <th>Status</th>
+       </tr>
+       <%@music_order.order_items.each do |order_item|
+        artistName = getMusicsArtistName(order_item.product_id,true)
+       %>
+        <tr>
+          <td><%=order_item.order_id%></td>
+          <td><%=order_item.product_name%></td>
+          <td><%=artistName%></td>
+          <td><%=order_item.product_final_price%></td>
+          <td><%=(order_item.order_status == 1)?"Paid":"Pending"%></td>
+        </tr>
+       <%end%>
+    </thead>
+  </table>           
+<%
+end
+%>
+<div id="ddtags">
+  <dl>			
+      <dd><%= link_to 'Back', music_purchases_path %></dd>
+  </dl>
+</div>

@@ -1,0 +1,85 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Artist Manager</title>
+<% end %>
+
+<div class="profiletitle">Artist Details</div>
+
+
+<div id="ddtags" class="ddtags-full-width">
+  <dl>
+    <dt><strong>Name</strong>:</dt>
+    <dd><%=@artistInfo.first_name+" "+@artistInfo.last_name%></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Email</strong>:</dt>
+    <dd><%= @artistInfo.email %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Country</strong>:</dt>
+    <dd><%= getCountryName(@artistInfo.country_id) %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>State</strong>:</dt>
+    <dd><%= getStateName(@artistInfo.state_id) %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>City</strong>:</dt>
+    <dd><%= @artistInfo.city %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Zip Code</strong>:</dt>
+    <dd><%= @artistInfo.zip %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Phone No</strong>:</dt>
+    <dd><%= @artistInfo.phone %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Music Info</strong>:</dt>
+    <dd><%= @artistInfo.music_info %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Category</strong>:</dt>
+    <dd><%= @musicCatName %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Music description</strong>:</dt>
+    <dd><%= @artistInfo.music_desc %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Label</strong>:</dt>
+    <dd>
+      <% if @artistInfo.music_label
+      %>
+        Yes
+      <%
+      else
+      %>
+        No
+      <%
+        end
+      %>
+    </dd>
+  </dl>
+  
+    
+  <dl>
+    <dt><strong>Profile Photo</strong>:</dt>
+    <dd><%= image_tag(getUserAvatar(@artistInfo,"large"),:width => "212") %></dd>
+  </dl>
+  
+  <dl>			
+    <dt>&nbsp;</dt>
+    <dd><%= link_to 'Edit', admin_edit_user_path(:user_id=>@artistInfo.id) %> | <%= link_to 'Back', admin_artists_path %></dd>
+  </dl>
+</div>

@@ -1,0 +1,102 @@
+<%= form_for([@user, @event]) do |f| %>
+
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this Event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="events_fieldwrap">
+  <div class="inputwrap_events clearfix">
+          <%= label_tag(:title, "Title:") %>
+          <%= f.text_field :title, class: "form-control required" %>
+  </div>  
+  <div class="inputwrap_events clearfix">
+          <%= label_tag(:desc, "Description") %>
+          <%= f.text_area(:desc, class: "form-control required") %>
+  </div>
+  
+  <div class="inputwrap_events clearfix">
+          <%= label_tag(:start_date, "Start Date") %>
+          <%= f.text_field :start_date, class: "form-control" %>
+  </div>
+  
+  <div class="inputwrap_events clearfix">
+          <%= label_tag(:end_date, "End Date") %>
+          <%= f.text_field :end_date, class: "form-control" %>
+  </div>  
+  
+  <div class="inputwrap_events clearfix">
+          <%= label_tag(:location, "Location") %>
+          <%= f.text_field :location, class: "form-control required" %>
+          <%= f.hidden_field :latitude %>
+          <%= f.hidden_field :longitude %>
+  </div> 
+  <div class="inputwrap_events clearfix">
+          <%= label_tag(:event_image, "Upload File") %>
+          <%= f.file_field :event_image,{:class => ""} %>
+  </div>
+
+  
+  
+  <% if @event.event_image.to_s!="" %>
+    <div class="inputwrap_events clearfix">
+      <%= image_tag("#{@event.event_image}", :width=>126, :height=>78) %>
+    </div>
+  <% end %>
+  
+    <input type="submit" id="submit_event_button" value="Submit" class="submit btn">  
+	</div>
+  <% end %>
+  
+
+<script type="text/javascript">
+function initialize_google_place_autocomplete() {        
+  var location_input = document.getElementById('event_location');
+  var location_autocomplete = new google.maps.places.Autocomplete(location_input);
+  google.maps.event.addListener(location_autocomplete, 'place_changed', function() {
+      var place = location_autocomplete.getPlace();
+      if (place.geometry) {
+          jQuery('#event_latitude').val(place.geometry.location.lat());
+          jQuery('#event_longitude').val(place.geometry.location.lng());	    
+      }        
+      return false;
+  });
+}
+
+jQuery( document ).ready(function() {
+    jQuery('#new_event').validate({
+      errorClass:"invalid",
+      submitHandler:function(form){
+        if(jQuery('#event_latitude').val() == "" || jQuery('#event_longitude').val()== "")
+        {
+          alert("Please choose an appropriate address");
+          return false;
+        }
+        else
+        {
+          document.getElementById('submit_event_button').form.submit();
+        }
+      }
+    });
+    jQuery( "#event_start_date" ).datetimepicker({
+        showOn: "focus",
+        dateFormat: "yy-mm-dd",
+        timeFormat: "HH:mm"
+    });
+    jQuery( "#event_end_date" ).datetimepicker({
+        showOn: "focus",
+        dateFormat: "yy-mm-dd",
+        timeFormat: "HH:mm"
+    });
+    initialize_google_place_autocomplete();
+    jQuery('#event_location').change(function(){
+      jQuery('#event_latitude,#event_longitude').val('');
+    });
+});
+</script>

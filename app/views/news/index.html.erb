@@ -1,0 +1,93 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Listing News</title>
+<% end %>
+<div class="contenttitle_area">
+        <h2 class="logintitle2">Listing News</h2>
+</div>
+
+<%@mobile_device_class=""%>
+<%= render :partial => 'profile/index_left' %>
+<div class="rightpartWrap col-md-10"> <!-- rightpartWrap start -->
+        <div class="rightPart clearfix"> <!-- rightPart start -->
+                <div class="contentCol col-md-9"> <!-- contentCol start -->
+                        <div class="content">
+                          <div class="titlepage"><span class="addnew"><%= link_to 'Add News', new_user_news_path %></span>  </div>
+                          <div class="fanfollowingWrap">
+                            <% @news.each do |news| %>
+                                <div class="fanfollowing clearfix">
+                                    <% if news.news_image.to_s != "" %>
+                                        <div class="folloimage col-md-3 col-sm-3">
+                                              <%= link_to image_tag(news.news_image, :class=>"img-responsive"), user_news_path(:user_id => news.user_id, :id => news.id) %>                                                          
+                                        </div>
+                                    <% end %>
+                                    <div class="folloinfo col-md-9 col-sm-9">
+                                      <%= link_to news.title, user_news_path(:user_id => news.user_id, :id => news.id.to_s+':'+news.title.parameterize) %><br>
+                                      <%= news.desc.truncate(140, :separator => ' ') %>
+                                    </div>
+                                </div>
+                            <% end %>
+                            <%= will_paginate @news, :previous_label => 'Prev', :next_label => 'Next' %>
+                          </div>
+                        </div>
+                </div> <!-- contentCol end -->
+                <%= render :partial => 'profile/index_right' %>
+        </div> <!-- rightPart end -->
+</div> <!-- rightpartWrap end -->
+<%@mobile_device_class=" mobile_device"%>
+<%= render :partial => 'profile/index_left' %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%if false%>
+
+<%= render :partial => 'profile/index_left' %>
+
+<div id="ddtags" class="profile">
+  <div class="titlepage"><span class="addnew"><%= link_to 'Add News', new_user_news_path %></span>  </div>
+
+    <% @news.each do |news| %>
+    
+    <div class="news" style="float: left;width: 750px;margin-bottom: 10px;padding-bottom: 10px;">
+      
+      <% if news.news_image.to_s != "" %>
+      <div style="float:left;margin-right:10px;width:126px;"><%= image_tag(news.news_image, :width=>126, :height=>78) %></div>
+      <div style="float:left;width:610px;">
+        <%= link_to news.title, user_news_path(:user_id => news.user_id, :id => news.id) %><br>
+        <%= news.desc.truncate(140, :separator => ' ') %>
+      </div>
+      <% else %>
+      <div>
+        <%= link_to news.title, user_news_path(:user_id => news.user_id, :id => news.id) %><br>
+        <%= news.desc.truncate(180, :separator => ' ') %>
+      </div>
+      <% end %>
+      
+    </div>
+    
+    <% end %>
+    
+    <%= will_paginate @news, :previous_label => 'Prev', :next_label => 'Next' %>
+
+</div>
+
+<%= render :partial => 'profile/index_right' %>
+<%end%>

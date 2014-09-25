@@ -1,0 +1,14 @@
+<p>Congratulation <%= @user.first_name %> <%= @user.last_name %>!</p>
+
+<p>Your have just purchased following musics. please download and enjoy!</p>
+
+<ul>
+  <%@musicList.each do |downloadRow|%>
+    <li><a href="<%=root_url%>download_music/<%=downloadRow[:download_key]%>"><%=downloadRow[:title]%></a></li>
+  <%end%>
+</ul>
+
+<p>Our website: <%=root_url%></p>
+
+
+<p>Best Regards</p>

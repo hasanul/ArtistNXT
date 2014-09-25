@@ -1,0 +1,59 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Profile Page</title>
+<% end %>
+<%@mobile_device_class=""%>
+<%= render :partial => 'index_left' %>
+<div class="rightpartWrap col-md-10"> <!-- rightpartWrap start -->
+  <div class="rightPart clearfix"> <!-- rightPart start -->
+    <div class="contentCol col-md-9"> <!-- contentCol start -->
+      <div class="content">
+        <!-- profile page start -->
+        <div class="profilepagefan">
+          <div class="profiletitle"><%= current_user.first_name.to_s+' '+current_user.last_name.to_s %></div>
+          <div class="proItembox">
+              <ul>
+                      <li>From: <%=getFormattedLocation(current_user)%></li>								
+                      <li><%= current_user.phone%></li>                      
+                      <li><span>Latest Events </span></li>
+              </ul>
+          </div>
+          <div class="porfileboxWrap">
+              <%myFavoriteArtistsNews = getFavoriteArtistsEvents(current_user.id) %>
+
+                <% if myFavoriteArtistsNews.length == 0 %>
+                        No Event Found    
+                <% else %>
+                  <% myFavoriteArtistsNews.each {|eventRow| %>
+                    <p class="news">
+                    
+                      <% if eventRow.event_image.to_s != "" %>
+                          <div class="porfilebox">
+                            <div class="proImage col-md-2 col-sm-2">
+                              <%= image_tag(eventRow.event_image, :class=>"img-responsive", :width=>154, :height=>102) %>
+                            </div>
+                            <div class="proText col-md-10 col-sm-10">
+                                    <h4><%= link_to eventRow.title, event_details_path(:id => eventRow.id) %></h4>
+                                    <p><%= eventRow.desc.truncate(140, :separator => ' ') %></p>
+                            </div>
+                          </div>
+                      <% else %>
+                          <div class="porfilebox">                                                                        
+                            <div class="proText col-md-10 col-sm-10">
+                                    <h4><%= link_to eventRow.title, event_details_path(:id => eventRow.id) %></h4>
+                                    <p><%= eventRow.desc.truncate(140, :separator => ' ') %></p>
+                            </div>
+                          </div>
+                      <% end %>
+                    </p>
+                  <% } %>
+                <% end %>  
+          </div>
+        </div>
+        <!-- profile page end -->
+      </div>
+    </div> <!-- contentCol end -->
+    <%= render :partial => 'index_right' %>
+  </div> <!-- rightPart end -->
+</div> <!-- rightpartWrap end -->
+<%@mobile_device_class=" mobile_device"%>
+<%= render :partial => 'index_left' %>

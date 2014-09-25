@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  desc: MyText
+  is_free: false
+  price: 9.99
+  period: 1
+  period_unit: MyString
+  published: false
+
+two:
+  name: MyString
+  desc: MyText
+  is_free: false
+  price: 9.99
+  period: 1
+  period_unit: MyString
+  published: false

@@ -1,0 +1,203 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | User Manager</title>
+<% end %>
+
+<div class="profiletitle">User Details</div>
+
+
+<div id="ddtags" class="ddtags-full-width">
+  <%= form_for(@userInfo, :url => admin_save_user_path, :html => { :method => :post }) do |f| %>
+      <%= f.hidden_field :id %>
+      <dl>	
+          <dt><%= label_tag(:first_name, "First Name") %>:</dt>
+          <dd><%= f.text_field :first_name, class: "login_inp" %></dd>
+       </dl>
+      <dl>			
+          <dt><%= label_tag(:last_name, "Last Name") %>:</dt>
+          <dd><%= f.text_field :last_name, class: "login_inp" %></dd>
+       </dl>
+       
+       <dl>			
+          <dt><%= label_tag(:email, "Email Address") %>:</dt>
+          <dd><%= f.email_field :email, class: "login_inp" %></dd>
+       </dl>
+       <%if @userInfo.role!="administrator"%>
+       
+	    <dl>			
+	       <dt><%= label_tag(:phone, "Phone No") %>:</dt>
+	       <dd><%= f.telephone_field(:phone, class: "login_inp") %></dd>
+	    </dl>
+	    <%if @userInfo.user_type == "artist"%>
+	     <dl>			
+		<dt><%= label_tag(:biography, "Biography") %></dt>
+		<dd><%= f.text_area(:biography, class: "login_inp1") %></dd>
+	    </dl>	
+	    <%end%>
+	     <dl>			
+		<dt><%= label_tag(:country_id, "Country") %>:</dt>
+		<dd>
+		   <%= f.collection_select(:country_id, Country.all, :id, :country_name, {:prompt => "Please Select Your Country"}, {:class => "login_inp2"}) %>
+		</dd>
+	     </dl>        
+	     <dl class="countryDependent"<%=(@userInfo.country_id.to_i!=223)?" style=display:none;":""%>>			
+		<dt><%= label_tag(:state_id, "State") %>:</dt>
+		<dd>
+		   <div id="country_states_wrapper"> 
+		     <%= render partial: 'countries/state_select', locals: {country_id: @userInfo.country_id, state_id: @userInfo.state_id} %>
+		   </div>
+		</dd>
+	     </dl>
+	     
+	     <dl>			
+		<dt><%= label_tag(:city, "City") %>:</dt>
+		<dd><%= f.text_field :city, class: "login_inp" %></dd>
+	     </dl>
+	     
+	     <dl>			
+		<dt><%= label_tag(:zip, "Zip Code") %>:</dt>
+		<dd><%= f.text_field :zip, class: "login_inp" %></dd>
+	     </dl>
+	<%end%>
+       <dl>			
+          <dt><%= label_tag(:password, "Choose Password") %>:</dt>
+          <dd><%= f.password_field :password, class: "login_inp", :autocomplete => "off" %> <i>(leave blank if you don't want to change it)</i></dd>
+       </dl>       
+       <dl>			
+          <dt><%= label_tag(:password_confirmation, "Retype Password") %>:</dt>
+          <dd><%= f.password_field :password_confirmation, class: "login_inp" %></dd>
+       </dl>
+       <%if @userInfo.role!="administrator"%>
+       <dl>			
+	    <dt>Profile Pic:</dt>
+	    <dd>
+	       <span><%= image_tag(getUserAvatar(@userInfo,"large"),:width => "212") %></span>
+	       
+	       <% if @userInfo.profile_photo.to_s!="" %>
+	       <span><a href="javascript:void(0);" id="add_new_trigger">Remove and add new</a></span>
+	       <% else %>
+	       <span><a href="javascript:void(0);" id="add_new_trigger">Add new</a></span>
+	       <% end %>
+	    </dd>
+	</dl>
+	 
+        <dl id="add_new_wrapper" style="display:none;">			
+           <dt><%= label_tag(:profile_photo, "Upload Profile Photo") %>:</dt>
+           <dd>
+              <div id="queue"></div>
+              <input id="photo_upload" name="photo_upload" type="file" >
+              <div id="photo_preview" style="display:none;"></div>              
+              <input type="hidden" value="" name="user[profile_photo]" id="user_profile_photo">
+           </dd>
+        </dl>
+	<%end%>
+       <dl>			
+          <dt>&nbsp;</dt>
+          <dd><%= f.submit "Update", class: "login" %></dd>
+       </dl>
+  <% end %>
+  
+  
+  
+  <dl>			
+    <dt>&nbsp;</dt>
+    <dd>
+      <%if @userInfo.user_type == "artist"%>
+	<%= link_to 'Back', admin_artists_path %>
+      <%elsif @userInfo.user_type == "fan"%>
+	<%= link_to 'Back', admin_fans_path %>
+      <%elsif @userInfo.role == "administrator"%>
+	<%= link_to 'Back', admin_users_path %>
+      <%end%>
+    </dd>
+  </dl>
+</div>
+<%if @userInfo.role!="administrator"%>
+
+<style type="text/css">
+.preview_data {
+   font-weight:bold;
+}
+label.invalid {
+   color: #B61C1C;
+}
+.login_inp.required.invalid {
+   border: 1px solid #B61C1C;
+}
+.login_inp2.required.invalid {
+   border: 1px solid #B61C1C;
+}
+.uploadify-button {
+   background-color: #B61C1C;
+   border: none;
+   padding: 0;
+}
+.uploadify:hover .uploadify-button {
+   background-color: #B61C1C;
+}
+</style>
+
+
+<script type="text/javascript">
+jQuery(function() {
+      jQuery('#add_new_trigger').click(function(){
+	 jQuery('#add_new_wrapper').show();
+      })
+      
+      jQuery('#photo_upload').uploadify({
+	 'debug'    : false,
+	 'fileSizeLimit' : '2MB',
+	 'fileTypeDesc' : 'Image Files',
+	 'fileTypeExts' : '*.gif; *.jpg; *.png', 
+	 'multi'    : false,
+	 'width'    : 100,
+	 'method'   : 'post',
+	 'fileObjName' : 'photo_upload',
+	 'formData'     : {
+		 'timestamp' : (new Date()).getTime(),
+		 'token'     : (new Date()).getTime(),
+		 'authenticity_token' : '<%= form_authenticity_token %>'
+	 },
+	 'swf'      : '<%= asset_path "uploadify/uploadify.swf" %>',
+	 'uploader' : '/application/upload_photo',
+	 'onSelect' : function(file) {
+	    jQuery('#photo_preview').html('').hide();
+	    jQuery('#final_photo_preview').html('').hide();
+	    jQuery('#user_profile_photo').val('');
+	 },
+	 'onUploadSuccess' : function(file, data, response) {
+	    jsonData = JSON.parse(data);	    
+	    file.name = jsonData.files[0].name;
+	    jQuery('#photo_preview').show().html('<img src="/uploads/tmp/'+file.name+'?d='+ (new Date()).getTime()+'" id="crop_target" width="100px" />');
+	    jQuery('#final_photo_preview').show().html('<img src="/uploads/tmp/'+file.name+'?d='+ (new Date()).getTime()+'" id="crop_target" width="100px" />');
+	    jQuery('#user_profile_photo').val(jsonData.files[0].name);
+	 },
+	 'onUploadError' : function(file, errorCode, errorMsg, errorString) {
+	    alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
+	 },
+	 'onUploadComplete' : function(file) {
+	    
+	    /*jQuery('#photo_preview').show().html('<img src="/uploads/tmp/'+file.name+'?d='+ (new Date()).getTime()+'" id="crop_target" width="100px" />');
+	    jQuery('#final_photo_preview').show().html('<img src="/uploads/tmp/'+file.name+'?d='+ (new Date()).getTime()+'" id="crop_target" width="100px" />');
+	    jQuery('#user_profile_photo').val(file.name);*/
+	 }
+      });
+      jQuery('select#user_country_id').change(function(){
+        var country_id = jQuery(this).val();
+	if(country_id == 223)//us
+	{
+	  jQuery('.countryDependent').show();      
+	  select_wrapper = jQuery('#country_states_wrapper');
+	  jQuery('select', select_wrapper).attr('disabled', true);
+	  url = "/countries/get_states?country_id="+country_id;
+	  select_wrapper.load(url);  
+	}
+	else//hide state and zip
+	{
+	  jQuery('.countryDependent').hide();      
+	  if(jQuery('#user_state_id').length > 0)
+	     jQuery('#user_state_id').val('')
+	}
+      });
+});
+</script>
+<%end%>

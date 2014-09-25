@@ -1,0 +1,64 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Fans Manager</title>
+<% end %>
+
+<div class="profiletitle">Fans Manager</div>
+<div class="clr">&nbsp;</div>
+
+<div class="searchWrap">
+	<div class="searchbox">
+                <form id="searchForm" name="searchForm" action="" method="get">
+                  <div class="searchboxinner">
+                    <input type="text" name="search" class="textbox1" value="<%=h(@search)%>"/>
+                    <input type="submit" value="Search" class="btn"/>
+                    <input style="margin-left:4px;" type="button" class="btn" value="Reset" onclick="document.searchForm.search.value='';document.searchForm.submit();">
+                  </div>
+                </form>		
+	</div>	
+	<div class="clr">&nbsp;</div>
+</div>
+<div class="tableWrap">
+  <form id="dataFormSlide" name="dataFormSlide" action="" method="post">
+  <div class="table-responsive">
+    <table class="table">
+           <thead>
+                  <tr>
+                    <th style="width: 50px;">#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+		    <th>Email</th>		    
+		    <th>Phone</th>
+		    <th style="width: 150px;">Action</th>
+                  </tr>
+           </thead>
+	   <tbody>
+	      <%
+		itemNo = 0
+		if params[:page].to_i > 1
+		  itemNo = (params[:page].to_i - 1)*10
+		end
+		@items.each do |item|
+		itemNo = itemNo + 1
+	      %>
+		<tr>
+		    <td><%=itemNo%></td>
+		    <td><%=item.first_name.to_s%></td>
+		    <td><%=item.last_name.to_s%></td>
+		    <td><%=item.email.to_s%></td>		    
+		    <td><%=item.phone.to_s%></td>
+		    <td>
+			      <%= link_to image_tag("/assets/edit_icon.png"), admin_fan_path(:fan_id=>item.id)
+			      %>                          
+			      &nbsp;&nbsp;&nbsp;			      
+			      
+			      <%= link_to image_tag("/assets/delete_icon.png"), removeuser_path(:user_id=>item.id),method: :get, data: { confirm: 'Are you sure to delete this fan?' } %>
+		    </td>
+		  </tr>
+	      <% end %>         
+	   </tbody>
+           
+    </table>
+    </div>
+   <%= will_paginate @items, :params=>{:search=>h(@search)} %>
+  </form>
+</div>

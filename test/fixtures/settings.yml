@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  paypal_merchant_email: MyString
+  sandbox_merchant_email: MyString
+  sandbox: false
+  currency: MyString
+
+two:
+  paypal_merchant_email: MyString
+  sandbox_merchant_email: MyString
+  sandbox: false
+  currency: MyString

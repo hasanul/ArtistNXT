@@ -1,0 +1,281 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Fan <%= @displayUser.first_name %> <%= @displayUser.last_name %></title>
+<% end %>
+<%bigAvatarURL=getUserAvatar(@displayUser,"large")%>
+<% content_for :page_meta do %>
+<link rel="canonical" href="<%=request.url%>" />
+<meta property="og:url" content="<%=request.url%>" />
+<link rel='image_src' href="<%=root_url+bigAvatarURL[1..-1]%>">
+<meta property='og:image' content="<%=root_url+bigAvatarURL[1..-1]%>" />
+
+<meta property='og:type' content="profile" />
+<meta property='og:title' content="<%= @displayUser.first_name %> <%= @displayUser.last_name %>'s Profile" />
+<meta property='og:site_name' content='ArtistNXT' />
+<meta name="title" content="<%= @displayUser.first_name %> <%= @displayUser.last_name %>'s Profile - ArtistNXT" />
+<meta name="description" content="ArtistNXT Profile Page for <%= @displayUser.first_name %> <%= @displayUser.last_name %>" />
+<meta property="og:description" content="ArtistNXT Profile Page for <%= @displayUser.first_name %> <%= @displayUser.last_name %>" />
+<% end %>
+
+<div class="titlepage clearfix">
+    <span><%= @displayUser.first_name %> <%= @displayUser.last_name %>:</span>
+    <span>&nbsp;My Fan Page</span>
+    <span class="arr2">                                        
+          <%if isUserOnline(@displayUser)
+          %>
+              <div class="on">Online</div>                                                
+          <%
+          else
+          %>
+               <div class="off">Offline</div>                                                
+          <%
+            end
+          %>                                               
+    </span>
+</div>
+<div class="leftCol col-md-2"> <!-- leftCol start -->
+    <div class="moduletable-profile">
+            <div class="profile-image"><%= image_tag(getUserAvatar(@displayUser,"large"),:width => "212", :class=>"img-responsive") %></div>
+    </div>		
+    <div class="moduletable-myartist">
+        
+        <%if !current_user.nil? && current_user.user_type.eql?("fan") && !current_user.id.eql?(@displayUser.id) %>
+             <%friendRequestStatus = getFriendRequestRow(current_user.id,@displayUser.id)
+             %>
+             
+             
+             <%if friendRequestStatus.nil?%>
+                <%= link_to "Add Friend", add_friend_path(:sender_id=>current_user.id,:receiver_id=>@displayUser.id), :class=>"submit btn"%>
+             <%elsif friendRequestStatus.status%>                
+                <%= link_to "Remove Friend", remove_friend_path(:sender_id=>current_user.id,:receiver_id=>@displayUser.id), :class=>"submit btn"%>
+             <%elsif friendRequestStatus.sender_id.to_i.eql?(current_user.id)%>
+                <%= link_to "Cancel Friend Request", remove_friend_path(:sender_id=>current_user.id,:receiver_id=>@displayUser.id), :class=>"submit btn"%>
+             <%elsif friendRequestStatus.receiver_id.to_i.eql?(current_user.id)%>
+                <%= link_to "Accept Friend Request", accept_friend_request_path(:sender_id=>@displayUser.id,:receiver_id=>current_user.id), :class=>"submit btn"%>
+                <%= link_to "Deny Friend Request", remove_friend_path(:sender_id=>@displayUser.id,:receiver_id=>current_user.id), :class=>"submit btn"%>           
+             <%end%>           
+        <%end%>
+        <h3>My Artist</h3>
+        <div class="inner-box">
+            <div class="fanWrap">
+                <div class="fansitemWrap clearfix">
+                  
+                  <% favoriteArtists = getFansFavoriteArtists(@displayUser.id) %>
+                  <% if favoriteArtists.length == 0 %>
+                          No Artist Found    
+                  <% else %>
+
+                    <% favoriteArtists.each {|favoriteArtist| %>
+                      <div class="itembox">
+                          <% user_name = favoriteArtist.first_name + " " + favoriteArtist.last_name %>
+                          <div class="item"><%= link_to image_tag(getUserAvatar(favoriteArtist),:width => "58"), artist_dashboard_path(id: favoriteArtist.id.to_s+':'+user_name.parameterize) %></div>
+                          <h4><%= link_to favoriteArtist.first_name + " " + favoriteArtist.last_name, artist_dashboard_path(id: favoriteArtist.id.to_s+':'+user_name.parameterize) %></h4>
+                      </div>
+                    <% } %>
+                  <% end %>
+                  
+                </div>
+            </div>
+        </div>
+    </div>		
+        
+</div> <!-- leftCol end -->
+<div class="rightpartWrap col-md-10"> <!-- rightpartWrap start -->
+    <div class="rightPart clearfix"> <!-- rightPart start -->
+        <div class="contentCol col-md-9"> <!-- contentCol start -->
+            <div class="content">
+                <div class="fan_detail">
+                        <div class="name">Name: <%= @displayUser.first_name %> <%= @displayUser.last_name %></div>
+                        <div class="location">Location: <%= getFormattedLocation(@displayUser) %></div>
+                </div>
+                <div class="videoWrap">
+                        <div class="titlepage">
+                                <h3>Recently Watched Videos</h3>
+                        </div>
+                        <div class="video-list clearfix">
+                          
+                          <% recentlyWatchedVideos = getRecentlyWatchedVideos(@displayUser.id) %>
+                          <% if recentlyWatchedVideos.length == 0 %>
+                               <div class="" style="text-align:center">No Video Found</div> 
+                          <% else %>
+                                  <%
+                                  counter = 1
+                                  recentlyWatchedVideos.each {|video|
+                                  %>
+                                    <% additional_class = (counter>4) ? ' visible-lg' : '' %>
+                                      <div class="fan_video_box<%=additional_class%>">
+                                          <%=getVideoThumb(video,"mqdefault",138,83)%>                                          
+                                          <div class="text"><%= link_to video.title.html_safe, watch_video_path(:id => video.id.to_s+':'+video.title.parameterize) %></div>
+                                      </div>
+                                  <%
+                                  counter = counter + 1
+                                  }
+                                  %>
+                          <% end %>
+                        </div>
+                </div>	
+                <div class="videoWrap">
+                        <div class="titlepage">
+                                <h3>Recently Uploaded Videos</h3>
+                        </div>
+                        <div class="video-list clearfix">
+                          <% recentlyUploadedVideos = getFavoriteArtistsRecentlyUploadedVideos(@displayUser.id)%>
+                          <% if recentlyUploadedVideos.length == 0 %>
+                               <div class="" style="text-align:center">No Video Found</div>  
+                          <% else %>
+                                  <%
+                                  counter = 1
+                                  recentlyUploadedVideos.each {|video| %>
+                                    <% additional_class = (counter>4) ? ' visible-lg' : '' %>
+                                      <div class="fan_video_box<%=additional_class%>">
+                                          <%=getVideoThumb(video,"mqdefault",138,83)%>
+                                          <div class="text"><%= link_to video.title.html_safe, watch_video_path(:id => video.id.to_s+':'+video.title.parameterize) %></div>
+                                      </div>
+                                  <%
+                                  counter = counter + 1
+                                  }
+                                  %>
+                          <% end %>
+                        </div>
+                </div>
+                <div class="videoWrap">
+                        <div class="titlepage">
+                                <h3>My Favorite Videos</h3>
+                        </div>
+                        <div class="video-list clearfix">
+                          <% favoriteVideos = getFavoriteVideos(@displayUser.id) %>
+                          <% if favoriteVideos.length == 0 %>
+                               <div class="" style="text-align:center">No Video Found</div>   
+                          <% else %>
+                                  <%
+                                  counter = 1
+                                  favoriteVideos.each {|video| %>
+                                    <% additional_class = (counter>4) ? ' visible-lg' : '' %>
+                                    <div class="fan_video_box<%=additional_class%>">
+                                       <%=getVideoThumb(video,"mqdefault",138,83)%>
+                                       <div class="text"><%= link_to video.title.html_safe, watch_video_path(:id => video.id.to_s+':'+video.title.parameterize) %></div>
+                                    </div>
+                                  <%
+                                  counter = counter + 1
+                                  }
+                                  %>
+                          <% end %>
+                        </div>
+                </div>
+                    
+            </div>		
+        </div> <!-- contentCol end -->
+        <%if !current_user.nil? && current_user.user_type.to_s.eql?("fan") &&  current_user.id==@displayUser.id%>
+            <%= render :partial => 'profile/index_right' %>
+        <%else%>
+            <div class="rightCol col-md-3"> <!-- rightCol start -->                
+                <div class="moduletable-fanarlist">
+                    <%= image_tag('/assets/fanalert1.jpg', :class=>"img-responsive") %>
+                    <div class="text">Who is performing near you</div>
+                        
+                    <div class="fanappWrap">
+                    <%if current_user!=nil
+                    %>
+                        <%
+                        nearestArtists = nil
+                        if current_user.user_type.to_s == "fan"
+                            nearestArtists = GetNearestPerformers(current_user,Rails.application.config.search_radius.to_s)
+                        elsif current_user.user_type.to_s == "artist"
+                            nearestArtists = GetArtistsNearestPerformers(current_user,Rails.application.config.search_radius.to_s)    
+                        end
+                        if !nearestArtists.nil?
+                            %>
+                            <% nearestArtists.each {|nearestArtist| %>
+                              
+                                <% user_name = nearestArtist.first_name + " " + nearestArtist.last_name %>
+                                <div class="fanapp clearfix">
+                                  <div class="fanappimage">                                                                
+                                    <%= link_to image_tag(getUserAvatar(nearestArtist),:width => "58"), artist_dashboard_path(id: nearestArtist.id.to_s+':'+user_name.parameterize) %>
+                                  </div>
+                                  <div class="fanappimagename">
+                                  <%= link_to user_name, artist_dashboard_path(id: nearestArtist.id.to_s+':'+user_name.parameterize) %>                                                            
+                                  </div>
+                                </div>
+                             <% } %>
+                             
+                        <% else %>
+                            <div class="" style="text-align:center">No Artist Found</div>  
+                        <% end %>
+                    <%
+                    end
+                    %>
+                    </div>
+                </div>
+                <div class="moduletable-myaccount">
+                    <h3>My Fan Friends</h3>
+                    <div class="inner-box">
+                        <div class="fanWrap">
+                            <div class="fansitemWrap clearfix">
+                              
+                              <% fanFriends = getFanFriends(@displayUser.id)%>
+                              <% if fanFriends.length == 0 %>
+                                   <div class="" style="text-align:center">No Fan Friend Found</div>
+                              <% else %>
+                                    <% fanFriends.each {|fanFriend|
+                                        user_name = fanFriend.first_name + " " + fanFriend.last_name  
+                                        if fanFriend.user_type.eql?("artist")
+                                            profileLink = artist_dashboard_path(id: fanFriend.id.to_s+':'+user_name.parameterize)
+                                        else
+                                            profileLink = fan_dashboard_path(id: fanFriend.id.to_s+':'+user_name.parameterize)
+                                        end
+                                    %>
+                                      <div class="itembox">
+                                          <div class="item"><%= link_to image_tag(getUserAvatar(fanFriend),:width => "58", :class=>"img-responsive"), profileLink %></div>
+                                          <h4><%= link_to user_name, profileLink %></h4>
+                                      </div>
+                                    <% } %>
+                              <% end %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- rightCol end -->        
+        <%end%>        
+    </div> <!-- rightPart end -->
+</div> <!-- rightpartWrap end -->
+<div class="leftCol mobile_device col-md-2"> <!-- leftCol start -->
+    <div class="moduletable-profile">
+        <div class="profile-image"><%= image_tag(getUserAvatar(@displayUser,"large"),:width => "212", :class=>"img-responsive") %></div>
+    </div>		
+    <div class="moduletable-myartist">
+        <%if !current_user.nil? && current_user.user_type.eql?("fan") && !current_user.id.eql?(@displayUser.id) %>
+             <%friendRequestStatus = getFriendRequestRow(current_user.id,@displayUser.id)
+             %>
+             
+             <%if friendRequestStatus.nil?%>
+                <%= link_to "Add Friend", add_friend_path(:sender_id=>current_user.id,:receiver_id=>@displayUser.id), :class=>"submit btn"%>
+             <%elsif friendRequestStatus.status%>                
+                <%= link_to "Remove Friend", remove_friend_path(:sender_id=>current_user.id,:receiver_id=>@displayUser.id), :class=>"submit btn"%>
+             <%elsif friendRequestStatus.sender_id.to_i.eql?(current_user.id)%>
+                <%= link_to "Cancel Friend Request", remove_friend_path(:sender_id=>current_user.id,:receiver_id=>@displayUser.id), :class=>"submit btn"%>
+             <%elsif friendRequestStatus.receiver_id.to_i.eql?(current_user.id)%>
+                <%= link_to "Accept Friend Request", accept_friend_request_path(:sender_id=>@displayUser.id,:receiver_id=>current_user.id), :class=>"submit btn"%>
+                <%= link_to "Deny Friend Request", remove_friend_path(:sender_id=>@displayUser.id,:receiver_id=>current_user.id), :class=>"submit btn"%>           
+             <%end%>           
+        <%end%>
+        <h3>My Artist</h3>
+        <div class="inner-box">
+            <div class="fanWrap">
+                <div class="fansitemWrap clearfix">
+                  <% favoriteArtists = getFansFavoriteArtists(@displayUser.id) %>
+                  <% if favoriteArtists.length == 0 %>
+                          No Artist Found    
+                  <% else %>
+
+                    <% favoriteArtists.each {|favoriteArtist| %>
+                      <div class="itembox">
+                          <% user_name = favoriteArtist.first_name + " " + favoriteArtist.last_name %>
+                          <div class="item"><%= link_to image_tag(getUserAvatar(favoriteArtist),:width => "58"), artist_dashboard_path(id: favoriteArtist.id.to_s+':'+user_name.parameterize) %></div>
+                          <h4><%= link_to favoriteArtist.first_name + " " + favoriteArtist.last_name, artist_dashboard_path(id: favoriteArtist.id.to_s+':'+user_name.parameterize) %></h4>
+                      </div>
+                    <% } %>
+                  <% end %>
+                </div>
+            </div>
+        </div>
+    </div>	
+</div> <!-- leftCol end -->

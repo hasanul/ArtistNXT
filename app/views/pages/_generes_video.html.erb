@@ -1,0 +1,31 @@
+<%@results.each do |result|
+createdBy = getUserByID(result.user_id);
+%>
+
+  <div class="searchboxWrap row">
+          <div class="searchimage col-md-3 col-sm-3">
+                  <%=getVideoThumb(result,"hqdefault",320,"auto")%>
+          </div>
+          <div class="description col-md-9 col-sm-9">
+                  <h3><%= link_to "<span>#{result.title}</span>".html_safe, watch_video_path(:id => result.id.to_s+':'+result.title.parameterize) %>   </h3>
+                  <div  class="infolist">
+                          <ul>
+                                  <li>by
+                                  <%if createdBy!=nil%>
+                                  <% user_name = createdBy.first_name + " " + createdBy.last_name %>
+                                  <%= link_to user_name, artist_dashboard_path(id: createdBy.id.to_s+':'+user_name.parameterize) %>
+                                  <%
+                                  else
+                                  %>
+                                    Anonymous
+                                  <%
+                                  end%>
+                                  </li>
+                                  <li><%= time_ago_in_words(result.created_at) %> ago</li>
+                                  <li><%=result.hits.to_i%> views</li>
+                          </ul>
+                  </div>
+                  <div class="info"><%= result.desc.truncate(150, :separator => ' ') %>  </div>
+          </div>
+  </div>
+<%end%>

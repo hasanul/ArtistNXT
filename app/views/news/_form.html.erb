@@ -1,0 +1,38 @@
+<%= form_for([@user, @news]) do |f| %>
+
+  <% if @news.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@news.errors.count, "error") %> prohibited this News from being saved:</h2>
+
+      <ul>
+      <% @news.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="news_form_wrap">
+	  <div class="inputwrap_news clearfix">
+			  <%= label_tag(:title, "Title:") %>
+			  <%= f.text_field :title, class: "form-control required" %>
+	  </div>  
+	  
+	  <div class="inputwrap_news clearfix">
+			  <%= label_tag(:desc, "Describe:") %>
+			  <%= f.text_area(:desc, class: "form-control required") %>
+	  </div>
+	  
+	  <div class="inputwrap_news clearfix">
+			  <%= label_tag(:news_image, "Upload File") %>
+			  <%= f.file_field :news_image,{:class => ""} %>
+	  </div>
+	  <input type="submit" value="Submit" class="submit btn">
+  </div>
+  <% end %>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){
+      jQuery('#new_news').validate({
+        errorClass:"invalid"
+      });
+    });
+  </script>

@@ -1,0 +1,69 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Create User</title>
+<% end %>
+
+<div class="profiletitle">Create User</div>
+
+
+<div id="ddtags" class="ddtags-full-width">
+  <%= form_for(@userInfo, :url => admin_save_new_user_path, :html => { :method => :post }) do |f| %>
+      <%= f.hidden_field :id %>
+      <dl>	
+          <dt><%= label_tag(:first_name, "First Name") %>:</dt>
+          <dd><%= f.text_field :first_name, class: "login_inp required" %></dd>
+       </dl>
+      <dl>			
+          <dt><%= label_tag(:last_name, "Last Name") %>:</dt>
+          <dd><%= f.text_field :last_name, class: "login_inp required" %></dd>
+       </dl>
+       
+       <dl>			
+          <dt><%= label_tag(:email, "Email Address") %>:</dt>
+          <dd><%= f.email_field :email, class: "login_inp required email", remote: "/application/check_email" %></dd>
+       </dl>
+       
+       <dl>			
+          <dt><%= label_tag(:password, "Choose Password") %>:</dt>
+          <dd><%= f.password_field :password, class: "login_inp required", :autocomplete => "off",minlength:"6" %></dd>
+       </dl>       
+       <dl>			
+          <dt><%= label_tag(:password_confirmation, "Retype Password") %>:</dt>
+          <dd>	    
+	    <input class="login_inp invalid" equalto="#user_password" id="user_password_confirmation" minlength="6" name="user[password_confirmation]" type="password">
+	  </dd>
+       </dl>
+       
+       <dl>			
+          <dt>&nbsp;</dt>
+          <dd><%= f.submit "Update", class: "login" %></dd>
+       </dl>
+  <% end %>
+  
+  
+  
+  <dl>			
+    <dt>&nbsp;</dt>
+    <dd>
+      <%= link_to 'Back', admin_users_path %>
+    </dd>
+  </dl>
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+  jQuery('#new_user').validate({
+    errorClass:"invalid",
+    messages:{
+	'user[email]': {				    
+		remote: jQuery.format("This email {0} is already in use")
+	}
+    },
+submitHandler:function(form)
+{
+    if(checkFullArtistFormValidation())
+	form.submit();
+    else
+	return false;
+}
+  });
+});
+</script>

@@ -1,0 +1,47 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Fan following Page</title>
+<% end %>
+<%@mobile_device_class=""%>
+<%= render :partial => 'profile/index_left' %>
+<div class="rightpartWrap col-md-10"> <!-- rightpartWrap start -->
+        <div class="rightPart clearfix"> <!-- rightPart start -->
+                <div class="contentCol col-md-9"> <!-- contentCol start -->
+                        <div class="content">
+                                <!-- artist following start -->
+				<%fansFollowingResult = getArtistsFansPagination(current_user.id,@pageNo)%>	
+                                <div class="fanfollowingWrap">
+                                        <div class="profiletitle">Fan's following Me (<span><%=fansFollowingResult[:total]%></span>)</div>
+                                        <%
+                                        fansFollowingResult[:rows].each {|fan|
+                                        user_name = fan.first_name + " " + fan.last_name
+                                        if fan.user_type.eql?("artist")
+                                            profileLink = artist_dashboard_path(id: fan.id.to_s+':'+user_name.parameterize)
+                                        else
+                                            profileLink = fan_dashboard_path(id: fan.id.to_s+':'+user_name.parameterize)
+                                        end
+                                      %>
+                                        <div class="fanfollowing clearfix">
+                                                <div class="folloimage col-md-3 col-sm-3">
+                                                      <%= link_to image_tag(getUserAvatar(fan,'large'),:width => "154"), profileLink %>                                                          
+                                                </div>
+                                                <div class="folloinfo col-md-9 col-sm-9">
+                                                <div class="follow_des">
+                                                        <%= link_to user_name, profileLink %>                                                     
+                                                        <span>From: <%=getFormattedLocation(fan)%></span>
+                                                </div>
+                                                <%= link_to "View Profile", profileLink,:class=>"viewprofile" %>
+                                                </div>
+                                        </div>
+                                      <%
+                                      }%>
+                                        <%= will_paginate fansFollowingResult[:collection], :previous_label => 'Prev', :next_label => 'Next' %>
+                                </div>
+
+                                <!-- artist following end -->
+                        </div>
+                </div> <!-- contentCol end -->
+                <%= render :partial => 'profile/index_right' %>
+        </div> <!-- rightPart end -->
+</div> <!-- rightpartWrap end -->
+<%@mobile_device_class=" mobile_device"%>
+<%= render :partial => 'profile/index_left' %>

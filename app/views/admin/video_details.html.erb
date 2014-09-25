@@ -1,0 +1,129 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Video Details</title>
+<% end %>
+
+<div class="profiletitle">Video Details</div>
+<div class="clr">&nbsp;</div>
+<%= form_for(@item, :url => admin_save_video_path, :html => { :method => :post }) do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this video from being saved:</h2>
+
+      <ul>
+      <% @item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.hidden_field :id %>
+  <div id="ddtags">
+  
+    <dl>
+      <dt><strong>Title:</strong></dt>
+      <dd>
+        <%= f.text_field :title, class: "form-control required" %>
+      </dd>
+    </dl>
+    
+    <dl>
+      <dt><strong>Genres:</strong></dt>
+      <dd><%=@video_genres.join(", ")%></dd>
+    </dl>
+    
+    <dl>
+      <dt><strong>Created By:</strong></dt>
+      <dd><%= User.find(@item.user_id).first_name+' ' +User.find(@item.user_id).last_name %></dd>
+    </dl>
+    
+    <dl>
+      <dt><strong>Created:</strong></dt>
+      <dd><%= @item.created_at %></dd>
+    </dl>
+    
+    <dl>
+      <dt><strong>Hits:</strong></dt>
+      <dd><%= @item.hits %></dd>
+    </dl>
+    
+    <dl>			
+      <dt>Published:</dt>
+      <dd>
+        <input type="hidden" value="0" name="video[published]">
+        <%= f.check_box :published %>        
+      </dd>
+    </dl>
+    
+    <dl>			
+      <dt>Featured:</dt>
+      <dd>
+        <input type="hidden" value="0" name="video[featured]">
+        <%= f.check_box :featured %>        
+      </dd>
+    </dl>
+    
+    <dl>			
+      <dt>Description:</dt>
+      <dd>
+        <%= f.text_area(:desc, class: "form-control") %>
+      </dd>
+    </dl>
+    
+    <dl>			
+      <dt>Source:</dt>
+      <dd>
+        <%= f.hidden_field :source %>
+        Youtube
+      </dd>
+    </dl>
+    <dl>			
+      <dt>Remote URL:</dt>
+      <dd>
+        <%= f.text_field :remote_path,{:class => "form-control remote_source required url youtube"} %>
+      </dd>
+    </dl>
+    <dl>
+      <dt>&nbsp;</dt>
+      <dd><input class="login" name="commit" type="submit" value="Submit"></dd>
+    </dl>
+    <dl>			
+      <dt></dt>
+      <dd>
+      <div class="videoWrapper">
+        <%if @item.source.to_s == "remote" && (!@item.remote_path.index('www.youtube.com').nil? || !@item.remote_path.index('youtu.be').nil?)%>
+            <%=youtube_embed(@item.remote_path,640,360).html_safe%>
+            <%else%>
+              <%=get_mediaelement_video_player(@item.path.to_s,@item.path_url(:webm).to_s,@item.path_url(:large).to_s,640,360).html_safe%>
+          <%end%> 
+          </div>
+        </dd>
+    </dl>
+    
+    
+    
+    <dl>			
+      <dt></dt>
+      <dd><%= link_to 'Back', admin_videos_path %></dd>
+    </dl>
+  
+  </div>
+<% end %>
+<script type="text/javascript">
+jQuery.validator.addMethod("youtube", function(value, element) {
+ var p = /^(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?(?=.*v=((\w|-){11}))(?:\S+)?$/;
+ //http://youtu.be/RM3i5oqn7EY 
+ var p2 = /^(?:https?:\/\/)?(?:www\.)?youtu\.be\/.*$/;
+ var testResult = (value.match(p)) ? RegExp.$1 : false;
+ if(!testResult)
+ {
+    testResult = (value.match(p2)) ? true : false; 
+ }
+ return testResult;
+}, "Enter correct youtube video URL. e.g. (http://www.youtube.com/watch?v=RM3i5oqn7EY)");
+
+jQuery(document).ready(function(){
+  jQuery('.edit_video').validate({
+    errorClass: 'invalid'
+  });
+});
+</script>

@@ -1,0 +1,83 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | News Manager</title>
+<% end %>
+
+<div class="profiletitle">News Manager</div>
+<div class="clr">&nbsp;</div>
+
+<div class="searchWrap">
+	<div class="searchbox">
+                <form id="searchForm" name="searchForm" action="" method="get">
+                  <div class="searchboxinner">
+                    <input type="text" name="search" class="textbox1" value="<%=h(@search)%>"/>
+                    <input type="submit" value="Search" class="btn"/>
+                    <input style="margin-left:4px;" type="button" class="btn" value="Reset" onclick="document.searchForm.search.value='';document.searchForm.submit();">
+                  </div>
+                </form>		
+	</div>
+	<div class="add-new"><%= link_to 'Add News', new_admin_news_path %></div>
+	<div class="clr">&nbsp;</div>
+</div>
+<div class="tableWrap">
+  <form id="dataFormItem" name="dataFormItem" action="" method="post">
+  <div class="table-responsive">
+    <table class="table">
+           <thead>
+                  <tr>
+                    <th style="width: 50px;">#</th>
+                    <th>Title</th>
+                    <th>Hits</th>
+                    <th style="width: 125px;">Published</th>
+                    <th style="width: 125px;">Ordering<a href="javascript:void(0);" onclick="saveOrdering();"><%= image_tag("/assets/filesave_icon.png") %></a></th>
+                    <th style="width: 150px;">Action</th>
+                  </tr>
+           </thead>
+           <tbody>
+                  <%
+                    itemNo = 0
+                    @admin_news.each do |admin_news|
+                    itemNo = itemNo + 1
+                  %>
+                    <tr>
+                      <td><%=itemNo%></td>
+                      <td>
+                        <%=link_to admin_news.title, admin_news%>
+                      </td>
+                      <td><%=admin_news.hits.to_i%></td>
+                      
+                      <td>
+                        <%if admin_news.published
+                        %>
+                          <img src="/assets/tick_green_icon.png" alt="" />
+                        <%
+                          else
+                        %>
+                          <img src="/assets/unpublish_icon.png" alt="" />
+                        <%
+                          end
+                        %>
+                        
+                      </td>
+                      <td><input type="text" name="ordering[<%=admin_news.id%>]" class="order_input" value="<%= admin_news.ordering.to_i %>"/></td>
+                      <td>
+                          <%= link_to image_tag("/assets/edit_icon.png"), edit_admin_news_path(admin_news) %>                          
+                          &nbsp;&nbsp;&nbsp;
+                          <%= link_to image_tag("/assets/delete_icon.png"), admin_news, method: :delete, data: { confirm: 'Are you sure?' } %>
+                      </td>
+                    </tr>
+                  <% end %>                  
+           </tbody>
+    </table>
+    </div>
+    <%= will_paginate @admin_news, :params=>{:search=>h(@search)} %>
+  </form>
+</div>
+<script type="text/javascript">
+function saveOrdering()
+{
+  if(jQuery('.order_input').length > 0)
+  {    
+    jQuery('#dataFormItem').attr('action','<%=news_save_ordering_path%>').submit();
+  }
+}
+</script>

@@ -1,0 +1,52 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Fans Manager</title>
+<% end %>
+
+<div class="profiletitle">Fan Details </div>
+
+<div id="ddtags">
+  <dl>
+    <dt><strong>Name</strong>:</dt>
+    <dd><%=@fanInfo.first_name+" "+@fanInfo.last_name%></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Email</strong>:</dt>
+    <dd><%= @fanInfo.email %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Phone No</strong>:</dt>
+    <dd><%= @fanInfo.phone %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Country</strong>:</dt>
+    <dd><%= getCountryName(@fanInfo.country_id) %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>State</strong>:</dt>
+    <dd><%= getStateName(@fanInfo.state_id) %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>City</strong>:</dt>
+    <dd><%= @fanInfo.city %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Zip Code</strong>:</dt>
+    <dd><%= @fanInfo.zip %></dd>
+  </dl>
+  
+  <dl>
+    <dt><strong>Profile Photo</strong>:</dt>
+    <dd><%= image_tag(getUserAvatar(@fanInfo,"large"),:width => "212") %></dd>
+  </dl>
+  
+  <dl>			
+    <dt>&nbsp;</dt>
+    <dd><%= link_to 'Edit', admin_edit_user_path(:user_id=>@fanInfo.id) %> | <%= link_to 'Back', admin_fans_path %></dd>
+  </dl>
+</div>

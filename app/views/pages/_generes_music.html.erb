@@ -1,0 +1,28 @@
+<%@results.each do |result|%>
+  <div class="searchboxWrap row">
+          <div class="searchimage col-md-3 col-sm-3">
+                  <%=get_mediaelement_audio_player(result.path.to_s,300).html_safe%>
+          </div>
+          <div class="description col-md-9 col-sm-9">
+                  <h3><%= "<span>#{result.title}</span>".html_safe%> </h3>
+                  <div  class="infolist">
+                          <ul>
+                                  <li>by
+                                  <%if createdBy!=nil%>
+                                  <% user_name = createdBy.first_name + " " + createdBy.last_name %>
+                                  <%= link_to user_name, artist_dashboard_path(id: createdBy.id.to_s+':'+user_name.parameterize) %>
+                                  <%
+                                  else
+                                  %>
+                                    Anonymous
+                                  <%
+                                  end%>
+                                  </li>
+                                  <li><%= time_ago_in_words(result.created_at) %> ago</li>
+                                  <li><%=result.hits.to_i%> views</li>
+                          </ul>
+                  </div>
+                  <div class="info"><%= result.desc.truncate(150, :separator => ' ') %>  </div>
+          </div>
+  </div>
+<%end%>

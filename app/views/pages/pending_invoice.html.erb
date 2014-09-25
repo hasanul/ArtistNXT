@@ -1,0 +1,44 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Confirm Subscription</title>
+<% end %>
+
+<div class="contentCol">
+    <div class="content">
+        <h2 class="logintitle2">Confirm Subscription</h2>
+        <div id="filter-dropdown-subscription">
+          <ul>        
+              <li>
+              <div class="subscription_wrap clearfix">
+              <div class="subscription_wrap_des">
+                <h3><%=@plan.name%></h3>
+                <%if @plan.is_free == 1
+                  is_free = "<p>Is free:yes</p>"
+                end%>
+                
+                <%if @plan.is_free == false
+                %>
+                  <p>Price: <%=@plan.price%></p>
+                <%
+                end%>
+                
+                <%if @plan.period_unit.to_s !=""
+                %>
+                  <p>Duration: <%=formatDuration(@plan.period,@plan.period_unit)%></p>
+                <%
+                else
+                %>
+                  <p>Duration: Lifetime</p>
+                <%
+                end%>            
+                <p>
+                  <%=@plan.desc%>
+                </p>
+                </div>
+                </div>
+              </li>
+              <%= link_to "Checkout", confirm_pending_invoice_path(subscription_id:@subscription_id), :title=>"Confirm subscription", :class => "btn confirm" %>
+          </ul>
+        <div>
+    
+    </div>
+</div>

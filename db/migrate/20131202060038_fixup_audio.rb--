@@ -1,0 +1,7 @@
+require_relative '20131202053540_create_audios'
+
+class FixupAudio < ActiveRecord::Migration
+  def change
+    revert CreateAudios
+  end
+end

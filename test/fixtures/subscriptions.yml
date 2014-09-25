@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  userid: 1
+  type: 
+  status: MyString
+  signup_date: 2013-12-12 14:19:01
+  lastpay_date: 2013-12-12 14:19:01
+  cancel_date: 2013-12-12 14:19:01
+  plan: 1
+  recurring: false
+  lifetime: false
+  expiration: 2013-12-12 14:19:01
+
+two:
+  userid: 1
+  type: 
+  status: MyString
+  signup_date: 2013-12-12 14:19:01
+  lastpay_date: 2013-12-12 14:19:01
+  cancel_date: 2013-12-12 14:19:01
+  plan: 1
+  recurring: false
+  lifetime: false
+  expiration: 2013-12-12 14:19:01

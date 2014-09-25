@@ -1,0 +1,36 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Upload Images</title>
+<% end %>
+
+<div class="logintitle2">Upload Images</div>
+<div class="clr">&nbsp;</div>
+
+<%= render :partial => 'index_left' %>
+
+<div id="ddtags" >
+  
+  <dl>			
+    <dt>Image Name:</dt>
+    <dd><input name="" type="text" class="login_inp" /></dd>
+  </dl>
+   
+  <dl>			
+    <dt>Describe Your Image:</dt>
+    <dd>
+      <textarea name="" class="login_inp" style="height:100px;"></textarea>
+    </dd>
+  </dl>
+  
+  <dl>			
+    <dt>Upload Image:</dt>
+    <dd> <input name="" type="file" /></dd>
+  </dl>
+
+  <dl>			
+    <dt>&nbsp;</dt>
+    <dd > <input name="" type="button" value=" submit "  class="login"/></dd>
+  </dl>
+  
+</div>
+
+<%= render :partial => 'index_right' %>

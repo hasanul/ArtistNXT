@@ -1,0 +1,47 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | My Music Sales</title>
+<% end %>
+<div class="contenttitle_area">
+        <h2 class="logintitle2">My Music Sales</h2>
+</div>
+
+<%@mobile_device_class=""%>
+<%= render :partial => 'profile/index_left' %>
+<div class="rightpartWrap col-md-10"> <!-- rightpartWrap start -->
+        <div class="rightPart clearfix"> <!-- rightPart start -->
+                <div class="contentCol col-md-9"> <!-- contentCol start -->
+                        <div class="content">
+                          <%if @myMusicOrders != nil && @myMusicOrders.length > 0%>
+                            <table cellpadding="0" cellspacing="0" border="0" class="table">
+                              <thead>
+                                <tr>          
+                                  <th>Title</th>
+                                  <th>Sold</th>
+                                </tr>
+                              </thead>
+                            
+                              <tbody>
+                                <%              
+                                  @myMusicOrders.each do |item|
+                                  musicTitle = getMusicTitleByID(item.product_id)
+                                  %>
+                                  <tr>            
+                                    <td>
+                                      <%= link_to musicTitle.html_safe, user_audio_path(:id => item.product_id,:user_id=>current_user.id) %>                  
+                                    </td>
+                                    <td><%=item.sold %></td>                
+                                  </tr>
+                                <% end %>
+                              </tbody>
+                            </table>
+                          <%
+                          else%>
+                            <div class="no_purchase">No one purchased your music yet</div>
+                          <%end%>
+                        </div>
+                </div> <!-- contentCol end -->
+                <%= render :partial => 'profile/index_right' %>
+        </div> <!-- rightPart end -->
+</div> <!-- rightpartWrap end -->
+<%@mobile_device_class=" mobile_device"%>
+<%= render :partial => 'profile/index_left' %>

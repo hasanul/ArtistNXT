@@ -1,0 +1,84 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Artist Manager</title>
+<% end %>
+
+<div class="profiletitle">Artist Manager</div>
+<div class="clr">&nbsp;</div>
+<div class="searchWrap clearfix">
+      <div class="searchbox">
+	  <form id="searchForm" name="searchForm" action="" method="get">
+	    <div class="searchboxinner">
+	      <input type="text" name="search" class="textbox1" value="<%=h(@search)%>"/>
+	      <input type="submit" value="Search" class="btn"/>
+	      <input style="margin-left:4px;" type="button" class="btn" value="Reset" onclick="document.searchForm.search.value='';document.searchForm.submit();">
+		
+	      <input type="hidden" name="sort_by" id="sort_by" value="<%=@sort_by%>" />
+	      <input type="hidden" name="sort_dir" id="sort_dir" value="<%=@sort_dir%>" />
+	    </div>
+	  </form>		
+      </div>
+      
+      <div class="exportWrap">
+	<label>Export:</label><%= link_to image_tag("/assets/export_csv.gif"), admin_artists_path(format: "csv", search: @search, sort_by: @sort_by, sort_dir: @sort_dir) %>
+      </div>
+      <div class="clr">&nbsp;</div>
+</div>
+<div class="tableWrap">
+  <form id="dataFormSlide" name="dataFormSlide" action="" method="post">
+  <div class="table-responsive">
+    <table class="table">
+           <thead>
+                  <tr>
+                    <th style="width: 50px;">#</th>
+                    <th><%=sortColumn('first_name', @sort_by, @sort_dir, 'Name').html_safe%></th>
+  		    <th><%=sortColumn('email', @sort_by, @sort_dir, 'Email').html_safe%></th>
+		    <th><%=sortColumn('created_at', @sort_by, @sort_dir, 'Register Date').html_safe%></th>
+		    <th>Featured</th>
+		    <th>Phone</th>
+		    <th style="width: 150px;">Action</th>
+                  </tr>
+           </thead>
+	   <tbody>
+	      <%
+		itemNo = 0
+		if params[:page].to_i > 1
+		  itemNo = (params[:page].to_i - 1)*10
+		end
+		@items.each do |item|
+		itemNo = itemNo + 1
+		
+		user_name = item.first_name.to_s + " " + item.last_name.to_s
+	      %>
+		<tr>
+		    <td><%=itemNo%></td>
+		    <td><%= link_to user_name, artist_dashboard_path(id: item.id.to_s+':'+user_name.parameterize), target: "_blank" %></td>
+		    <td><%=item.email.to_s%></td>
+		    <td><%=item.created_at.to_s%></td>		    
+		    <td>
+		      <%if item.featured
+		      %>
+			<%= link_to image_tag("/assets/tick_green_icon.png"), make_featured_artist_path(:artist_id=>item.id,:value=>0) %>
+		      <%
+		      else
+		      %>
+			<%= link_to image_tag("/assets/unpublish_icon.png"), make_featured_artist_path(:artist_id=>item.id,:value=>1) %>
+		      <%
+			end
+		      %>
+		    </td>
+		    <td><%=item.phone.to_s%></td>
+		    <td>
+			      <%= link_to image_tag("/assets/edit_icon.png"), admin_artist_path(:artist_id=>item.id)
+			      %>                          
+			      &nbsp;&nbsp;&nbsp;
+			      <%= link_to image_tag("/assets/delete_icon.png"), removeuser_path(:user_id=>item.id),method: :get, data: { confirm: 'Are you sure?.All videos, news, events of this artist will be deleted' } %>
+		    </td>
+		  </tr>
+	      <% end %>         
+	   </tbody>
+           
+    </table>
+    </div>
+   <%= will_paginate @items, :params=>{:search=>h(@search)} %>
+  </form>
+</div>

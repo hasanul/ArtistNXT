@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cart.user_id %>
+</p>
+
+<p>
+  <strong>Cart number:</strong>
+  <%= @cart.cart_number %>
+</p>
+
+<p>
+  <strong>Cart total:</strong>
+  <%= @cart.cart_total %>
+</p>
+
+<p>
+  <strong>Ip address:</strong>
+  <%= @cart.ip_address %>
+</p>
+
+<%= link_to 'Edit', edit_cart_path(@cart) %> |
+<%= link_to 'Back', carts_path %>

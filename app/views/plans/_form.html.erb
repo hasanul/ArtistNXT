@@ -1,0 +1,56 @@
+<%= form_for(@plan, url: {action: @form_action}) do |f| %>
+  <% if @plan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
+
+      <ul>
+      <% @plan.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <dl>
+  <dt><%= f.label :name %></dt>
+  <dd><%= f.text_field :name, class: "login_inp required" %></dd>
+  </dl>
+  
+  <dl>
+  <dt><%= f.label :desc %></dt>
+  <dd><%= f.text_area :desc, class: "login_inp1" %></dd>
+  </dl>
+  
+  <dl>
+  <dt><%= f.label :is_free %></dt>
+  <dd><%= f.check_box :is_free %></dd>
+  </dl>
+  
+  <dl>
+  <dt><%= f.label :price %></dt>
+  <dd><%= f.text_field :price, class: "login_inp required" %></dd>
+  </dl>
+  
+  <!--dl>
+  <dt><%= f.label :period %></dt>
+  <dd><%= f.number_field :period, class: "login_inp required" %> </dd>
+  </dl>
+  
+  <dl>
+  <dt><%= f.label :period_unit %></dt>
+  <dd><%= f.text_field :period_unit, class: "login_inp required" %></dd>
+  </dl-->
+  
+  <%= f.hidden_field :period, value: 1 %>
+  <%= f.hidden_field :period_unit, value: 'm' %>
+  
+  <dl>
+  <dt><%= f.label :published %></dt>
+  <dd><%= f.check_box :published %></dd>
+  </dl>
+  
+  <dl>
+  <dt>&nbsp;</dt>
+  <dd><%= f.submit "Submit", class: "login"  %></dd>
+  </dl>
+<% end %>

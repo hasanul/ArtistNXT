@@ -1,0 +1,38 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Listing Events</title>
+<% end %>
+
+<div class="contenttitle_area">
+        <h2 class="logintitle2">Listing Events</h2>
+</div>
+
+<%@mobile_device_class=""%>
+<%= render :partial => 'profile/index_left' %>
+<div class="rightpartWrap col-md-10"> <!-- rightpartWrap start -->
+        <div class="rightPart clearfix"> <!-- rightPart start -->
+                <div class="contentCol col-md-9"> <!-- contentCol start -->
+                        <div class="content">
+                          <div class="titlepage"><span class="addnew"><%= link_to 'Add Event', new_user_event_path %></span>  </div>
+                          <div class="fanfollowingWrap">
+                            <% @events.each do |event| %>
+                                <div class="fanfollowing clearfix">
+                                    <% if event.event_image.to_s != "" %>
+                                        <div class="folloimage col-md-3 col-sm-3">
+                                          <%= link_to image_tag(event.event_image, :class=>"img-responsive"), user_event_path(:user_id => event.user_id, :id => event.id) %>                                                          
+                                        </div>
+                                    <% end %>
+                                    <div class="folloinfo col-md-9 col-sm-9">
+                                      <%= link_to event.title, user_event_path(:user_id => event.user_id, :id => event.id.to_s+':'+event.title.parameterize) %><br>
+                                      <%= event.desc.truncate(180, :separator => ' ') %>
+                                    </div>
+                                </div>
+                            <% end %>
+                            <%= will_paginate @events, :previous_label => 'Prev', :next_label => 'Next' %>
+                          </div>
+                        </div>
+                </div> <!-- contentCol end -->
+                <%= render :partial => 'profile/index_right' %>
+        </div> <!-- rightPart end -->
+</div> <!-- rightpartWrap end -->
+<%@mobile_device_class=" mobile_device"%>
+<%= render :partial => 'profile/index_left' %>

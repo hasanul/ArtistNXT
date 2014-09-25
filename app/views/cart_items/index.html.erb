@@ -1,0 +1,88 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Music Cart</title>
+<% end %>
+
+
+<div class="contentCol">
+    <div class="content">
+        
+        <h2 class="logintitle2">Music Cart</h2>
+        <%if @cart_items.length > 0%>  
+        <div class="music_cart_wrap">
+            <div class="table-responsive">      
+            <table cellpadding="0" cellspacing="0" border="0" class="table cart-table">
+              <thead>
+                <tr>          
+                  <th>Product Name</th>
+                  <th width="15%">Artist</th>
+                  <th>SubTotal</th>
+                  <th></th>
+                </tr>
+              </thead>
+            
+              <tbody>
+                <%
+                  totalPrice = 0.00;
+                  @cart_items.each do |item|
+                  totalPrice = (totalPrice + item.product_final_price.to_f)
+                  %>
+                  <tr>            
+                    <td><%= item.product_name %></td>
+                    <td width="15%">
+                        <%=getMusicsArtistName(item.product_id,true)%>
+                    </td>
+                    <td>$<%= number_with_precision(item.product_final_price, precision: 2) %></td>                
+                    <td>
+                        <%if current_user == nil%>
+                            <%= link_to image_tag("/assets/del.png"), cart_remove_item_path(:product_id=>item.product_id), method: :delete, data: { confirm: 'Are you sure?' } %> 
+                        <%
+                        else
+                        %>
+                            <%= link_to  image_tag("/assets/del.png") , item, method: :delete, data: { confirm: 'Are you sure?' } %>
+                        <%end%>
+                        
+                    </td>
+                  </tr>
+                <% end %>
+                  <tr class="price-row">
+                    <td width="15%">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="pricelabel" align="right">Product price result:</td>
+                    <td class="price">$<%=number_with_precision(totalPrice, precision: 2)%></td>          
+                  </tr>
+              </tbody>
+            </table>
+            </div>
+            
+            <div class="checkoutbuttonWrap">    
+                <div class="continuebutton">
+                    <%= link_to 'Continue Shopping'.html_safe, @continueShoppingLink %> 
+                </div>
+                <div style="float: right;" class="checkoutbutton">
+                    <%if current_user != nil
+                    %>
+                        <%= link_to 'Checkout out now'.html_safe, cart_checkout_path %>
+                    <%
+                    else
+                    %>
+                        <%= link_to 'Checkout out now'.html_safe, new_user_session_path(:return_url=>Base64.encode64(root_url+"cart_items")) %>
+                    <%end%>            
+                </div>
+                <div class="clearfix"></div>
+            </div> 
+        <%
+        else
+        %>
+            <h2>No item has been added so far</h2>
+            <div style="padding-top:10px;">&nbsp;</div>
+            <div class="checkoutbuttonWrap">    
+                <div class="continuebutton">
+                    <%= link_to 'Continue Shopping'.html_safe, @continueShoppingLink %> 
+                </div>
+                <div class="clearfix"></div>
+            </div> 
+        <%end%>
+        </div>
+        
+    </div>	
+</div>

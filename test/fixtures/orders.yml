@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  order_number: MyString
+  order_subtotal: 9.99
+  order_tax: 9.99
+  order_total: 9.99
+  order_status: 1
+  customer_note: MyText
+  ip_address: MyString
+
+two:
+  user_id: 1
+  order_number: MyString
+  order_subtotal: 9.99
+  order_tax: 9.99
+  order_total: 9.99
+  order_status: 1
+  customer_note: MyText
+  ip_address: MyString

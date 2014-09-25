@@ -1,0 +1,65 @@
+<% content_for :page_title do %>
+  <title>ArtistNXT | Event Details</title>
+<% end %>
+
+<div class="contenttitle_area">
+        <h2 class="logintitle2">Event Details</h2>
+</div>
+<%@mobile_device_class=""%>
+<%= render :partial => 'profile/index_left' %>
+<div class="rightpartWrap col-md-10"> <!-- rightpartWrap start -->
+        <div class="rightPart clearfix"> <!-- rightPart start -->
+                <div class="contentCol col-md-9"> <!-- contentCol start -->
+                        <div class="content">
+                          <div class="newsdescription clearfix">
+                            <div class="titleWrap clearfix">
+                              <label>Title:</label>
+                              <div class="title_name"><%= @event.title %></div>
+                            </div>
+                            <% if @event.start_date!= nil %>
+                              <div class="titleWrap clearfix">
+                                  <label>Start Date:</label>
+                                  <div class="title_name"><%= @event.start_date.to_time.utc.strftime('%Y-%m-%d %H:%M:%S') %></div>
+                              </div>
+                              <% end %>
+                              
+                              <% if @event.end_date!= nil %>
+                              <div class="titleWrap clearfix">
+                                  <label>End Date:</label>
+                                  <div class="title_name"><%= @event.end_date.to_time.utc.strftime('%Y-%m-%d %H:%M:%S') %></div>
+                              </div>
+                              <% end %>
+                              
+                              <% if @event.location!= nil %>
+                              <div class="titleWrap clearfix">
+                                <label>Location:</label>
+                                <div class="title_name"><%= @event.location %></div>
+                              </div>
+                            <% end %>
+                            
+                            <div class="des_wrap clearfix">
+                              <label>Description:</label>
+                              <div class="des_details">
+                                <%= @event.desc %>
+                              </div>
+                            </div>
+                            <div class="newsdes_link clearfix">
+                              <div class="left_side_links">
+                                <ul>
+                                <li><%= link_to 'Edit', edit_user_event_path(@user, @event) %></li>
+                                <li><%= link_to 'Delete', user_event_path(@user, @event), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+                                </ul>
+                              </div>
+                              <div class="right_side_link">
+                                <%= link_to 'Back', user_events_path %>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                </div> <!-- contentCol end -->
+                <%= render :partial => 'profile/index_right' %>
+        </div> <!-- rightPart end -->
+</div> <!-- rightpartWrap end -->
+<%@mobile_device_class=" mobile_device"%>
+<%= render :partial => 'profile/index_left' %>
